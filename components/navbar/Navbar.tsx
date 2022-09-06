@@ -5,6 +5,7 @@ import styles from './Navbar.module.scss';
 function Navbar() {
 
     const ref = useRef(null);
+    const refIconBurger = useRef(null);
     const [burgerActive, setBurgerActive] = useState(false);
     const [ulList, setUlList] = useState<any>();
 
@@ -13,6 +14,18 @@ function Navbar() {
         data[index].classList.toggle(styles.subNavOpen);
         setUlList(data);
     }
+
+    const handleBurger = () => {
+        setBurgerActive(!burgerActive)
+        const icon: any = refIconBurger.current;
+        if (icon.classList.contains(styles.openHamburger)) {
+            const menu: any = ref.current;
+            const nl = [...menu.querySelectorAll('ul')];
+            nl.forEach((ul) => {
+                ul.classList.remove(styles.subNavOpen);
+            });
+        }
+    };
 
     useEffect(() => {
         const menu: any = ref.current;
@@ -28,54 +41,54 @@ function Navbar() {
                     <Link href="/"><a>עמוד הבית</a></Link>
                     <ul className={styles.subNavMenu}>
                         {ulList &&
-                            <div className={styles.subMenuTitle}>
-                                <h2 onClick={() => handleSubCategory(0)}>הדרכה הורית</h2>
-                                <span className="material-symbols-outlined">{ulList[0].classList.contains(styles.subNavOpen) ? 'arrow_drop_up' : 'arrow_drop_down'}</span>
+                            <div onClick={() => handleSubCategory(0)} className={styles.subMenuTitle}>
+                                <h3>הדרכה הורית</h3>
+                                <span className="material-symbols-outlined">{ulList[0].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
                             </div>
                         }
-                        <div className={styles.links}>
+                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
                             <Link href="/"><a>מאמרים</a></Link>
                             <Link href="/"><a>מאמרים</a></Link>
                         </div>
                     </ul>
                     <ul className={styles.subNavMenu}>
                         {ulList &&
-                            <div className={styles.subMenuTitle}>
-                                <h2 onClick={() => handleSubCategory(1)}>יועצת שינה</h2>
-                                <span className="material-symbols-outlined">{ulList[1].classList.contains(styles.subNavOpen) ? 'arrow_drop_up' : 'arrow_drop_down'}</span>
+                            <div onClick={() => handleSubCategory(1)} className={styles.subMenuTitle}>
+                                <h3>יועצת שינה</h3>
+                                <span className="material-symbols-outlined">{ulList[1].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
                             </div>
                         }
-                        <div className={styles.links}>
+                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
                             <Link href="/"><a>מאמרים</a></Link>
                             <Link href="/"><a>מאמרים</a></Link>
                         </div>
                     </ul>
                     <ul className={styles.subNavMenu}>
                         {ulList &&
-                            <div className={styles.subMenuTitle}>
-                                <h2 onClick={() => handleSubCategory(2)}>התמחות בהפרעת קשב וריכוז</h2>
-                                <span className="material-symbols-outlined">{ulList[2].classList.contains(styles.subNavOpen) ? 'arrow_drop_up' : 'arrow_drop_down'}</span>
+                            <div onClick={() => handleSubCategory(2)} className={styles.subMenuTitle}>
+                                <h3>התמחות בהפרעת קשב וריכוז</h3>
+                                <span className="material-symbols-outlined">{ulList[2].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
                             </div>
                         }
-                        <div className={styles.links}>
+                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
                             <Link href="/"><a>מאמרים</a></Link>
                             <Link href="/"><a>מאמרים</a></Link>
                         </div>
                     </ul>
                     <ul className={styles.subNavMenu}>
                         {ulList &&
-                            <div className={styles.subMenuTitle}>
-                                <h2 onClick={() => handleSubCategory(3)}>גמילה מחיתולים</h2>
-                                <span className="material-symbols-outlined">{ulList[3].classList.contains(styles.subNavOpen) ? 'arrow_drop_up' : 'arrow_drop_down'}</span>
+                            <div onClick={() => handleSubCategory(3)} className={styles.subMenuTitle}>
+                                <h3>גמילה מחיתולים</h3>
+                                <span className="material-symbols-outlined">{ulList[3].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
                             </div>
                         }
-                        <div className={styles.links}>
+                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
                             <Link href="/"><a>מאמרים</a></Link>
                             <Link href="/"><a>מאמרים</a></Link>
                         </div>
                     </ul>
                 </ul>
-                <div onClick={() => setBurgerActive(!burgerActive)} className={!burgerActive ? styles.hamburger : `${styles.hamburger} ${styles.openHamburger}`}>
+                <div ref={refIconBurger} onClick={handleBurger} className={!burgerActive ? styles.hamburger : `${styles.hamburger} ${styles.openHamburger}`}>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>

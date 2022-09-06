@@ -1,7 +1,29 @@
-*{
+:root{
+    --purple-pastel: #C3BAE3;
+    --blue-pastel: #87ABE3;
+    --background-color: #FCF7F4;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     direction: rtl;
     font-family: 'Varela Round', sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 20px;
+    border: transparent;
 }
