@@ -1,7 +1,8 @@
 :root{
     --purple-pastel: #C3BAE3;
-    --blue-pastel: #87ABE3;
+    --blue-pastel: #5077AB;
     --background-color: #FCF7F4;
+    --black-gray: #3F4756;
 }
 
 * {
@@ -10,6 +11,21 @@
     box-sizing: border-box;
     direction: rtl;
     font-family: 'Varela Round', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0rem 5rem;
+    background-color: var(--background-color);
+    
+    @media only screen and (max-width: 1000px){
+        margin: 0rem;
+    }
 }
 
 *::-webkit-scrollbar {

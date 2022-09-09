@@ -4,6 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
+                <link rel="shortcut icon" href="/logo_ico.ico" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"></link>
             </Head>

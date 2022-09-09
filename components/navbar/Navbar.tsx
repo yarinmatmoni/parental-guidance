@@ -1,100 +1,114 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
 
-    const ref = useRef(null);
-    const refIconBurger = useRef(null);
-    const [burgerActive, setBurgerActive] = useState(false);
-    const [ulList, setUlList] = useState<any>();
+    const isMobile = useMediaQuery({ query: `(max-width: 780px)` });
+    const refMenu = useRef<HTMLUListElement>(null);
+    const refIconBurger = useRef<HTMLDivElement>(null);
+    const refSub1 = useRef<HTMLUListElement>(null);
+    const refSub2 = useRef<HTMLUListElement>(null);
+    const refSub3 = useRef<HTMLUListElement>(null);
 
-    const handleSubCategory = (index: number) => {
-        const data = [...ulList];
-        data[index].classList.toggle(styles.subNavOpen);
-        setUlList(data);
-    }
+    const handleOpenBurgerMenu = () => {
+        const menu: any = refMenu.current;
+        menu.classList.toggle(styles.navMenuActive);
+        const iconBurger: any = refIconBurger.current;
+        iconBurger.classList.toggle(styles.openHamburger);
 
-    const handleBurger = () => {
-        setBurgerActive(!burgerActive)
-        const icon: any = refIconBurger.current;
-        if (icon.classList.contains(styles.openHamburger)) {
-            const menu: any = ref.current;
-            const nl = [...menu.querySelectorAll('ul')];
-            nl.forEach((ul) => {
-                ul.classList.remove(styles.subNavOpen);
-            });
+        if (!iconBurger.classList.contains(styles.openHamburger)) {
+            refSub1.current?.classList.remove(styles.navMenuLinksMobileActive);
+            refSub2.current?.classList.remove(styles.navMenuLinksMobileActive);
+            refSub3.current?.classList.remove(styles.navMenuLinksMobileActive);
         }
     };
 
-    useEffect(() => {
-        const menu: any = ref.current;
-        const nl = menu.querySelectorAll('ul');
-        setUlList([...nl]);
-    }, []);
+    const handleSubMenu = (index: number) => {
+
+        switch (index) {
+            case 1: {
+                if (!isMobile) {
+                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub1.current?.classList.toggle(styles.navMenuLinksActive);
+                }
+                else
+                    refSub1.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                break;
+            }
+            case 2: {
+                if (!isMobile) {
+                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub2.current?.classList.toggle(styles.navMenuLinksActive);
+                }
+                else
+                    refSub2.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                break;
+            }
+            case 3: {
+                if (!isMobile) {
+                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub3.current?.classList.toggle(styles.navMenuLinksActive);
+                }
+                else
+                    refSub3.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                break;
+            }
+        }
+    };
 
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <div className={styles.logo}>לוגו</div>
-                <ul ref={ref} className={!burgerActive ? styles.navMenu : `${styles.navMenu} ${styles.openMenu}`}>
-                    <Link href="/"><a>עמוד הבית</a></Link>
-                    <ul className={styles.subNavMenu}>
-                        {ulList &&
-                            <div onClick={() => handleSubCategory(0)} className={styles.subMenuTitle}>
-                                <h3>הדרכה הורית</h3>
-                                <span className="material-symbols-outlined">{ulList[0].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
-                            </div>
-                        }
-                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
-                            <Link href="/"><a>מאמרים</a></Link>
-                            <Link href="/"><a>מאמרים</a></Link>
+                <div className={styles.logo}>
+                    <Image src="/LOGO.png" height={75} width={100} alt="logo"></Image>
+                </div>
+                <ul ref={refMenu} className={styles.navMenu}>
+                    <li><Link href="/"><a>עמוד הבית</a></Link></li>
+                    <li className={styles.subMenu}>
+                        <div className={styles.title} onClick={() => handleSubMenu(1)}>
+                            <h3>הדרכה הורית</h3>
+                            <span className="material-symbols-outlined">expand_more</span>
                         </div>
-                    </ul>
-                    <ul className={styles.subNavMenu}>
-                        {ulList &&
-                            <div onClick={() => handleSubCategory(1)} className={styles.subMenuTitle}>
-                                <h3>יועצת שינה</h3>
-                                <span className="material-symbols-outlined">{ulList[1].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
-                            </div>
-                        }
-                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
-                            <Link href="/"><a>מאמרים</a></Link>
-                            <Link href="/"><a>מאמרים</a></Link>
+                        <ul ref={refSub1} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                            <Link href="/"><a>הדרכה הורית 1</a></Link>
+                            <Link href="/"><a>הדרכה הורית 2</a></Link>
+                        </ul>
+                    </li>
+                    <li className={styles.subMenu}>
+                        <div className={styles.title} onClick={() => handleSubMenu(2)}>
+                            <h3>יועצת שינה</h3>
+                            <span className="material-symbols-outlined">expand_more</span>
                         </div>
-                    </ul>
-                    <ul className={styles.subNavMenu}>
-                        {ulList &&
-                            <div onClick={() => handleSubCategory(2)} className={styles.subMenuTitle}>
-                                <h3>התמחות בהפרעת קשב וריכוז</h3>
-                                <span className="material-symbols-outlined">{ulList[2].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
-                            </div>
-                        }
-                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
-                            <Link href="/"><a>מאמרים</a></Link>
-                            <Link href="/"><a>מאמרים</a></Link>
+                        <ul ref={refSub2} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                            <Link href="/"><a>מאמרים 1</a></Link>
+                            <Link href="/"><a>מאמרים 2</a></Link>
+                        </ul>
+                    </li>
+                    <li className={styles.subMenu}>
+                        <div className={styles.title} onClick={() => handleSubMenu(3)}>
+                            <h3>התמחויות</h3>
+                            <span className="material-symbols-outlined">expand_more</span>
                         </div>
-                    </ul>
-                    <ul className={styles.subNavMenu}>
-                        {ulList &&
-                            <div onClick={() => handleSubCategory(3)} className={styles.subMenuTitle}>
-                                <h3>גמילה מחיתולים</h3>
-                                <span className="material-symbols-outlined">{ulList[3].classList.contains(styles.subNavOpen) ? 'expand_less' : 'keyboard_arrow_down'}</span>
-                            </div>
-                        }
-                        <div className={!burgerActive ? styles.links : styles.linksMobile}>
-                            <Link href="/"><a>מאמרים</a></Link>
-                            <Link href="/"><a>מאמרים</a></Link>
-                        </div>
-                    </ul>
+                        <ul ref={refSub3} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                            <Link href="/"><a>התמחות 1</a></Link>
+                            <Link href="/"><a>התמחות 2</a></Link>
+                        </ul>
+                    </li>
+                    <li><Link href="/"><a>גמילה מחיתולים</a></Link></li>
                 </ul>
-                <div ref={refIconBurger} onClick={handleBurger} className={!burgerActive ? styles.hamburger : `${styles.hamburger} ${styles.openHamburger}`}>
+                <div ref={refIconBurger} onClick={handleOpenBurgerMenu} className={styles.hamburger}>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                 </div>
             </nav>
-        </header>
+        </header >
     )
 };
 
