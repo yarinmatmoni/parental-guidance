@@ -27,51 +27,83 @@ function Navbar() {
     };
 
     const handleSubMenu = (index: number) => {
-
-        switch (index) {
-            case 1: {
-                if (!isMobile) {
-                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub1.current?.classList.toggle(styles.navMenuLinksActive);
+        if (isMobile) {
+            switch (index) {
+                case 1: {
+                    if (!isMobile) {
+                        refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub1.current?.classList.toggle(styles.navMenuLinksActive);
+                    }
+                    else
+                        refSub1.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                    break;
                 }
-                else
-                    refSub1.current?.classList.toggle(styles.navMenuLinksMobileActive);
-                break;
-            }
-            case 2: {
-                if (!isMobile) {
-                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub2.current?.classList.toggle(styles.navMenuLinksActive);
+                case 2: {
+                    if (!isMobile) {
+                        refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub2.current?.classList.toggle(styles.navMenuLinksActive);
+                    }
+                    else
+                        refSub2.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                    break;
                 }
-                else
-                    refSub2.current?.classList.toggle(styles.navMenuLinksMobileActive);
-                break;
-            }
-            case 3: {
-                if (!isMobile) {
-                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
-                    refSub3.current?.classList.toggle(styles.navMenuLinksActive);
+                case 3: {
+                    if (!isMobile) {
+                        refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                        refSub3.current?.classList.toggle(styles.navMenuLinksActive);
+                    }
+                    else
+                        refSub3.current?.classList.toggle(styles.navMenuLinksMobileActive);
+                    break;
                 }
-                else
-                    refSub3.current?.classList.toggle(styles.navMenuLinksMobileActive);
-                break;
             }
         }
+    };
+
+    const handleHover = (index: number) => {
+        if (!isMobile) {
+            switch (index) {
+                case 1: {
+                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub1.current?.classList.add(styles.navMenuLinksActive);
+                    break;
+                }
+                case 2: {
+                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub3.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub2.current?.classList.add(styles.navMenuLinksActive);
+                    break;
+                }
+                case 3: {
+                    refSub1.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub2.current?.classList.remove(styles.navMenuLinksActive);
+                    refSub3.current?.classList.add(styles.navMenuLinksActive);
+                    break;
+                }
+            }
+        }
+    };
+
+    const handleLeave = () => {
+        refSub1.current?.classList.remove(styles.navMenuLinksActive);
+        refSub2.current?.classList.remove(styles.navMenuLinksActive);
+        refSub3.current?.classList.remove(styles.navMenuLinksActive);
     };
 
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <div className={styles.logo}>
-                    <Image src="/LOGO.png" height={75} width={100} alt="logo"></Image>
+                    <Image src="/LOGO.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 120} alt="logo"></Image>
                 </div>
                 <ul ref={refMenu} className={styles.navMenu}>
-                    <li><Link href="/"><a>עמוד הבית</a></Link></li>
-                    <li className={styles.subMenu}>
-                        <div className={styles.title} onClick={() => handleSubMenu(1)}>
+                    <li onMouseLeave={handleLeave}><Link href="/"><a>עמוד הבית</a></Link></li>
+                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                        <div className={styles.title} onClick={() => handleSubMenu(1)} onMouseEnter={() => handleHover(1)}>
                             <h3>הדרכה הורית</h3>
                             <span className="material-symbols-outlined">expand_more</span>
                         </div>
@@ -80,8 +112,8 @@ function Navbar() {
                             <Link href="/"><a>הדרכה הורית 2</a></Link>
                         </ul>
                     </li>
-                    <li className={styles.subMenu}>
-                        <div className={styles.title} onClick={() => handleSubMenu(2)}>
+                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                        <div className={styles.title} onClick={() => handleSubMenu(2)} onMouseEnter={() => handleHover(2)}>
                             <h3>יועצת שינה</h3>
                             <span className="material-symbols-outlined">expand_more</span>
                         </div>
@@ -90,8 +122,8 @@ function Navbar() {
                             <Link href="/"><a>מאמרים 2</a></Link>
                         </ul>
                     </li>
-                    <li className={styles.subMenu}>
-                        <div className={styles.title} onClick={() => handleSubMenu(3)}>
+                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                        <div className={styles.title} onClick={() => handleSubMenu(3)} onMouseEnter={() => handleHover(3)}>
                             <h3>התמחויות</h3>
                             <span className="material-symbols-outlined">expand_more</span>
                         </div>
@@ -100,7 +132,7 @@ function Navbar() {
                             <Link href="/"><a>התמחות 2</a></Link>
                         </ul>
                     </li>
-                    <li><Link href="/"><a>גמילה מחיתולים</a></Link></li>
+                    <li onMouseLeave={handleLeave}><Link href="/"><a>גמילה מחיתולים</a></Link></li>
                 </ul>
                 <div ref={refIconBurger} onClick={handleOpenBurgerMenu} className={styles.hamburger}>
                     <span className={styles.bar}></span>
