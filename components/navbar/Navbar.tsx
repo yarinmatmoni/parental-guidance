@@ -98,41 +98,45 @@ function Navbar() {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <div className={styles.logo}>
-                    <Image src="/LOGO.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 120} alt="logo"></Image>
+                    <Image src="/LOGO.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 125} alt="logo"></Image>
                 </div>
                 <ul ref={refMenu} className={styles.navMenu}>
-                    <li onMouseLeave={handleLeave}><Link href="/"><a>עמוד הבית</a></Link></li>
-                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
-                        <div className={styles.title} onClick={() => handleSubMenu(1)} onMouseEnter={() => handleHover(1)}>
-                            <h3>הדרכה הורית</h3>
-                            <span className="material-symbols-outlined">expand_more</span>
-                        </div>
-                        <ul ref={refSub1} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
-                            <Link href="/"><a>הדרכה הורית 1</a></Link>
-                            <Link href="/"><a>הדרכה הורית 2</a></Link>
-                        </ul>
-                    </li>
-                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
-                        <div className={styles.title} onClick={() => handleSubMenu(2)} onMouseEnter={() => handleHover(2)}>
-                            <h3>יועצת שינה</h3>
-                            <span className="material-symbols-outlined">expand_more</span>
-                        </div>
-                        <ul ref={refSub2} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
-                            <Link href="/"><a>מאמרים 1</a></Link>
-                            <Link href="/"><a>מאמרים 2</a></Link>
-                        </ul>
-                    </li>
-                    <li className={styles.subMenu} onMouseLeave={handleLeave}>
-                        <div className={styles.title} onClick={() => handleSubMenu(3)} onMouseEnter={() => handleHover(3)}>
-                            <h3>התמחויות</h3>
-                            <span className="material-symbols-outlined">expand_more</span>
-                        </div>
-                        <ul ref={refSub3} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
-                            <Link href="/"><a>התמחות 1</a></Link>
-                            <Link href="/"><a>התמחות 2</a></Link>
-                        </ul>
-                    </li>
-                    <li onMouseLeave={handleLeave}><Link href="/"><a>גמילה מחיתולים</a></Link></li>
+                    <div className={styles.wrapper}>
+                        <li onMouseLeave={handleLeave}><Link href="/"><a>עמוד הבית</a></Link></li>
+                        <li onMouseLeave={handleLeave}><Link href="/"><a>אודות</a></Link></li>
+                        <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                            <div className={styles.title} onClick={() => handleSubMenu(1)} onMouseEnter={() => handleHover(1)}>
+                                <h3>הדרכה הורית</h3>
+                                <span className="material-symbols-outlined">expand_more</span>
+                            </div>
+                            <ul ref={refSub1} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                                <Link href="/"><a>סדנאות להורים ולאנשי חינוך</a></Link>
+                                <Link href="/"><a>הדרכה הורית לגיל הרך</a></Link>
+                                <Link href="/"><a>גמילה ממוצץ</a></Link>
+                                <Link href="/"><a>גמילה מחיתולים</a></Link>
+                            </ul>
+                        </li>
+                        <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                            <div className={styles.title} onClick={() => handleSubMenu(2)} onMouseEnter={() => handleHover(2)}>
+                                <h3>יועצת שינה</h3>
+                                <span className="material-symbols-outlined">expand_more</span>
+                            </div>
+                            <ul ref={refSub2} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                                <Link href="/"><a>מאמר 1</a></Link>
+                                <Link href="/"><a>מאמר 2</a></Link>
+                            </ul>
+                        </li>
+                        <li className={styles.subMenu} onMouseLeave={handleLeave}>
+                            <div className={styles.title} onClick={() => handleSubMenu(3)} onMouseEnter={() => handleHover(3)}>
+                                <h3>התמחויות</h3>
+                                <span className="material-symbols-outlined">expand_more</span>
+                            </div>
+                            <ul ref={refSub3} className={isMobile ? styles.navMenuLinksMobile : styles.navMenuLinks}>
+                                <Link href="/"><a>הפרעות קשב וריכוז</a></Link>
+                                <Link href="/"><a>התמחות 2</a></Link>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
                 <div ref={refIconBurger} onClick={handleOpenBurgerMenu} className={styles.hamburger}>
                     <span className={styles.bar}></span>

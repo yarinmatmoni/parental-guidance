@@ -36,11 +36,10 @@ body {
 
 *::-webkit-scrollbar-track {
     background: transparent;
-
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: transparent;
+    background-color: var(--purple-pastel);
     border-radius: 20px;
     border: transparent;
 }

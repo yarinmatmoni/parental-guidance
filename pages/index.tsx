@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>הדרכה הורית | עמוד הבית</title>
-        <meta name="keywords" content="הדרכה הורית" />
+        <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
+        <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
       <div>
         <h1>עמוד הבית</h1>
