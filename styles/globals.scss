@@ -1,5 +1,45 @@
-*{
+:root{
+    --purple-pastel: #C3BAE3;
+    --blue-pastel: #5077AB;
+    --background-color: #FCF7F4;
+    --black-gray: #3F4756;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Varela Round', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0rem 5rem;
+    background-color: var(--background-color);
+    transition: 0.3s;
+
+    @media only screen and (max-width: 1000px){
+        margin: 0rem;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5078ab59;
+    border-radius: 20px;
+    border: transparent;
 }
