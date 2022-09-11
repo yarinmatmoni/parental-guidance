@@ -98,7 +98,7 @@ function Navbar() {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <div className={styles.logo}>
-                    <Image src="/LOGO.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 125} alt="logo"></Image>
+                    <Image src="/Logo.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 125} alt="logo"></Image>
                 </div>
                 <ul ref={refMenu} className={styles.navMenu}>
                     <div className={styles.wrapper}>
