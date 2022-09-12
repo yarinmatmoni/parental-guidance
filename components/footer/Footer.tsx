@@ -9,7 +9,7 @@ function Footer() {
             <div className={styles.content}>
                 <div className={styles.descriptionLogo}>
                     <div className={styles.logo}>
-                        <Image src='/LOGO.png' height={110} width={110} alt='logo'></Image>
+                        <Image src='/LOGO.png' height={100} width={120} alt='logo'></Image>
                     </div>
                     <div className={styles.description}>
                         <h4>כמה מילים</h4>

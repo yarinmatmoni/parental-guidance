@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 .header{
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     box-shadow: 0px 10px 35px 10px rgba(195,186,227,0.35);
@@ -35,7 +37,7 @@
                         gap: 0.3rem;
                         cursor: pointer;
                         transition: 0.3s;
-                        color: var(--black-gray);
+                        color: $black-gray;
                         padding: 1rem 0rem;
                         
                         h3{
@@ -48,7 +50,7 @@
                         }
         
                         &:hover{
-                            color: var(--blue-pastel);
+                            color: $blue-pastel;
                         }
                     }
     
@@ -57,7 +59,7 @@
                     }
     
                     .navMenuLinksActive{
-                        background-color: var(--background-color);
+                        background-color: $background-color;
                         display: flex;
                         flex-direction: column;
                         position: fixed;
@@ -84,7 +86,7 @@
                 margin: 5px auto;
                 -webkit-transition: all 0.5s ease-in-out;
                 transition: all 0.5s ease-in-out;
-                background-color: var(--blue-pastel);
+                background-color: $blue-pastel;
             }
         }
     }
@@ -93,11 +95,11 @@
         text-decoration: none;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        color: var(--black-gray);
+        color: $black-gray;
         font-size: 1rem;
 
         &:hover{
-            color: var(--blue-pastel);
+            color: $blue-pastel;
         }
     }
 }
@@ -105,7 +107,7 @@
 @media only screen and (max-width: 780px){ //mobile
     .nav{
         .navMenu{
-            background-color: var(--background-color);
+            background-color: $background-color;
             position: fixed;
             display: flex;
             flex-direction: column;
