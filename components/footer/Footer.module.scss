@@ -1,0 +1,136 @@
+.footerContainer{
+    background-color: var(--purple-light);
+    min-height: 28vh;
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    align-items: center;    
+
+    .content{
+        display: flex;
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+.descriptionLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    .logo{
+        img{
+            display: flex;
+        }
+    }
+
+    .description{
+        text-align: center;
+        padding-inline: 2rem;
+        h4{
+            font-size: 0.9rem;
+            font-weight: 100;
+            color: var(--blue-pastel);
+        }
+    }
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+
+    h4{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--blue-pastel);
+    }
+
+    .navContainer{
+        display: flex;
+        justify-content: space-evenly;
+
+        ul{
+            height:  fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            h4{
+                padding: 0.5rem 0rem;
+                font-size: 1.1rem;
+                text-align: right;
+            }
+
+            a{
+                text-decoration: none;
+                font-weight: 100;
+                font-size: 0.85rem;
+                color: var(--blue-pastel);
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.contact{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    h4{
+        font-weight: 500;
+        padding: 0.5rem 0rem;
+        font-size: 1.1rem;
+        color: var(--blue-pastel);
+    }
+
+    .contactDetails{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: fit-content;
+        
+        .top{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: center;
+
+            .topItem{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+
+                h4{
+                    font-size: 0.9rem;
+                    font-weight: 100;
+                }
+
+                span{
+                    color: var(--blue-pastel);
+                    font-weight: 300;
+                    font-size: 1.2rem
+                }
+            }
+        }
+
+        .bottom{
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 780px){ //mobile
+
+}
