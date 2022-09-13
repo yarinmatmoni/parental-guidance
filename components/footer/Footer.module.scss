@@ -43,7 +43,7 @@
 .navigation{
     display: flex;
     flex-direction: column;
-    flex: 6;
+    flex: 8;
     flex-wrap: wrap;
 
     h4{
@@ -56,6 +56,7 @@
     .navContainer{
         display: flex;
         justify-content: space-evenly;
+        gap: 0.5rem;
 
         ul{
             height:  fit-content;
@@ -124,7 +125,6 @@
 
         .bottom{
             display: flex;
-            justify-content: center;
             gap: 1rem;
 
             img{
@@ -145,13 +145,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        img{
+            height: 7rem !important;
+            width: 9rem !important;
+        }
     }
 
     .navigation{
         .navContainer{
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh;
             
             ul{
                 display: flex;
@@ -186,7 +191,7 @@
                 align-items: center ;
                 
                 span{
-                    font-size: 2rem !important;
+                    font-size: 1.7rem !important;
                 }
 
                 h4{
@@ -200,11 +205,12 @@
     .bottom{
         height: 15vh;
         padding-bottom: 1rem;
+        justify-content: space-evenly;
         gap: 0.5rem;
 
         img{
-            height: 35rem !important;
-            width: 35rem !important;
+            height: 3rem !important;
+            width: 3rem !important;
         }
     }
 }

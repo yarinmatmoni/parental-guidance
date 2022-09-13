@@ -9,7 +9,7 @@ function Footer() {
             <div className={styles.content}>
                 <div className={styles.descriptionLogo}>
                     <div className={styles.logo}>
-                        <Image src='/LOGO.png' height={100} width={120} alt='logo'></Image>
+                        <Image src='/LOGO.png' height={80} width={100} alt='logo'></Image>
                     </div>
                     <div className={styles.description}>
                         <h4>כמה מילים</h4>
@@ -52,7 +52,7 @@ function Footer() {
                             </div>
                             <div className={styles.topItem}>
                                 <span className="material-symbols-outlined">mail</span>
-                                <h4>yarinmatmoni@gmail.com</h4>
+                                <h4>shalhevetbarak@gmail.com</h4>
                             </div>
                         </div>
                         <div className={styles.bottom}>

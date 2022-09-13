@@ -4,6 +4,11 @@
 .header{
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     box-shadow: 0px 10px 35px 10px rgba(195,186,227,0.35);
+    min-height: 9vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: $background-color;
     
     .nav{
         display: flex;
@@ -63,12 +68,11 @@
                         background-color: $background-color;
                         display: flex;
                         flex-direction: column;
-                        position: fixed;
-                        margin-top: -0.3rem;
+                        position:  absolute;
                         padding: 0.4rem 0.8rem;
                         box-shadow: 0px 5px 20px 3px rgba(195,186,227,0.35);
                         border-radius: 0.5rem;
-    
+                        
                         a{
                             padding: 0.5rem;
                         }
@@ -158,12 +162,13 @@
                     }
     
                     .navMenuLinksMobileActive{
-                       display: flex !important;
-                       flex-direction: column;
-    
-                       a{
+                        display: flex !important;
+                        flex-direction: column;
+                        padding-top: 1rem;
+
+                        a{
                             padding: 0.5rem 0rem;
-                       }
+                        }
                     }
     
                     .navMenuLinksMobile{
