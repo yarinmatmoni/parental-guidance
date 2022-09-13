@@ -1,6 +1,6 @@
 @import './colors.scss';
 @import './sizes.scss';
 
-.homePage{
-    min-height: calc(100vh - $body-size)
+.section{
+    min-height: calc(100vh - $body-size);
 }
