@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
-      <div>
+      <div className={styles.homePage}>
         <h1>עמוד הבית</h1>
       </div>
     </>
