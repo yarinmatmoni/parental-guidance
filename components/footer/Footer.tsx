@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import * as Content from '../../utils/content/common';
 
 function Footer() {
     return (
@@ -19,27 +20,16 @@ function Footer() {
                     <div className={styles.navContainer}>
                         <ul>
                             <h4>כללי</h4>
-                            <Link href="/"><a>עמוד הבית</a></Link>
-                            <Link href="/"><a>אודות</a></Link>
-
+                            {Content.nav.filter((menuItem) => menuItem.sub.length === 0).map((item, i) => (
+                                <Link key={i} href="/"><a>{item.name}</a></Link>
+                            ))}
                         </ul>
-                        <ul>
-                            <h4>הדרכה הורית</h4>
-                            <Link href="/"><a>סדנאות להורים ולאנשי חינוך</a></Link>
-                            <Link href="/"><a>הדרכה הורית לגיל הרך</a></Link>
-                            <Link href="/"><a>גמילה ממוצץ</a></Link>
-                            <Link href="/"><a>גמילה מחיתולים</a></Link>
-                        </ul>
-                        <ul>
-                            <h4>יועצת שינה</h4>
-                            <Link href="/"><a>מאמר 1</a></Link>
-                            <Link href="/"><a>מאמר 2</a></Link>
-                        </ul>
-                        <ul>
-                            <h4>התמחויות</h4>
-                            <Link href="/"><a>הפרעות קשב וריכוז</a></Link>
-                            <Link href="/"><a>התמחות 2</a></Link>
-                        </ul>
+                        {Content.nav.filter((menuItem) => menuItem.sub.length !== 0).map((item, i) => (
+                            <ul key={i}>
+                                <h4>{item.name}</h4>
+                                {item.sub.map((subMenuItem, i) => <Link key={i} href="/"><a>{subMenuItem.name}</a></Link>)}
+                            </ul>
+                        ))}
                     </div>
                 </div>
                 <div className={styles.contact}>
@@ -56,8 +46,8 @@ function Footer() {
                             </div>
                         </div>
                         <div className={styles.bottom}>
-                            <Image src='/whatsapp_icon.svg' height={30} width={30} alt="whatsapp_icon" ></Image>
-                            <Image src='/facebook_icon.svg' height={30} width={30} alt="facebook_icon" ></Image>
+                            <Image src='/icons/facebook_icon.svg' height={30} width={30} alt="facebook_icon" ></Image>
+                            <Image src='/icons/whatsapp_icon.svg' height={30} width={30} alt="whatsapp_icon" ></Image>
                         </div>
                     </div>
                 </div>

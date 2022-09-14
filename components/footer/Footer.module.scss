@@ -4,7 +4,7 @@
 .footerContainer{
     background-color: $purple-light;
     min-height: 28vh;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     display: flex;
     align-items: center;
 
@@ -22,18 +22,12 @@
     flex: 1;
     justify-content: space-evenly;
 
-    .logo{
-        img{
-            display: flex;
-        }
-    }
-
     .description{
         text-align: center;
-        padding-inline: 2rem;
+        padding-inline: 32px;
         
         h4{
-            font-size: 0.9rem;
+            font-size: 14.4px;
             font-weight: 100;
             color: $blue-pastel;
         }
@@ -49,31 +43,30 @@
     h4{
         text-align: center;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 16px;
         color: $blue-pastel;
     }
 
     .navContainer{
         display: flex;
         justify-content: space-evenly;
-        gap: 0.5rem;
+        gap: 10px;
 
         ul{
             height:  fit-content;
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 6px;
 
             h4{
-                padding: 0.5rem 0rem;
-                font-size: 1.1rem;
+                font-size: 18px;
                 text-align: right;
             }
 
             a{
                 text-decoration: none;
                 font-weight: 100;
-                font-size: 0.85rem;
+                font-size: 14px;
                 color: $blue-pastel;
             }
         }
@@ -84,32 +77,33 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 18px;
 
     h4{
         font-weight: 500;
-        padding: 0.5rem 0rem 0.8rem 0rem;
-        font-size: 1.1rem;
+        font-size: 18px;
         color: $blue-pastel;
     }
 
     .contactDetails{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 16px;
         
         .top{
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 8px;
             justify-content: center;
 
             .topItem{
                 display: flex;
-                gap: 0.5rem;
+                gap: 8px;
                 align-items: center;
+                cursor: pointer;
 
                 h4{
-                    font-size: 0.9rem;
+                    font-size: 14px;
                     text-align: right;
                     font-weight: 100;
                 }
@@ -117,14 +111,14 @@
                 span{
                     color: $blue-pastel;
                     font-weight: 300;
-                    font-size: 1.2rem
+                    font-size: 20px;
                 }
             }
         }
 
         .bottom{
             display: flex;
-            gap: 1rem;
+            gap: 16px;
 
             img{
                 cursor: pointer;
@@ -140,35 +134,31 @@
     }
 
     .descriptionLogo{
-        min-height: 20vh;
+        min-height: 15vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        img{
-            height: 7rem !important;
-            width: 9rem !important;
-        }
     }
 
     .navigation{
         .navContainer{
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 65vh;
             
             ul{
                 display: flex;
                 align-items: center;
 
                 h4{
-                    font-size: 1.5rem;
+                    font-size: 24px;
                 }
     
                 a{
-                    font-size: 1rem;
+                    font-size: 16px;
+                    transition: 0.3s;
                     &:hover{
-                        letter-spacing: 0.05rem;
+                        letter-spacing: 0.8px;
                     }
                 }
             }
@@ -179,7 +169,7 @@
         display: flex;
         align-items: center;
         h4{
-            font-size: 1.5rem;
+            font-size: 24px;
         }
 
         .top{
@@ -189,13 +179,8 @@
                 display: flex;
                 align-items: center ;
                 
-                span{
-                    font-size: 1.7rem !important;
-                }
-
                 h4{
-                    font-size: 1rem !important;
-                    padding: 0rem;
+                    font-size: 16px !important;
                 }
             }
         }
@@ -203,13 +188,12 @@
 
     .bottom{
         height: 15vh;
-        padding-bottom: 1rem;
+        padding-bottom: 16px;
         justify-content: space-evenly;
-        gap: 0.5rem;
 
         img{
-            height: 3rem !important;
-            width: 3rem !important;
+            height: 50px !important;
+            width: 50px !important;
         }
     }
 }
