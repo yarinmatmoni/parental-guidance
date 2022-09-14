@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navbar/Navbar';
+import Header from './header/Header';
 import Footer from './footer/Footer';
 
 
@@ -10,7 +10,7 @@ type Props = {
 function Layout({ children }: Props) {
     return (
         <div>
-            < Navbar />
+            < Header />
             {children}
             < Footer />
         </div >

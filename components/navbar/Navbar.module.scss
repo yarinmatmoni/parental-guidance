@@ -1,98 +1,64 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
 
-.header{
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
-    box-shadow: 0px 10px 35px 10px rgba(195,186,227,0.35);
-    min-height: 9vh;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: $background-color;
-    
-    .nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        margin: 0rem auto;
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
 
-        li{
-            list-style: none;
-            padding: 0.5rem 0rem;
-        }
+    li{
+        list-style: none;
+        padding: 8px 0px;
+    }
 
-        .logo{
-            padding: 0rem;
-        }
+    .navMenu {
+        width: 100%;
 
-        .navMenu {
+        .wrapper{
+            display: flex;
             width: 100%;
-                        
-            .wrapper{
-                display: flex;
-                width: 100%;
-                justify-content: space-evenly;
-                align-items: center;
-                
+            justify-content: space-evenly;
+            align-items: center;
+
+            
+            li{
+                cursor: pointer;
+                padding: 12px 0px;
+
                 .subMenu{
-                    .title{
-                        display: flex;
-                        text-align: center;
-                        align-items: center;
-                        gap: 0.3rem;
-                        cursor: pointer;
-                        transition: 0.3s;
-                        color: $black-gray;
-                        padding: 1rem 0rem;
-                        
-                        h3{
-                            font-weight: 100;
-                            font-size: 1rem;
-                        }
-        
-                        span{
-                            font-size: 1.3rem;
-                        }
-        
-                        &:hover{
-                            color: $blue-pastel;
-                        }
-                    }
-    
-                    .navMenuLinks{
-                        display: none;
-                    }
-    
-                    .navMenuLinksActive{
-                        background-color: $background-color;
+                    display: none;
+                }
+
+                &:hover{
+                    .subMenu{
+                        position: absolute;
+                        background: $background-color;
                         display: flex;
                         flex-direction: column;
-                        position:  absolute;
-                        padding: 0.4rem 0.8rem;
+                        padding: 10px 20px;
                         box-shadow: 0px 5px 20px 3px rgba(195,186,227,0.35);
-                        border-radius: 0.5rem;
-                        
-                        a{
-                            padding: 0.5rem;
-                        }
+                        border-radius: 8px;
+                        gap: 10px;
+                        margin-top: 10px;
                     }
                 }
             }
         }
+    }
 
-        .hamburger {
-            display: none;
+    .hamburger {
+        display: none;
 
-            .bar {
-                display: block;
-                width: 22px;
-                height: 3px;
-                margin: 5px auto;
-                -webkit-transition: all 0.5s ease-in-out;
-                transition: all 0.5s ease-in-out;
+        .bar {
+            display: block;
+            width: 22px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
                 background-color: $blue-pastel;
-            }
         }
     }
 
@@ -101,8 +67,8 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         color: $black-gray;
-        font-size: 1rem;
-
+        font-size: 16px;
+    
         &:hover{
             color: $blue-pastel;
         }
@@ -116,63 +82,52 @@
             position: fixed;
             display: flex;
             flex-direction: column;
-            top: 4.4rem;
+            top: 70px;
             left: 0;
             align-items: center;
-            width: 90vw !important;
             transition: 0.3s;
             box-shadow: 0px 10px 35px 10px rgba(195,186,227,0.35);
             left: -100%;
             opacity: 0;
-            border-radius: 0rem 1rem 1rem 1rem;
-            z-index: 1;
+            border-radius: 0px 16px 16px 16px;
+            z-index: $z-index-nav;
             
             .wrapper{
                 display: flex;
                 flex-direction: column;
-                padding: 0.8rem 0rem;
+                padding: 12px 0px;
                 max-height: 70vh;
                 overflow-y: scroll;
-                justify-content: normal !important;
 
-                a{
-                    &:hover{
-                        letter-spacing: 0.05rem;
-                    }
+                li:nth-child(1),
+                li:nth-child(2){
+                   a:hover{
+                        letter-spacing: 0.8px;   
+                    } 
                 }
-    
-                .subMenu{
+
+                li{
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
-                    text-align: center;
-    
-                    .title{
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        padding: 0rem !important;
-    
-                        h3{
-                            font-weight: bold !important;
-                        }
-    
-                        &:hover{
-                            letter-spacing: 0.05rem;
-                        }
-                    }
-    
-                    .navMenuLinksMobileActive{
-                        display: flex !important;
-                        flex-direction: column;
-                        padding-top: 1rem;
+                    align-items: center;
 
-                        a{
-                            padding: 0.5rem 0rem;
+                    .subMenuMobile{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 15px;
+                        margin-top: 20px;
+
+                        a:hover{
+                            letter-spacing: 0.8px;
                         }
                     }
     
-                    .navMenuLinksMobile{
-                        display: none;
+                    &:hover{
+                        .subMenu{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -184,7 +139,7 @@
         }
 
         .hamburger{
-            display: block !important;
+            display: block;
             cursor: pointer;
         }
 

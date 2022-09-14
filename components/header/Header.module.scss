@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+@import '../../styles/sizes.scss';
+
+.header{
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    box-shadow: 0px 10px 35px 10px rgba(195,186,227,0.35);
+    min-height: 9vh;
+    position: sticky;
+    top: 0;
+    z-index: $z-index-header;
+    background-color: $background-color;
+}

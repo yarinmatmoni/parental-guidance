@@ -2,12 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
+import * as Content from '../utils/content/common';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
+        <title>{Content.mainTitle}</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
       <section className={`${styles.section}`}>
@@ -17,4 +18,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;
