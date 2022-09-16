@@ -1,199 +1,201 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
 
-.footerContainer{
-    background-color: $purple-light;
-    min-height: 28vh;
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
+.footerContainer {
+	background-color: $footer-color;
+	min-height: 28vh;
+	padding: 16px 32px;
+	display: flex;
+	align-items: center;
 
-    .content{
-        display: flex;
-        height: fit-content;
-        width: 100%;
-    }
+	.content {
+		display: flex;
+		height: fit-content;
+		width: 100%;
+	}
 }
 
-.descriptionLogo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    justify-content: space-evenly;
+.descriptionLogo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	justify-content: space-evenly;
 
-    .description{
-        text-align: center;
-        padding-inline: 32px;
-        
-        h4{
-            font-size: 14.4px;
-            font-weight: 100;
-            color: $blue-pastel;
-        }
-    }
+	.description {
+		text-align: center;
+		padding-inline: 32px;
+
+		h4 {
+			font-size: 14.4px;
+			font-weight: 100;
+			color: $black-gray;
+		}
+	}
 }
 
-.navigation{
-    display: flex;
-    flex-direction: column;
-    flex: 8;
-    flex-wrap: wrap;
+.navigation {
+	display: flex;
+	flex-direction: column;
+	flex: 8;
+	flex-wrap: wrap;
 
-    h4{
-        text-align: center;
-        font-weight: 500;
-        font-size: 16px;
-        color: $blue-pastel;
-    }
+	h4 {
+		text-align: center;
+		font-weight: 700;
+		font-size: 16px;
+		color: $purple;
+	}
 
-    .navContainer{
-        display: flex;
-        justify-content: space-evenly;
-        gap: 10px;
+	.navContainer {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 10px;
 
-        ul{
-            height:  fit-content;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+		ul {
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
 
-            h4{
-                font-size: 18px;
-                text-align: right;
-            }
+			h4 {
+				font-size: 18px;
+				text-align: right;
+			}
 
-            a{
-                text-decoration: none;
-                font-weight: 100;
-                font-size: 14px;
-                color: $blue-pastel;
-            }
-        }
-    }
+			a {
+				text-decoration: none;
+				font-weight: 100;
+				font-size: 14px;
+				color: $purple;
+			}
+		}
+	}
 }
 
-.contact{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.contact {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
 
-    h4{
-        font-weight: 500;
-        font-size: 18px;
-        color: $blue-pastel;
-    }
+	h4 {
+		font-weight: 500;
+		font-size: 18px;
+		color: $purple;
+		font-weight: 700;
+	}
 
-    .contactDetails{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        
-        .top{
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            justify-content: center;
+	.contactDetails {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 
-            .topItem{
-                display: flex;
-                gap: 8px;
-                align-items: center;
-                cursor: pointer;
+		.top {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			justify-content: center;
 
-                h4{
-                    font-size: 14px;
-                    text-align: right;
-                    font-weight: 100;
-                }
+			.topItem {
+				display: flex;
+				gap: 8px;
+				align-items: center;
+				cursor: pointer;
 
-                span{
-                    color: $blue-pastel;
-                    font-weight: 300;
-                    font-size: 20px;
-                }
-            }
-        }
+				h4 {
+					font-size: 14px;
+					text-align: right;
+					font-weight: 100;
+					color: $purple;
+				}
 
-        .bottom{
-            display: flex;
-            gap: 16px;
+				span {
+					color: $purple;
+					font-weight: 300;
+					font-size: 20px;
+				}
+			}
+		}
 
-            img{
-                cursor: pointer;
-            }
-        }
-    }
+		.bottom {
+			display: flex;
+			gap: 16px;
+
+			img {
+				cursor: pointer;
+			}
+		}
+	}
 }
 
-@media only screen and (max-width: $mobile-size){
-    .content{
-        display: flex;
-        flex-direction: column;
-    }
+@media only screen and (max-width: $mobile-size) {
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
 
-    .descriptionLogo{
-        min-height: 15vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+	.descriptionLogo {
+		min-height: 15vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
-    .navigation{
-        .navContainer{
-            display: flex;
-            flex-direction: column;
-            min-height: 65vh;
-            
-            ul{
-                display: flex;
-                align-items: center;
+	.navigation {
+		.navContainer {
+			display: flex;
+			flex-direction: column;
+			min-height: 65vh;
 
-                h4{
-                    font-size: 24px;
-                }
-    
-                a{
-                    font-size: 16px;
-                    transition: 0.3s;
-                    &:hover{
-                        letter-spacing: 0.8px;
-                    }
-                }
-            }
-        }
-    }
+			ul {
+				display: flex;
+				align-items: center;
 
-    .contact{
-        display: flex;
-        align-items: center;
-        h4{
-            font-size: 24px;
-        }
+				h4 {
+					font-size: 24px;
+				}
 
-        .top{
-            align-items: center;
+				a {
+					font-size: 16px;
+					transition: 0.3s;
+					&:hover {
+						letter-spacing: 0.8px;
+					}
+				}
+			}
+		}
+	}
 
-            .topItem{
-                display: flex;
-                align-items: center ;
-                
-                h4{
-                    font-size: 16px !important;
-                }
-            }
-        }
-    }
+	.contact {
+		display: flex;
+		align-items: center;
+		h4 {
+			font-size: 24px;
+		}
 
-    .bottom{
-        height: 15vh;
-        padding-bottom: 16px;
-        justify-content: space-evenly;
+		.top {
+			align-items: center;
 
-        img{
-            height: 50px !important;
-            width: 50px !important;
-        }
-    }
+			.topItem {
+				display: flex;
+				align-items: center;
+
+				h4 {
+					font-size: 16px !important;
+				}
+			}
+		}
+	}
+
+	.bottom {
+		height: 15vh;
+		padding-bottom: 16px;
+		justify-content: space-evenly;
+
+		img {
+			height: 50px !important;
+			width: 50px !important;
+		}
+	}
 }
