@@ -21,6 +21,9 @@ const Home: NextPage = () => {
           <h4>{Content.welcomeSection.line1}</h4>
           <h4>{Content.welcomeSection.line2}</h4>
         </div>
+        <div className={styles.call}>
+          <h4>שיחת ייעוץ ראשונה - בחינם</h4>
+        </div>
       </section>
     </>
   )

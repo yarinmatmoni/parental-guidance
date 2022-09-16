@@ -3,16 +3,15 @@
 
 .section {
 	min-height: calc(100vh - $body-size);
-	padding: 32px 48px;
+	padding: 32px 64px;
 }
 
 .welcomeSection {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	// background-image: url('../public/images/welcomeSection.jpeg');
+	// background-image: url('../public/images/image1.jpeg');
 	// background-size: cover;
-	// background-repeat: no-repeat;
 
 	.title {
 		display: flex;
@@ -45,6 +44,22 @@
 			font-weight: 500;
 			font-size: 18px;
 			padding: 8px 0px;
+		}
+	}
+
+	.call {
+		background-color: $purple-light;
+		color: $black-gray;
+		padding: 16px;
+		margin-top: 48px;
+		text-align: center;
+		border-radius: 6px;
+		transition: 0.5s;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0px 0px 14px 4px rgba(159, 121, 171, 0.5);
+			color: whitesmoke;
 		}
 	}
 }
