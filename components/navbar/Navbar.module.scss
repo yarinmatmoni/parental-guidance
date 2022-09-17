@@ -8,6 +8,11 @@
 	width: 90%;
 	margin: 0px auto;
 
+	.logo {
+		align-items: center;
+		display: flex;
+	}
+
 	li {
 		list-style: none;
 		padding: 8px 0px;

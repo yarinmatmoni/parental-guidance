@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '../../public/logo/logo1.svg';
 import * as Content from '../../utils/content/common';
 
 function Footer() {
@@ -10,7 +11,7 @@ function Footer() {
             <div className={styles.content}>
                 <div className={styles.descriptionLogo}>
                     <div className={styles.logo}>
-                        <Image src='/LOGO.png' height={80} width={100} alt='logo'></Image>
+                        <Image src={logo} height={80} width={100} alt='logo'></Image>
                     </div>
                     <div className={styles.description}>
                         <h4>כמה מילים</h4>
