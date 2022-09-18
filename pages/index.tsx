@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
+import InfoBox from '../components/infoBox/InfoBox';
 import * as Content from '../utils/content/homePage';
 
 const Home: NextPage = () => {
@@ -24,6 +25,9 @@ const Home: NextPage = () => {
         <div className={styles.call}>
           <h4>שיחת ייעוץ ראשונה - בחינם</h4>
         </div>
+      </section>
+      <section className={`${styles.section} ${styles.infoSection}`}>
+        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={""} title={box.title} text={box.text} />)}
       </section>
     </>
   )
