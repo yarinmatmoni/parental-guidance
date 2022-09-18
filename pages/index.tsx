@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className={`${styles.section} ${styles.infoSection}`}>
-        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={""} title={box.title} text={box.text} />)}
+        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} />)}
       </section>
     </>
   )

@@ -7,23 +7,23 @@ export const welcomeSection = {
 
 export const infoSection = [
 	{
-		logo: 'לוגו',
-		title: 'כותרת',
-		text: 'טקסט טקסט טקסט טקסט',
+		logo: '/icons/nappy_icon.svg',
+		title: 'גמילה מחיתולים',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 	{
-		logo: 'לוגו',
-		title: 'כותרת',
-		text: 'טקסט טקסט טקסט טקסט',
+		logo: '/icons/bottle_icon.svg',
+		title: 'גמילה מבקבוק',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 	{
-		logo: 'לוגו',
-		title: 'כותרת',
-		text: 'טקסט טקסט טקסט טקסט',
+		logo: '/icons/pacifier_icon.svg',
+		title: 'גמילה ממוצץ',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 	{
-		logo: 'לוגו',
-		title: 'כותרת',
-		text: 'טקסט טקסט טקסט טקסט',
+		logo: '/icons/babyMobile_icon.svg',
+		title: 'יועצת שינה',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 ];

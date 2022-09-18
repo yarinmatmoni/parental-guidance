@@ -59,7 +59,11 @@
 }
 
 .infoSection {
-	background-color: $pink-light;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
 }
 
 @media only screen and (max-width: $mobile-size) {
