@@ -27,3 +27,27 @@ export const infoSection = [
 		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 ];
+
+export const timeLineElements = [
+	{
+		id: 1,
+		title: 'מפגש היכרות / תצפית',
+		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
+		step: 'שלב #1',
+		icon: '/icons/pacifier_icon.svg',
+	},
+	{
+		id: 2,
+		title: 'ישום המלצות',
+		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
+		step: 'שלב #2',
+		icon: '/icons/pacifier_icon.svg',
+	},
+	{
+		id: 3,
+		title: 'עדכון תוכנית עבודה',
+		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
+		step: 'שלב #3',
+		icon: '/icons/pacifier_icon.svg',
+	},
+];

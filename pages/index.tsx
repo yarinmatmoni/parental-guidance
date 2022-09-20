@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import * as Content from '../utils/content/homePage';
@@ -28,6 +27,9 @@ const Home: NextPage = () => {
       </section>
       <section className={`${styles.section} ${styles.infoSection}`}>
         {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} />)}
+      </section>
+      <section className={`${styles.section} ${styles.workPlan}`}>
+        <h3>איך זה עובד ?</h3>
       </section>
     </>
   )
