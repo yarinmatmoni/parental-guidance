@@ -34,21 +34,21 @@ export const timeLineElements = [
 		title: 'מפגש היכרות / תצפית',
 		description:
 			' טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
-		step: 'שלב #1',
+		step: 'שלב ראשון',
 		icon: '/icons/pacifier_icon.svg',
 	},
 	{
 		id: 2,
 		title: 'ישום המלצות',
 		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
-		step: 'שלב #2',
-		icon: '/icons/pacifier_icon.svg',
+		step: 'שלב שני',
+		icon: '/icons/bottle_icon.svg',
 	},
 	{
 		id: 3,
 		title: 'עדכון תוכנית עבודה',
 		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
-		step: 'שלב #3',
+		step: 'שלב שלישי',
 		icon: '/icons/pacifier_icon.svg',
 	},
 ];
