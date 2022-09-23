@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
+import Carousel from '../components/carousel/Carousel';
 import * as Content from '../utils/content/homePage';
 
 const Home: NextPage = () => {
@@ -42,6 +43,13 @@ const Home: NextPage = () => {
           <small>יאנוש קורצ&#x27;אק</small>
           <span className={styles.right}>❞</span>
         </div>
+      </section>
+      <section className={`${styles.section} ${styles.quotesCarousel}`}>
+        <div className={styles.title}>
+          <span className="material-symbols-outlined">star_rate</span>
+          <h3>הורים ממליצים</h3>
+        </div>
+        <Carousel data={Content.reviews} />
       </section>
     </>
   )
