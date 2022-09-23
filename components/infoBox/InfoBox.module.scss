@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+
+.infoBox {
+	padding: 15px 30px;
+	flex-direction: column;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 350px;
+	max-height: 200px;
+	transition: 0.5s;
+	cursor: pointer;
+	border-radius: 6px;
+
+	h4 {
+		padding-top: 15px;
+		font-weight: 100;
+		color: $purple;
+	}
+
+	p {
+		padding-top: 20px;
+		color: $black-gray;
+	}
+
+	&:hover {
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	}
+}

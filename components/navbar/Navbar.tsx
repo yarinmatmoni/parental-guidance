@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '../../public/logo/logo1.svg';
 import * as Content from '../../utils/content/common';
 import styles from './Navbar.module.scss';
 
@@ -20,7 +21,7 @@ function Navbar() {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
-                <Image src="/Logo.png" height={isMobile ? 75 : 90} width={isMobile ? 100 : 125} alt="logo"></Image>
+                <Image src={logo} height={isMobile ? 75 : 100} width={isMobile ? 75 : 100} alt="logo"></Image>
             </div>
             <ul ref={refMenu} className={styles.navMenu}>
                 <div className={styles.wrapper}>
