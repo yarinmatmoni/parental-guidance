@@ -33,6 +33,16 @@ const Home: NextPage = () => {
         <h3>איך זה עובד ?</h3>
         <TimeLine data={Content.timeLineElements} />
       </section>
+      <section className={`${styles.section} ${styles.quoteSection}`}>
+        <div className={styles.quote}>
+          <span className={styles.left}>❝</span>
+          <blockquote>
+            אין ילד רע, יש ילד שרע לו בחייו, והוא מוציא את התיסכול שלו כלפי חוץ
+          </blockquote>
+          <small>יאנוש קורצ&#x27;אק</small>
+          <span className={styles.right}>❞</span>
+        </div>
+      </section>
     </>
   )
 }
