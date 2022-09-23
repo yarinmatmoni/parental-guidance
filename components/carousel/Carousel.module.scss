@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 .carousel {
 	.carouselList {
 		align-items: center;
@@ -5,10 +7,10 @@
 		grid-row-gap: 1.25rem;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr auto;
-		max-width: 40rem;
+		max-width: 900px;
 		overflow: hidden;
-		padding: 1rem 2rem;
-		list-style-type: none;
+		padding: 16px 32px;
+		list-style: none;
 	}
 
 	.carouselItem {
@@ -16,7 +18,7 @@
 		grid-row: 1;
 		line-height: 1.2;
 		text-align: center;
-		transition: transform 0.5s;
+		transition: transform 0.8s;
 	}
 
 	.carouselItem.active {
@@ -31,6 +33,30 @@
 
 	.carouselQuote {
 		font-style: italic;
-		line-height: 1.5;
+		line-height: 2;
+
+		h4 {
+			font-size: 20px;
+			margin-top: 25px;
+			color: $black-gray;
+		}
+
+		p {
+			font-size: 20px;
+			color: $black-gray;
+			font-weight: 100;
+
+			&::after {
+				content: '\201C';
+				padding-right: 5px;
+				font-size: 30px;
+			}
+
+			&::before {
+				content: '\201D';
+				padding-left: 5px;
+				font-size: 30px;
+			}
+		}
 	}
 }

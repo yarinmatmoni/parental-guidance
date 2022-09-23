@@ -49,7 +49,9 @@ const Home: NextPage = () => {
           <span className="material-symbols-outlined">star_rate</span>
           <h3>הורים ממליצים</h3>
         </div>
-        <Carousel data={Content.reviews} />
+        <div className={styles.carousel}>
+          <Carousel data={Content.reviews} />
+        </div>
       </section>
     </>
   )

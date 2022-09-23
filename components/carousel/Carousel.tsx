@@ -33,10 +33,8 @@ function Carousel({ data }: any) {
                             ${index + 1 < activeSlide ? styles.right : ""}
                             ${index + 1 > activeSlide ? styles.left : ""}`}>
                             <blockquote className={styles.carouselQuote}>
-                                <cite>
-                                    <span className="carousel__name">{review.name}</span>
-                                </cite>
-                                <q>{review.quote}</q>
+                                <p>{review.quote}</p>
+                                <h4>{review.name}</h4>
                             </blockquote>
                         </li>
                     )
