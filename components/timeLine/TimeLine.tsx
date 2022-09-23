@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import * as styles from './TimeLine.module.scss';
 
 type TimeLine = {
     id: number,
@@ -14,26 +13,29 @@ type TimeLine = {
 };
 
 function TimeLine({ data }: any) {
-    let iconStyle = { backgroundColor: '#ffc8dd', display: 'flex', justifyContent: 'center', alignItems: 'center' };
+    let iconStyle = { backgroundColor: '#dceaf5', display: 'flex', justifyContent: 'center', alignItems: 'center' };
 
     return (
         <div>
-            <VerticalTimeline>
+            <VerticalTimeline
+                lineColor='#bde0fe'
+            >
                 {data && data.map((e: TimeLine) => {
                     return (
                         <VerticalTimelineElement
                             key={e.id}
                             date={e.step}
                             iconStyle={iconStyle}
-                            icon={<Image src={e.icon} height={35} width={35} alt={""}></Image>}
+                            contentArrowStyle={{ borderRight: '7px solid  #bde0fe' }}
+                            icon={<Image src={e.icon} height={32} width={32} alt={""}></Image>}
                         >
-                            <h4 style={{ fontSize: 16, fontWeight: "500", color: "#3f4756" }}>{e.title}</h4>
-                            <p>{e.description}</p>
+                            <h4 style={{ fontSize: 16, fontWeight: "500", color: "#af85bc", direction: "rtl" }}>{e.title}</h4>
+                            <p style={{ fontSize: 15, fontWeight: "300", color: '#3f4756' }}>{e.description}</p>
                         </VerticalTimelineElement>
                     )
                 })}
-            </VerticalTimeline>
-        </div>
+            </VerticalTimeline >
+        </div >
     )
 };
 

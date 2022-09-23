@@ -35,20 +35,20 @@ export const timeLineElements = [
 		description:
 			' טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 		step: 'שלב ראשון',
-		icon: '/icons/pacifier_icon.svg',
+		icon: '/icons/handshake_icon.svg',
 	},
 	{
 		id: 2,
 		title: 'ישום המלצות',
 		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 		step: 'שלב שני',
-		icon: '/icons/bottle_icon.svg',
+		icon: '/icons/plan_icon.svg',
 	},
 	{
 		id: 3,
 		title: 'עדכון תוכנית עבודה',
 		description: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 		step: 'שלב שלישי',
-		icon: '/icons/pacifier_icon.svg',
+		icon: '/icons/update_icon.svg',
 	},
 ];

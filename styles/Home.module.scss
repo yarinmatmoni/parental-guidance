@@ -69,6 +69,7 @@
 }
 
 .workPlan {
+	background-color: $background-blue;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -79,7 +80,12 @@
 		font-weight: 500;
 		font-size: 25px;
 		text-align: center;
-		padding-bottom: 50px;
+		padding-bottom: 25px;
+		direction: rtl;
+	}
+
+	p {
+		direction: rtl;
 	}
 }
 
