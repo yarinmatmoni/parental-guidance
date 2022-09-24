@@ -143,6 +143,33 @@
 	}
 }
 
+.quotesCarousel {
+	.title {
+		display: flex;
+		width: fit-content;
+		gap: 5px;
+		align-items: center;
+		margin-bottom: 50px;
+
+		h3 {
+			color: $black-gray;
+			font-weight: 500;
+			font-size: 25px;
+		}
+
+		span {
+			font-weight: 200;
+			font-size: 40px;
+			color: #ffce45;
+		}
+	}
+
+	.carousel {
+		display: flex;
+		justify-content: center;
+	}
+}
+
 @media only screen and (max-width: $mobile-size) {
 	.welcomeSection {
 		border-bottom-left-radius: 200px;
