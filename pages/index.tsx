@@ -4,11 +4,13 @@ import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
 import Carousel from '../components/carousel/Carousel';
+import { motion } from 'framer-motion';
+import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
       <Head>
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
@@ -54,7 +56,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className={`${styles.section} ${styles.parallaxSection}`}></section>
-    </>
+    </motion.div>
   )
 }
 

@@ -26,7 +26,7 @@ function Navbar() {
             <ul ref={refMenu} className={styles.navMenu}>
                 <div className={styles.wrapper}>
                     {Content.nav.map((menuItem, i) => (
-                        <li key={i}><Link href="/"><a>{menuItem.name}</a></Link>
+                        <li key={i}> {menuItem.sub.length > 0 ? menuItem.name : <Link href="/"><a>{menuItem.name}</a></Link>}
                             {menuItem.sub.length > 0 ?
                                 <ul className={!isMobile ? styles.subMenu : styles.subMenuMobile}>
                                     {menuItem.sub.map((subMenuItem, i) => (
