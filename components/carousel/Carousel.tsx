@@ -18,7 +18,7 @@ function Carousel({ data }: any) {
 
         const intervalId = setInterval(() => {
             cycleReviews();
-        }, 15000);
+        }, 12000);
 
         return () => clearInterval(intervalId);
 

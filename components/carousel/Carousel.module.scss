@@ -1,10 +1,11 @@
 @import '../../styles/colors.scss';
+@import '../../styles/sizes.scss';
 
 .carousel {
 	.carouselList {
 		align-items: center;
 		display: grid;
-		grid-row-gap: 1.25rem;
+		grid-row-gap: 1.15rem;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr auto;
 		max-width: 900px;
@@ -18,17 +19,22 @@
 		grid-row: 1;
 		line-height: 1.2;
 		text-align: center;
-		transition: transform 0.8s;
+		transition: 1s;
 	}
 
 	.carouselItem.active {
 		transform: translateX(0);
+		opacity: 1;
 	}
+
 	.carouselItem.left {
-		transform: translateX(-150%);
+		transform: translateX(-110%);
+		opacity: 0;
 	}
+
 	.carouselItem.right {
-		transform: translateX(150%);
+		transform: translateX(110%);
+		opacity: 0;
 	}
 
 	.carouselQuote {
