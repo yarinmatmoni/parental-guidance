@@ -12,8 +12,8 @@ export const infoSection = [
 		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 	{
-		logo: '/icons/bottle_icon.svg',
-		title: 'גמילה מבקבוק',
+		logo: '/icons/attention_icon.svg',
+		title: 'הפרעות קשב וריכוז',
 		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 	{
@@ -24,6 +24,16 @@ export const infoSection = [
 	{
 		logo: '/icons/babyMobile_icon.svg',
 		title: 'יועצת שינה',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
+	},
+	{
+		logo: '/icons/babyFeet_icon.svg',
+		title: 'הדרכה הורית לגיל הרך',
+		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
+	},
+	{
+		logo: '/icons/training_icon.svg',
+		title: 'סדנאות להורים ואנשי חינוך',
 		text: 'טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט',
 	},
 ];

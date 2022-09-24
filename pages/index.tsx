@@ -53,6 +53,7 @@ const Home: NextPage = () => {
           <Carousel data={Content.reviews} />
         </div>
       </section>
+      <section className={`${styles.section} ${styles.parallaxSection}`}></section>
     </>
   )
 }
