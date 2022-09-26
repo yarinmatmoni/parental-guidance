@@ -17,17 +17,17 @@ const Home: NextPage = () => {
       </Head>
       <section className={`${styles.section} ${styles.welcomeSection}`}>
         <div className={styles.title}>
-          <h1>שלהבת ברק</h1>
-          <h1>ייעוץ והדרכה הורית</h1>
+          <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
+          <motion.h1 variants={Animation.titleAnimation}>ייעוץ והדרכה הורית</motion.h1>
         </div>
-        <div className={styles.content}>
+        <motion.div className={styles.content}>
           <h3>ברוכים הבאים!</h3>
           <h4>{Content.welcomeSection.line1}</h4>
           <h4>{Content.welcomeSection.line2}</h4>
-        </div>
-        <div className={styles.call}>
+        </motion.div>
+        <motion.div variants={Animation.fade} className={styles.call}>
           <h4>שיחת ייעוץ ראשונה - בחינם</h4>
-        </div>
+        </motion.div>
       </section>
       <section className={`${styles.section} ${styles.infoSection}`}>
         {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} />)}
