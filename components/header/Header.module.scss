@@ -1,12 +1,13 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
+@import '../../styles/z-index.scss';
 
 .header {
 	border-radius: 0px 0px 12px 12px;
-	box-shadow: 0px -5px 8px 10px $box-shadow-color;
+	box-shadow: 0px -5px 8px 10px $box-shadow-brand-color;
 	min-height: 9vh;
 	position: sticky;
 	top: 0;
 	z-index: $z-index-header;
-	background-color: $background-color;
+	background-color: $background-body-color;
 }

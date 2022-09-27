@@ -21,16 +21,13 @@ const Home: NextPage = () => {
           <motion.h1 variants={Animation.titleAnimation}>ייעוץ והדרכה הורית</motion.h1>
         </div>
         <motion.div className={styles.content}>
-          <h3>ברוכים הבאים!</h3>
-          <h4>{Content.welcomeSection.line1}</h4>
-          <h4>{Content.welcomeSection.line2}</h4>
+          <span>ברוכים הבאים!</span>
+          {Content.welcomeSection}
         </motion.div>
-        <motion.div variants={Animation.fade} className={styles.call}>
-          <h4>שיחת ייעוץ ראשונה - בחינם</h4>
-        </motion.div>
+        <motion.button className={styles.call} variants={Animation.fade}>שיחת יעוץ ראשונה - בחינם</motion.button>
       </section>
       <section className={`${styles.section} ${styles.infoSection}`}>
-        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} />)}
+        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} alt={box.alt} />)}
       </section>
       <section className={`${styles.section} ${styles.workPlan}`}>
         <h3>איך זה עובד ?</h3>
@@ -38,12 +35,10 @@ const Home: NextPage = () => {
       </section>
       <section className={`${styles.section} ${styles.quoteSection}`}>
         <div className={styles.quote}>
-          <span className={styles.left}>❝</span>
           <blockquote>
             אין ילד רע, יש ילד שרע לו בחייו, והוא מוציא את התיסכול שלו כלפי חוץ
           </blockquote>
           <small>יאנוש קורצ&#x27;אק</small>
-          <span className={styles.right}>❞</span>
         </div>
       </section>
       <section className={`${styles.section} ${styles.quotesCarousel}`}>
