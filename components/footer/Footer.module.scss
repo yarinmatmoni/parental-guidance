@@ -2,7 +2,7 @@
 @import '../../styles/sizes.scss';
 
 .footerContainer {
-	background-color: $footer-color;
+	background-color: $background-section-blue-light;
 	min-height: 25vh;
 	padding: 16px 32px;
 	display: flex;
@@ -29,7 +29,7 @@
 		h4 {
 			font-size: 14.4px;
 			font-weight: 100;
-			color: $black-gray;
+			color: $basic-text-color;
 		}
 	}
 }
@@ -44,7 +44,7 @@
 		text-align: center;
 		font-weight: 500;
 		font-size: 16px;
-		color: $black-gray;
+		color: $basic-text-color;
 	}
 
 	.navContainer {
@@ -67,7 +67,7 @@
 				text-decoration: none;
 				font-weight: 100;
 				font-size: 14px;
-				color: $purple;
+				color: $brand-color-purple;
 			}
 		}
 	}
@@ -82,7 +82,7 @@
 	h4 {
 		font-weight: 500;
 		font-size: 18px;
-		color: $black-gray;
+		color: $basic-text-color;
 		font-weight: 500;
 	}
 
@@ -107,11 +107,11 @@
 					font-size: 14px;
 					text-align: right;
 					font-weight: 100;
-					color: $purple;
+					color: $brand-color-purple;
 				}
 
 				span {
-					color: $purple;
+					color: $brand-color-purple;
 					font-weight: 300;
 					font-size: 20px;
 				}

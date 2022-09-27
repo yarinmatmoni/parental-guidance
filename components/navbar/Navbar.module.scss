@@ -1,5 +1,6 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
+@import '../../styles/z-index.scss';
 
 .nav {
 	display: flex;
@@ -26,6 +27,7 @@
 			width: 100%;
 			justify-content: space-evenly;
 			align-items: center;
+			color: $basic-text-color;
 
 			li {
 				cursor: pointer;
@@ -38,11 +40,11 @@
 				&:hover {
 					.subMenu {
 						position: absolute;
-						background: $background-color;
+						background: $background-body-color;
 						display: flex;
 						flex-direction: column;
 						padding: 10px 20px;
-						box-shadow: 0px 5px 20px 3px $box-shadow-color;
+						box-shadow: 0px 0px 15px 1px $box-shadow-brand-color;
 						border-radius: 8px;
 						gap: 10px;
 						margin-top: 10px;
@@ -62,7 +64,7 @@
 			margin: 5px auto;
 			-webkit-transition: all 0.5s ease-in-out;
 			transition: all 0.5s ease-in-out;
-			background-color: $purple-light;
+			background-color: $secondary-purple;
 		}
 	}
 
@@ -70,11 +72,11 @@
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
-		color: $black-gray;
+		color: $basic-text-color;
 		font-size: 16px;
 
 		&:hover {
-			color: $purple;
+			color: $brand-color-purple;
 		}
 	}
 }
@@ -82,15 +84,15 @@
 @media only screen and (max-width: $mobile-size) {
 	.nav {
 		.navMenu {
-			background-color: $background-color;
+			background-color: $background-body-color;
 			position: fixed;
 			display: flex;
 			flex-direction: column;
-			top: 70px;
+			top: 65px;
 			left: 0;
 			align-items: center;
 			transition: 0.3s;
-			box-shadow: 0px 10px 35px 10px rgba(195, 186, 227, 0.35);
+			box-shadow: 0px 0px 15px 1px rgba(195, 186, 227, 0.35);
 			left: -100%;
 			opacity: 0;
 			border-radius: 0px 16px 16px 16px;

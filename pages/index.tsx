@@ -4,31 +4,30 @@ import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
 import Carousel from '../components/carousel/Carousel';
+import { motion } from 'framer-motion';
+import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
       <Head>
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
       <section className={`${styles.section} ${styles.welcomeSection}`}>
         <div className={styles.title}>
-          <h1>שלהבת ברק</h1>
-          <h1>ייעוץ והדרכה הורית</h1>
+          <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
+          <motion.h1 variants={Animation.titleAnimation}>ייעוץ והדרכה הורית</motion.h1>
         </div>
-        <div className={styles.content}>
-          <h3>ברוכים הבאים!</h3>
-          <h4>{Content.welcomeSection.line1}</h4>
-          <h4>{Content.welcomeSection.line2}</h4>
-        </div>
-        <div className={styles.call}>
-          <h4>שיחת ייעוץ ראשונה - בחינם</h4>
-        </div>
+        <motion.div className={styles.content}>
+          <span>ברוכים הבאים!</span>
+          {Content.welcomeSection}
+        </motion.div>
+        <motion.button className={styles.call} variants={Animation.fade}>שיחת יעוץ ראשונה - בחינם</motion.button>
       </section>
       <section className={`${styles.section} ${styles.infoSection}`}>
-        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} />)}
+        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} alt={box.alt} />)}
       </section>
       <section className={`${styles.section} ${styles.workPlan}`}>
         <h3>איך זה עובד ?</h3>
@@ -36,12 +35,10 @@ const Home: NextPage = () => {
       </section>
       <section className={`${styles.section} ${styles.quoteSection}`}>
         <div className={styles.quote}>
-          <span className={styles.left}>❝</span>
           <blockquote>
             אין ילד רע, יש ילד שרע לו בחייו, והוא מוציא את התיסכול שלו כלפי חוץ
           </blockquote>
           <small>יאנוש קורצ&#x27;אק</small>
-          <span className={styles.right}>❞</span>
         </div>
       </section>
       <section className={`${styles.section} ${styles.quotesCarousel}`}>
@@ -54,7 +51,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className={`${styles.section} ${styles.parallaxSection}`}></section>
-    </>
+    </motion.div>
   )
 }
 

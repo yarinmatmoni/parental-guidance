@@ -4,7 +4,7 @@
 	padding: 15px 30px;
 	flex-direction: column;
 	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 15px 1px rgb(63 71 86 / 20%);
 	max-width: 350px;
 	max-height: 200px;
 	transition: 0.5s;
@@ -14,12 +14,12 @@
 	h4 {
 		padding-top: 15px;
 		font-weight: 100;
-		color: $purple;
+		color: $brand-color-purple;
 	}
 
 	p {
 		padding-top: 20px;
-		color: $black-gray;
+		color: $basic-text-color;
 	}
 
 	&:hover {
