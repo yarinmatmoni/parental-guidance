@@ -21,7 +21,7 @@ function Navbar() {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
-                <Image src={logo} height={isMobile ? 75 : 100} width={isMobile ? 75 : 100} alt="logo"></Image>
+                <Image src={logo} height={isMobile ? 65 : 75} width={isMobile ? 65 : 75} alt="logo"></Image>
             </div>
             <ul ref={refMenu} className={styles.navMenu}>
                 <div className={styles.wrapper}>

@@ -1,6 +1,6 @@
-import { url } from 'inspector';
 import React from 'react';
 import Image from 'next/image';
+import styles from './TimeLine.module.scss';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
