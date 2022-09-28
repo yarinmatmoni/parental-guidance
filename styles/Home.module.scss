@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import './sizes.scss';
+@import './z-index.scss';
 
 .section {
 	min-height: calc(100vh - $body-size);
@@ -72,7 +73,8 @@
 .infoSection {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 50px;
+	column-gap: 30px;
+	row-gap: 30px;
 	justify-content: center;
 	align-items: center;
 }
@@ -101,61 +103,13 @@
 	direction: ltr;
 	background-color: $background-section-pink;
 	display: flex;
-
-	.quote {
-		text-align: center;
-		font-size: 60px;
-		margin: auto;
-		padding: 15px;
-		max-width: 63%;
-		position: relative;
-
-		blockquote {
-			color: $brand-color-pink;
-			text-shadow: -1px 1px 2px #514c4c94;
-			font-style: italic;
-			position: relative;
-			direction: rtl;
-		}
-
-		&::before {
-			content: '\201D';
-			position: absolute;
-			top: -50px;
-			right: -80px;
-			width: 150px;
-			text-align: right;
-			font-size: 180px;
-			color: $brand-color-purple;
-			line-height: 200px;
-		}
-
-		&::after {
-			content: '\201C';
-			position: absolute;
-			left: -80px;
-			bottom: -50px;
-			width: 150px;
-			text-align: left;
-			font-size: 180px;
-			color: $brand-color-purple;
-			line-height: 200px;
-		}
-
-		small {
-			color: $brand-color-purple;
-			font-size: 25px;
-
-			&::after {
-				content: '\2014 \0020';
-				width: 5px;
-				padding-left: 5px;
-			}
-		}
-	}
 }
 
 .quotesCarousel {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+
 	.title {
 		display: flex;
 		width: fit-content;
@@ -183,14 +137,26 @@
 }
 
 .parallaxSection {
-	background-image: url('../public/images/parallaxImage.jpeg');
-	min-height: 500px;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	filter: blur(1px);
-	opacity: 0.4;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	&::after {
+		content: '';
+		background-image: url('../public/images/parallaxImage.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		opacity: 0.3;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: $z-index-behind;
+	}
 }
 
 @media only screen and (max-width: $mobile-size) {
@@ -198,22 +164,6 @@
 		border-bottom-left-radius: 200px;
 		.call {
 			min-width: 90%;
-		}
-	}
-
-	.quoteSection {
-		.quote {
-			max-width: 80%;
-			font-size: 45px;
-
-			&::before,
-			&::after {
-				font-size: 150px;
-			}
-
-			small {
-				font-size: 20px;
-			}
 		}
 	}
 }

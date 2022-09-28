@@ -4,9 +4,12 @@ import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
 import Carousel from '../components/carousel/Carousel';
+import Quote from '../components/quote/Quote';
+import Contact from '../components/contact/Contact';
 import { motion } from 'framer-motion';
 import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
+import * as Quotes from '../utils/content/quotes';
 
 const Home: NextPage = () => {
   return (
@@ -34,12 +37,7 @@ const Home: NextPage = () => {
         <TimeLine data={Content.timeLineElements} />
       </section>
       <section className={`${styles.section} ${styles.quoteSection}`}>
-        <div className={styles.quote}>
-          <blockquote>
-            אין ילד רע, יש ילד שרע לו בחייו, והוא מוציא את התיסכול שלו כלפי חוץ
-          </blockquote>
-          <small>יאנוש קורצ&#x27;אק</small>
-        </div>
+        <Quote data={Quotes.mainQuote} />
       </section>
       <section className={`${styles.section} ${styles.quotesCarousel}`}>
         <div className={styles.title}>
@@ -50,7 +48,9 @@ const Home: NextPage = () => {
           <Carousel data={Content.reviews} />
         </div>
       </section>
-      <section className={`${styles.section} ${styles.parallaxSection}`}></section>
+      <section className={`${styles.section} ${styles.parallaxSection}`}>
+        <Contact />
+      </section>
     </motion.div>
   )
 }
