@@ -4,9 +4,12 @@
 
 .header {
 	box-shadow: 0px -5px 8px 10px $box-shadow-brand-color;
-	max-height: 9vh;
+	height: 8vh;
 	position: sticky;
 	top: 0;
 	z-index: $z-index-header;
 	background-color: $background-body-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
