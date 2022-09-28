@@ -24,19 +24,18 @@ export const nav = [
 ];
 
 export const contact = {
-	title: 'עוד לא יצרנו קשר ? - לתאום פגישה ראשונה',
+	title: 'צרו קשר',
+	title2: 'שיחה יעוץ ראשונה - בחינם',
 	detailsForContact: [
 		{
-			icon: '',
+			name: '050-4532052',
+			icon: '/icons/phone_icon.svg',
 			alt: 'טלפון',
 		},
 		{
-			icon: '',
+			name: 'shalhevetbarak@gmail.com',
+			icon: '/icons/mail_icon.svg',
 			alt: 'דואר אלקטרוני',
-		},
-		{
-			icon: '',
-			alt: 'פייסובק',
 		},
 	],
 	data: [{ name: 'שם מלא' }, { name: 'מספר טלפון' }, { name: 'אימייל' }],
