@@ -5,6 +5,7 @@ import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
 import Carousel from '../components/carousel/Carousel';
 import Quote from '../components/quote/Quote';
+import Contact from '../components/contact/Contact';
 import { motion } from 'framer-motion';
 import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
@@ -47,7 +48,9 @@ const Home: NextPage = () => {
           <Carousel data={Content.reviews} />
         </div>
       </section>
-      <section className={`${styles.section} ${styles.parallaxSection}`}></section>
+      <section className={`${styles.section} ${styles.parallaxSection}`}>
+        <Contact />
+      </section>
     </motion.div>
   )
 }

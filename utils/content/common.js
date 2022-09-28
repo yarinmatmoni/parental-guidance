@@ -22,3 +22,22 @@ export const nav = [
 		sub: [{ name: 'סדנה 1' }, { name: 'סדנה 2' }],
 	},
 ];
+
+export const contact = {
+	title: 'עוד לא יצרנו קשר ? - לתאום פגישה ראשונה',
+	detailsForContact: [
+		{
+			icon: '',
+			alt: 'טלפון',
+		},
+		{
+			icon: '',
+			alt: 'דואר אלקטרוני',
+		},
+		{
+			icon: '',
+			alt: 'פייסובק',
+		},
+	],
+	data: [{ name: 'שם מלא' }, { name: 'מספר טלפון' }, { name: 'אימייל' }],
+};
