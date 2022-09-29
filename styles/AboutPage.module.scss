@@ -55,6 +55,13 @@
 	justify-content: center;
 }
 
+.mainSection {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	min-height: 50vh;
+}
+
 @media only screen and (max-width: $mobile-size) {
 	.introSection {
 		justify-content: center;

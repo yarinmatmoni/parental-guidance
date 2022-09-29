@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Quote from '../components/quote/Quote';
+import DesignParagraph from '../components/designParagraph/DesignParagraph';
 import * as Quotes from '../utils/content/quotes';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -22,7 +23,7 @@ function AboutPage() {
                         <motion.p variants={Animation.titleAnimation}>בואו נכיר קצת...</motion.p>
                     </div>
                     <div className={styles.info}>
-                        {Content && Content.intro.data.map((p, index) => <p key={index}>{p.paragraph}</p>)}
+                        {Content && Content.intro.introData.map((p, index) => <p key={index}>{p.paragraph}</p>)}
                     </div>
                 </div>
                 <motion.div variants={Animation.leftFadeIn} className={styles.image}>
@@ -32,7 +33,12 @@ function AboutPage() {
             <section className={`section ${styles.QuoteSection}`}>
                 <Quote data={Quotes.mainQuote} />
             </section>
-        </motion.div>
+            <section className={`section ${styles.mainSection}`}>
+                {
+                    Content && Content.intro.mainData.map((p, index) => <DesignParagraph key={`${index}_${p.alt}`} data={p} />)
+                }
+            </section>
+        </motion.div >
     )
 };
 
