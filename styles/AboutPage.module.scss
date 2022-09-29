@@ -1,0 +1,71 @@
+@import './colors.scss';
+@import './sizes.scss';
+@import './z-index.scss';
+
+.introSection {
+	background: $background-section-blue;
+	border-bottom-left-radius: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.about {
+	.title {
+		h1 {
+			font-weight: 100;
+			color: $basic-text-color;
+		}
+
+		p {
+			font-size: 20px;
+			font-weight: 600;
+			color: $brand-color-blue;
+		}
+	}
+
+	.info {
+		p {
+			color: $basic-text-color;
+			margin-top: 16px;
+			max-width: 530px;
+			display: flex;
+			flex-direction: column;
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+}
+
+.image {
+	filter: drop-shadow(5px 5px 2px #3f475533);
+
+	img {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 50%;
+	}
+}
+
+.QuoteSection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (max-width: $mobile-size) {
+	.introSection {
+		justify-content: center;
+	}
+
+	.image {
+		margin-top: 20px;
+
+		img {
+			height: 250px !important;
+			width: 250px !important;
+		}
+	}
+}

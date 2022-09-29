@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
-      <section className={`${styles.section} ${styles.welcomeSection}`}>
+      <section className={`section ${styles.welcomeSection}`}>
         <div className={styles.title}>
           <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
           <motion.h1 variants={Animation.titleAnimation}>ייעוץ והדרכה הורית</motion.h1>
@@ -29,17 +29,17 @@ const Home: NextPage = () => {
         </motion.div>
         <motion.button className={styles.call} variants={Animation.fade}>שיחת יעוץ ראשונה - בחינם</motion.button>
       </section>
-      <section className={`${styles.section} ${styles.infoSection}`}>
+      <section className={`section ${styles.infoSection}`}>
         {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} alt={box.alt} />)}
       </section>
-      <section className={`${styles.section} ${styles.workPlan}`}>
+      <section className={`section ${styles.workPlan}`}>
         <h3>איך זה עובד ?</h3>
         <TimeLine data={Content.timeLineElements} />
       </section>
-      <section className={`${styles.section} ${styles.quoteSection}`}>
+      <section className={`section ${styles.quoteSection}`}>
         <Quote data={Quotes.mainQuote} />
       </section>
-      <section className={`${styles.section} ${styles.quotesCarousel}`}>
+      <section className={`section ${styles.quotesCarousel}`}>
         <div className={styles.title}>
           <span className="material-symbols-outlined">star_rate</span>
           <h3>הורים ממליצים</h3>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
           <Carousel data={Content.reviews} />
         </div>
       </section>
-      <section className={`${styles.section} ${styles.parallaxSection}`}>
+      <section className={`section ${styles.parallaxSection}`}>
         <Contact />
       </section>
     </motion.div>

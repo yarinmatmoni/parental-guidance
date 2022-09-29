@@ -2,11 +2,6 @@
 @import './sizes.scss';
 @import './z-index.scss';
 
-.section {
-	min-height: calc(100vh - $body-size);
-	padding: 32px 80px;
-}
-
 .welcomeSection {
 	display: flex;
 	flex-direction: column;

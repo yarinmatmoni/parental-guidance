@@ -29,6 +29,21 @@ export const titleAnimation = {
 	},
 };
 
+export const leftFadeIn = {
+	hidden: {
+		x: -150,
+		opacity: 0,
+	},
+	show: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			ease: 'easeOut',
+		},
+	},
+};
+
 export const fade = {
 	hidden: {
 		opacity: 0,
