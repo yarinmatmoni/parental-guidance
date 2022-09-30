@@ -7,7 +7,7 @@
 	flex-direction: column;
 	justify-content: center;
 	background: $background-section-purple;
-	border-bottom-left-radius: 300px;
+	border-bottom-left-radius: $section-border-radius;
 
 	.title {
 		display: flex;
@@ -156,7 +156,7 @@
 
 @media only screen and (max-width: $mobile-size) {
 	.welcomeSection {
-		border-bottom-left-radius: 200px;
+		border-bottom-left-radius: $section-border-radius-mobile;
 		.call {
 			min-width: 90%;
 		}

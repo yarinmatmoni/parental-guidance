@@ -4,11 +4,11 @@
 
 .introSection {
 	background: $background-section-blue;
-	border-bottom-left-radius: 300px;
+	border-bottom-left-radius: $section-border-radius;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .about {
@@ -59,20 +59,24 @@
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	min-height: 50vh;
 }
 
 @media only screen and (max-width: $mobile-size) {
 	.introSection {
 		justify-content: center;
+		border-bottom-left-radius: $section-border-radius-mobile;
 	}
 
 	.image {
-		margin-top: 20px;
+		margin-top: 40px;
 
 		img {
-			height: 250px !important;
-			width: 250px !important;
+			height: 220px !important;
+			width: 220px !important;
 		}
+	}
+
+	.mainSection {
+		gap: 15px;
 	}
 }
