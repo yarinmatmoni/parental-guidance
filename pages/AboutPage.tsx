@@ -37,6 +37,9 @@ function AboutPage() {
                 {
                     Content && Content.intro.mainData.map((p, index) => <DesignParagraph key={`${index}_${p.alt}`} data={p} />)
                 }
+                <div className={styles.contact}>
+                    <h3>אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר <span>בווצאפ</span></h3>
+                </div>
             </section>
         </motion.div >
     )

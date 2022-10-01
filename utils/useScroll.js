@@ -6,9 +6,7 @@ export const useScroll = () => {
 	const isMobile = useMediaQuery({ query: `(max-width: 780px)` });
 
 	const controls = useAnimation();
-	const [element, view] = useInView(
-		isMobile ? { threshold: 0.2 } : { threshold: 0.8 }
-	);
+	const [element, view] = useInView({ threshold: 0.5 });
 
 	if (view) controls.start('show');
 	else controls.start('hidden');
