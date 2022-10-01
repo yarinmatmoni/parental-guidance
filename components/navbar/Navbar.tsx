@@ -18,6 +18,11 @@ function Navbar() {
         iconBurger.classList.toggle(styles.openHamburger);
     };
 
+    const handleCloseMobile = () => {
+        if (isMobile)
+            handleOpenBurgerMenu();
+    };
+
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
@@ -26,11 +31,11 @@ function Navbar() {
             <ul ref={refMenu} className={styles.navMenu}>
                 <div className={styles.wrapper}>
                     {Content && Content.nav.map((menuItem, i) => (
-                        <li key={i}> {menuItem.sub.length > 0 ? menuItem.name : <Link href={`${menuItem.link}`}><a>{menuItem.name}</a></Link>}
+                        <li key={i}> {menuItem.sub.length > 0 ? menuItem.name : <Link href={`${menuItem.link}`}><a onClick={handleCloseMobile}>{menuItem.name}</a></Link>}
                             {menuItem.sub.length > 0 ?
                                 <ul className={!isMobile ? styles.subMenu : styles.subMenuMobile}>
                                     {menuItem.sub.map((subMenuItem, i) => (
-                                        <Link key={i} className={styles.link} href={`${subMenuItem.link}`}><a>{subMenuItem.name}</a></Link>
+                                        <Link key={i} className={styles.link} href={`${subMenuItem.link}`}><a onClick={handleCloseMobile}>{subMenuItem.name}</a></Link>
                                     ))}
                                 </ul>
                                 : ''}

@@ -27,7 +27,7 @@ function AboutPage() {
                     </div>
                 </div>
                 <motion.div variants={Animation.leftFadeIn} className={styles.image}>
-                    <Image src='/images/aboutMe.jpeg' height={280} width={280} alt='AboutMe'></Image>
+                    <Image src='/images/aboutMe.jpeg' height={270} width={270} alt='AboutMe'></Image>
                 </motion.div>
             </section>
             <section className={`section ${styles.QuoteSection}`}>

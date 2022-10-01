@@ -8,7 +8,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .about {
@@ -58,7 +58,7 @@
 .mainSection {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 20px;
 
 	.contact {
 		min-height: 20vh;
