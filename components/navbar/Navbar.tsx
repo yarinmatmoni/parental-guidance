@@ -12,10 +12,10 @@ function Navbar() {
     const refIconBurger = useRef<HTMLDivElement>(null);
 
     const handleOpenBurgerMenu = () => {
-        const menu: any = refMenu.current;
-        menu.classList.toggle(styles.navMenuActive);
-        const iconBurger: any = refIconBurger.current;
-        iconBurger.classList.toggle(styles.openHamburger);
+        const menu = refMenu.current;
+        menu?.classList.toggle(styles.navMenuActive);
+        const iconBurger = refIconBurger.current;
+        iconBurger?.classList.toggle(styles.openHamburger);
     };
 
     const handleCloseMobile = () => {

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 
+type CarouselProps = {
+    name: string,
+    quote: string
+};
+
 function Carousel({ data }: any) {
 
     const [activeSlide, setActiveSlide] = useState(1);
@@ -27,7 +32,7 @@ function Carousel({ data }: any) {
     return (
         <div className={styles.carousel}>
             <ul className={styles.carouselList}>
-                {data && data.map((review: any, index: number) => {
+                {data && data.map((review: CarouselProps, index: number) => {
                     return (
                         <li key={index + 1} className={`${styles.carouselItem} ${index + 1 === activeSlide ? styles.active : ""}
                             ${index + 1 < activeSlide ? styles.right : ""}

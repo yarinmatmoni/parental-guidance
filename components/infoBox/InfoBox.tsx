@@ -2,12 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './InfoBox.module.scss';
 
-function InfoBox({ logo, title, text, alt }: any) {
+type InfoBoxProps = {
+    data: {
+        logo: string,
+        title: string,
+        text: string,
+        alt: string
+    }
+};
+
+function InfoBox({ data }: InfoBoxProps) {
     return (
         <div className={styles.infoBox}>
-            <Image src={logo} height={40} width={40} alt={alt}></Image>
-            <h4>{title}</h4>
-            <p>{text}</p>
+            <Image src={data.logo} height={40} width={40} alt={data.alt}></Image>
+            <h4>{data.title}</h4>
+            <p>{data.text}</p>
         </div>
     )
 };

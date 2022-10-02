@@ -31,7 +31,7 @@ function AboutPage() {
                 </motion.div>
             </section>
             <section className={`section ${styles.QuoteSection}`}>
-                <Quote data={Quotes.mainQuote} />
+                <Quote data={Quotes.quote1} />
             </section>
             <section className={`section ${styles.mainSection}`}>
                 {

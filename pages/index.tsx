@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import InfoBox from '../components/infoBox/InfoBox';
 import TimeLine from '../components/timeLine/TimeLine';
@@ -30,14 +31,14 @@ const Home: NextPage = () => {
         <motion.button className={styles.call} variants={Animation.fade}>שיחת יעוץ ראשונה - בחינם</motion.button>
       </section>
       <section className={`section ${styles.infoSection}`}>
-        {Content.infoSection.map((box, i) => <InfoBox key={i} logo={box.logo} title={box.title} text={box.text} alt={box.alt} />)}
+        {Content.infoSection.map((box, i) => <InfoBox key={i} data={box} />)}
       </section>
       <section className={`section ${styles.workPlan}`}>
         <h3>איך זה עובד ?</h3>
         <TimeLine data={Content.timeLineElements} />
       </section>
       <section className={`section ${styles.quoteSection}`}>
-        <Quote data={Quotes.mainQuote} />
+        <Quote data={Quotes.quote1} />
       </section>
       <section className={`section ${styles.quotesCarousel}`}>
         <div className={styles.title}>
@@ -49,7 +50,10 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className={`section ${styles.parallaxSection}`}>
-        <Contact />
+        {/* <div className={styles.test}> */}
+        <Image src={'/images/parallaxImage.jpeg'} objectFit="cover" objectPosition="center" layout="fill" alt="תמונה" />
+        {/* </div> */}
+        {/* <Contact /> */}
       </section>
     </motion.div>
   )
