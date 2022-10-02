@@ -30,7 +30,7 @@ function Navbar() {
             </div>
             <ul ref={refMenu} className={styles.navMenu}>
                 <div className={styles.wrapper}>
-                    {Content && Content.nav.map((menuItem, i) => (
+                    {Content.nav && Content.nav.map((menuItem, i) => (
                         <li key={i}> {menuItem.sub.length > 0 ? menuItem.name : <Link href={`${menuItem.link}`}><a onClick={handleCloseMobile}>{menuItem.name}</a></Link>}
                             {menuItem.sub.length > 0 ?
                                 <ul className={!isMobile ? styles.subMenu : styles.subMenuMobile}>

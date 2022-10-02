@@ -1657,10 +1657,10 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"sass@^1.3.0", "sass@^1.54.7":
-  "integrity" "sha512-3q7MQz7sCpVG6TLhUfZwGOcd2/sm2ghYN2JEdRjNiW04ILdvahdo9GuAs+bxsxZ3hDCKv+wUT5w0iFWGU0CxlA=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.54.7.tgz"
-  "version" "1.54.7"
+"sass@^1.3.0", "sass@^1.55.0":
+  "integrity" "sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.55.0.tgz"
+  "version" "1.55.0"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
     "immutable" "^4.0.0"
