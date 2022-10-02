@@ -50,10 +50,10 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className={`section ${styles.parallaxSection}`}>
-        {/* <div className={styles.test}> */}
-        <Image src={'/images/parallaxImage.jpeg'} objectFit="cover" objectPosition="center" layout="fill" alt="תמונה" />
-        {/* </div> */}
-        {/* <Contact /> */}
+        <div className={styles.image}>
+          <Image src={'/images/parallaxImage.jpeg'} objectFit="cover" objectPosition="center" layout="fill" alt="תמונה" />
+        </div>
+        <Contact />
       </section>
     </motion.div>
   )
