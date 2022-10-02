@@ -53,7 +53,9 @@ const Home: NextPage = () => {
         <div className={styles.image}>
           <Image src={'/images/parallaxImage.jpeg'} objectFit="cover" objectPosition="center" layout="fill" alt="תמונה" />
         </div>
-        <Contact />
+        <div className={styles.contact}>
+          <Contact />
+        </div>
       </section>
     </motion.div>
   )

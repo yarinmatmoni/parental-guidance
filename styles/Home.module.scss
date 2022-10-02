@@ -137,29 +137,16 @@
 		top: 0;
 
 		img {
-			opacity: 0.2;
+			opacity: 0.15;
 		}
 	}
 
 	justify-content: flex-start;
 	align-items: center;
-	// max-width: 100%;
 
-	// &::after {
-	// 	content: '';
-	// 	background-image: url('../public/images/parallaxImage.jpeg');
-	// 	background-repeat: no-repeat;
-	// 	background-position: center;
-	// 	background-size: cover;
-	// 	background-attachment: fixed;
-	// 	opacity: 0.3;
-	// 	top: 0;
-	// 	left: 0;
-	// 	bottom: 0;
-	// 	right: 0;
-	// 	position: absolute;
-	// 	z-index: $z-index-behind;
-	// }
+	.contact {
+		position: relative;
+	}
 }
 
 @media only screen and (max-width: $mobile-size) {
