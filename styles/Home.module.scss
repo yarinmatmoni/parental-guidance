@@ -43,7 +43,6 @@
 
 	.call {
 		background-color: $secondary-purple;
-		color: $basic-text-color;
 		padding: 16px;
 		margin-top: 48px;
 		text-align: center;
@@ -56,9 +55,16 @@
 		font-size: 16px;
 		cursor: pointer;
 
+		a {
+			color: $basic-text-color;
+			transition: 0.5s ease;
+		}
+
 		&:hover {
 			box-shadow: 0px 0px 15px 1px $secondary-purple;
-			color: whitesmoke;
+			a {
+				color: whitesmoke;
+			}
 		}
 	}
 }

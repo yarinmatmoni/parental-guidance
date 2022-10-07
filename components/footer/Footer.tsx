@@ -47,7 +47,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className={styles.bottom}>
-                            <a href={`//api.whatsapp.com/send?phone=972${Content.personalInfo.phoneNumber.value}`} target="_blank" rel="noreferrer">
+                            <a href={`//api.whatsapp.com/send?phone=972${Content.personalInfo.phoneNumber.value}&text=${Content.whatsAppMessage}`} target="_blank" rel="noreferrer">
                                 <Image src='/icons/whatsapp_icon.svg' height={30} width={30} alt="whatsapp_icon" ></Image>
                             </a>
                             <a>

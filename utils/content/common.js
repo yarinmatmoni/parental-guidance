@@ -6,6 +6,8 @@ export const personalInfo = {
 	email: 'shalhevetbarak@gmail.com',
 };
 
+export const whatsAppMessage = 'היי שלהבת...';
+
 export const nav = [
 	{
 		name: 'עמוד הבית',

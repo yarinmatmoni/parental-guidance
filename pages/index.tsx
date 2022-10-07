@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
 import * as Quotes from '../utils/content/quotes';
+import * as Data from '../utils/content/common';
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +29,9 @@ const Home: NextPage = () => {
           <span>ברוכים הבאים!</span>
           {Content.welcomeSection}
         </motion.div>
-        <motion.button className={styles.call} variants={Animation.fade}>שיחת יעוץ ראשונה - בחינם</motion.button>
+        <motion.button className={styles.call} variants={Animation.fade}>
+          <a href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`} target="_blank" rel="noreferrer">שיחת יעוץ ראשונה - בחינם</a>
+        </motion.button>
       </section>
       <section className={`section ${styles.infoSection}`}>
         {Content.infoSection.map((box, i) => <InfoBox key={i} data={box} />)}
