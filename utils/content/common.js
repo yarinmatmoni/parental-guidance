@@ -1,3 +1,11 @@
+export const personalInfo = {
+	phoneNumber: {
+		display: '050-5432052',
+		value: '0505432052',
+	},
+	email: 'shalhevetbarak@gmail.com',
+};
+
 export const nav = [
 	{
 		name: 'עמוד הבית',

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './DesignParagraph.module.scss';
-import { useScroll } from '../../utils/useScroll';
+import { useScroll } from '../../utils/hooks/useScroll';
 import { motion } from 'framer-motion';
 import * as Animation from '../../utils/animation/animation';
 
