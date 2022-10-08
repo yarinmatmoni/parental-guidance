@@ -7,6 +7,7 @@ import TimeLine from '../components/timeLine/TimeLine';
 import Carousel from '../components/carousel/Carousel';
 import Quote from '../components/quote/Quote';
 import Contact from '../components/contact/Contact';
+// import BubblePurple from '../components/bubblePurple/BubblePurple';
 import { motion } from 'framer-motion';
 import * as Animation from '../utils/animation/animation';
 import * as Content from '../utils/content/homePage';
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
       </section>
       <section className={`section ${styles.infoSection}`}>
         {Content.infoSection.map((box, i) => <InfoBox key={i} data={box} />)}
+        {/* <BubblePurple /> */}
       </section>
       <section className={`section ${styles.workPlan}`}>
         <h3>איך זה עובד ?</h3>
