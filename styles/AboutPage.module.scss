@@ -5,10 +5,9 @@
 .introSection {
 	background: $background-section-blue;
 	border-bottom-left-radius: $section-border-radius;
-	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .about {
@@ -50,15 +49,12 @@
 }
 
 .QuoteSection {
-	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 .mainSection {
-	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 20px;
 
 	.contact {
 		min-height: 20vh;
@@ -78,7 +74,7 @@
 				font-size: 35px;
 			}
 
-			span {
+			a {
 				cursor: pointer;
 				color: $brand-color-purple;
 				font-weight: 600;

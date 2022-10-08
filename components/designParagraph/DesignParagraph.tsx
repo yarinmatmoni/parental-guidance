@@ -1,11 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './DesignParagraph.module.scss';
-import { useScroll } from '../../utils/useScroll';
+import { useScroll } from '../../utils/hooks/useScroll';
 import { motion } from 'framer-motion';
 import * as Animation from '../../utils/animation/animation';
 
-function DesignParagraph({ data }: any) {
+type paragraphProps = {
+    data: {
+        paragraph: string,
+        icon: string,
+        alt: string,
+        animation: string
+    }
+};
+
+function DesignParagraph({ data }: paragraphProps) {
 
     const [element, controls]: any = useScroll();
 

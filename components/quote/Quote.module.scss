@@ -56,12 +56,23 @@
 
 @media only screen and (max-width: $mobile-size) {
 	.quoteContainer {
-		max-width: 80%;
-		font-size: 45px;
+		font-size: 38px;
+		padding: 0;
 
-		&::before,
+		blockquote {
+			padding-bottom: 10px;
+		}
+
+		&::before {
+			font-size: 120px;
+			top: -100px;
+			right: -50px;
+		}
+
 		&::after {
-			font-size: 150px;
+			font-size: 120px;
+			left: -50px;
+			bottom: -100px;
 		}
 
 		small {

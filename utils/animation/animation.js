@@ -31,7 +31,7 @@ export const titleAnimation = {
 
 export const leftFadeIn = {
 	hidden: {
-		x: -50,
+		x: -25,
 		opacity: 0,
 	},
 	show: {
@@ -46,7 +46,7 @@ export const leftFadeIn = {
 
 export const rightFadeIn = {
 	hidden: {
-		x: 50,
+		x: 25,
 		opacity: 0,
 	},
 	show: {

@@ -9,7 +9,7 @@ function Contact() {
             <div className={styles.top}>
                 <div className={styles.title}>
                     <h2>{contact.contact.title}</h2>
-                    <p>{contact.contact.title2}</p>
+                    <p>{contact.contact.subtitle}</p>
                 </div>
                 <div className={styles.details}>
                     {contact.contact.detailsForContact.map((item, index) => {

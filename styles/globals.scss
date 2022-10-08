@@ -17,8 +17,6 @@
 body {
 	background-color: $background-body-color;
 	direction: rtl;
-	max-width: $body-max-width;
-	margin: auto;
 }
 
 h1 {
@@ -37,9 +35,21 @@ h4 {
 	font-size: 16px;
 }
 
+a {
+	text-decoration: none;
+}
+
 .section {
 	min-height: calc(100vh - $body-size);
+	display: flex;
+	justify-content: center;
 	padding: 32px 80px;
+	max-width: $body-max-width;
+	margin: auto;
+
+	@media only screen and (max-width: $mobile-size) {
+		padding: 32px 30px;
+	}
 }
 
 *::-webkit-scrollbar {

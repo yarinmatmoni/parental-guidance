@@ -54,14 +54,27 @@
 
 			&::after {
 				content: '\201C';
-				padding-right: 5px;
 				font-size: 30px;
+				padding-right: 5px;
 			}
 
 			&::before {
 				content: '\201D';
 				padding-left: 5px;
 				font-size: 30px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile-size) {
+	.carousel {
+		.carouselQuote {
+			p {
+				font-size: 18px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
 			}
 		}
 	}

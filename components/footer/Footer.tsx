@@ -39,7 +39,7 @@ function Footer() {
                         <div className={styles.top}>
                             <div className={styles.topItem}>
                                 <span className="material-symbols-outlined">call</span>
-                                <h4>050-5432052</h4>
+                                <h4>{Content.personalInfo.phoneNumber.display}</h4>
                             </div>
                             <div className={styles.topItem}>
                                 <span className="material-symbols-outlined">mail</span>
@@ -47,8 +47,12 @@ function Footer() {
                             </div>
                         </div>
                         <div className={styles.bottom}>
-                            <Image src='/icons/facebook_icon.svg' height={30} width={30} alt="facebook_icon" ></Image>
-                            <Image src='/icons/whatsapp_icon.svg' height={30} width={30} alt="whatsapp_icon" ></Image>
+                            <a href={`//api.whatsapp.com/send?phone=972${Content.personalInfo.phoneNumber.value}&text=${Content.whatsAppMessage}`} target="_blank" rel="noreferrer">
+                                <Image src='/icons/whatsapp_icon.svg' height={30} width={30} alt="whatsapp_icon" ></Image>
+                            </a>
+                            <a>
+                                <Image src='/icons/facebook_icon.svg' height={30} width={30} alt="facebook_icon" ></Image>
+                            </a>
                         </div>
                     </div>
                 </div>

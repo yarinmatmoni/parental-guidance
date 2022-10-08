@@ -1,3 +1,13 @@
+export const personalInfo = {
+	phoneNumber: {
+		display: '050-5432052',
+		value: '0505432052',
+	},
+	email: 'shalhevetbarak@gmail.com',
+};
+
+export const whatsAppMessage = 'היי שלהבת...';
+
 export const nav = [
 	{
 		name: 'עמוד הבית',
@@ -30,7 +40,7 @@ export const nav = [
 
 export const contact = {
 	title: 'צרו קשר',
-	title2: 'שיחה יעוץ ראשונה - בחינם',
+	subtitle: 'שיחה יעוץ ראשונה - בחינם',
 	detailsForContact: [
 		{
 			name: '050-4532052',

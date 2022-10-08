@@ -1,7 +1,14 @@
 import React from 'react';
 import styles from './Quote.module.scss';
 
-function Quote({ data }: any) {
+type QuoteProps = {
+    data: {
+        name: string,
+        quote: string
+    }
+};
+
+function Quote({ data }: QuoteProps) {
     return (
         <div className={styles.quoteContainer}>
             <blockquote>{data.quote}</blockquote>
