@@ -5,6 +5,7 @@ import DesignParagraph from '../components/designParagraph/DesignParagraph';
 import * as Quotes from '../utils/content/quotes';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import * as Data from '../utils/content/common';
 import * as Content from '../utils/content/about';
 import * as Animation from '../utils/animation/animation';
 import styles from '../styles/AboutPage.module.scss';
@@ -38,7 +39,7 @@ function AboutPage() {
                     Content && Content.intro.mainData.map((p, index) => <DesignParagraph key={`${index}_${p.alt}`} data={p} />)
                 }
                 <div className={styles.contact}>
-                    <h3>אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר <span>בווצאפ</span></h3>
+                    <h3>אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר <a href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`} target="_blank" rel="noreferrer">בווצאפ</a></h3>
                 </div>
             </section>
         </motion.div >
