@@ -12,16 +12,12 @@
 	.menuContainer {
 		background-color: $background-body-color;
 		position: fixed;
-		display: flex;
-		flex-direction: column;
 		top: $navbar-height;
-		align-items: center;
 		transition: 0.3s;
 		box-shadow: 0 6px 5px 0 rgb(63 71 86 / 15%);
 		opacity: 0;
 		z-index: $z-index-normal;
 		height: 0;
-		justify-content: center;
 		overflow-y: scroll;
 		width: 100%;
 		left: 0;
@@ -33,6 +29,24 @@
 			opacity: 1;
 			transition: opacity 0.1s ease-in-out;
 			padding: 8px 0;
+			color: $basic-text-color;
+
+			.subMenu{
+				margin-top: 5px;
+			}
+
+			a{
+				color: $basic-text-color;
+				font-size: 16px;
+				text-decoration: none;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					color: $brand-color-purple;
+					letter-spacing: 0.8px;
+				}
+			}
 		}
 
 		&[data-open='true'] {
@@ -86,17 +100,9 @@
 				.subMenu {
 					display: none;
 				}
-			}
 
-			a {
-				text-decoration: none;
-				cursor: pointer;
-				transition: all 0.3s ease-in-out;
-				color: $basic-text-color;
-				font-size: 16px;
-
-				&:hover {
-					color: $brand-color-purple;
+				a:hover{
+					letter-spacing: initial;
 				}
 			}
 		}

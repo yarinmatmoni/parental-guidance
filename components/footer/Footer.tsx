@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/logo/logo1.svg";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
