@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
 @import '../../styles/z-index.scss';
+@import '../../styles/functions.scss';
 
 .header {
 	box-shadow: 0 6px 5px 0 rgb(63 71 86 / 15%);
@@ -8,7 +9,10 @@
 	top: 0;
 	z-index: $z-index-header;
 	background-color: $background-body-color;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }

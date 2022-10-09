@@ -1,0 +1,7 @@
+@import '../styles/sizes.scss';
+
+@mixin desktop {
+	@media (min-width: $mobile-size) {
+		@content;
+	}
+}
