@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as Content from "../../utils/content/common";
 import styles from "./Navbar.module.scss";
 import Logo from "../logo/Logo";
-import Hamburger from "../navbar/hamburger/Hamburger";
+import Hamburger from "../hamburger/Hamburger";
 
 function Navbar() {
   const refMenuContainer = useRef<HTMLUListElement>(null);
