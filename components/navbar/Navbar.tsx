@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 import * as Content from "../../utils/content/common";
 import styles from "./Navbar.module.scss";
 import Logo from "../logo/Logo";
-import Hamburger from "../navbar/hamburger/Hamburger";
+import Hamburger from "../hamburger/Hamburger";
 import useOnclickOutside from "../../utils/hooks/useOnclickOutside";
 import { useScrollLock } from "../../utils/hooks/useLockScroll";
 
@@ -12,6 +13,24 @@ function Navbar() {
   const refMenuContainer: any = useRef();
   useOnclickOutside(refMenuContainer, () => setIsOpen(false));
   useScrollLock(isOpen);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (
+        refMenuContainer.current &&
+        !refMenuContainer.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside, true);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, []);
 
   const onMenuClick = () => {
     setIsOpen(!isOpen);
@@ -19,11 +38,11 @@ function Navbar() {
 
   return (
     <nav ref={refMenuContainer} className={styles.navMenuContainer}>
-      <Logo height={65} width={65} />
+      <Logo height={75} width={75} />
       <ul className={styles.menuContainer} data-open={isOpen}>
         <>
           {Content.nav?.map((menuItem, i) => (
-            <li key={i} className={styles.menuItem}>
+            <li key={i} className={styles.menuItem} data-path={router.pathname === menuItem.link ? true : false}>
               {menuItem.sub.length > 0 ? (
                 <>
                   {menuItem.name}
