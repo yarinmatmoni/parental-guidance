@@ -1,22 +1,26 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
-import InfoBox from '../components/infoBox/InfoBox';
-import TimeLine from '../components/timeLine/TimeLine';
-import Carousel from '../components/carousel/Carousel';
-import Quote from '../components/quote/Quote';
-import Contact from '../components/contact/Contact';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import InfoBox from "../components/infoBox/InfoBox";
+import TimeLine from "../components/timeLine/TimeLine";
+import Carousel from "../components/carousel/Carousel";
+import Quote from "../components/quote/Quote";
+import Contact from "../components/contact/Contact";
 // import BubblePurple from '../components/bubblePurple/BubblePurple';
-import { motion } from 'framer-motion';
-import * as Animation from '../utils/animation/animation';
-import * as Content from '../utils/content/homePage';
-import * as Quotes from '../utils/content/quotes';
-import * as Data from '../utils/content/common';
+import { motion } from "framer-motion";
+import * as Animation from "../utils/animation/animation";
+import * as Content from "../utils/content/homePage";
+import * as Quotes from "../utils/content/quotes";
+import * as Data from "../utils/content/common";
 
 const Home: NextPage = () => {
   return (
-    <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
+    <motion.div
+      variants={Animation.pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <Head>
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
@@ -24,18 +28,28 @@ const Home: NextPage = () => {
       <section className={`section ${styles.welcomeSection}`}>
         <div className={styles.title}>
           <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
-          <motion.h1 variants={Animation.titleAnimation}>ייעוץ והדרכה הורית</motion.h1>
+          <motion.h1 variants={Animation.titleAnimation}>
+            ייעוץ והדרכה הורית
+          </motion.h1>
         </div>
         <motion.div className={styles.content}>
           <span>ברוכים הבאים!</span>
           {Content.welcomeSection}
         </motion.div>
         <motion.button className={styles.call} variants={Animation.fade}>
-          <a href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`} target="_blank" rel="noreferrer">שיחת יעוץ ראשונה - בחינם</a>
+          <a
+            href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            שיחת יעוץ ראשונה - בחינם
+          </a>
         </motion.button>
       </section>
       <section className={`section ${styles.infoSection}`}>
-        {Content.infoSection.map((box, i) => <InfoBox key={i} data={box} />)}
+        {Content.infoSection.map((box, i) => (
+          <InfoBox key={i} data={box} />
+        ))}
         {/* <BubblePurple /> */}
       </section>
       <section className={`section ${styles.workPlan}`}>
@@ -56,14 +70,20 @@ const Home: NextPage = () => {
       </section>
       <section className={`section ${styles.parallaxSection}`}>
         <div className={styles.image}>
-          <Image src={'/images/parallaxImage.jpeg'} objectFit="cover" objectPosition="center" layout="fill" alt="תמונה" />
+          <Image
+            src={"/images/parallaxImage.jpeg"}
+            objectFit="cover"
+            objectPosition="center"
+            layout="fill"
+            alt="תמונה"
+          />
         </div>
         <div className={styles.contact}>
           <Contact />
         </div>
       </section>
     </motion.div>
-  )
-}
+  );
+};
 
 export default Home;

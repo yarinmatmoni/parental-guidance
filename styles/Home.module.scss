@@ -1,165 +1,165 @@
-@import './colors.scss';
-@import './sizes.scss';
-@import './z-index.scss';
+@import "./colors.scss";
+@import "./sizes.scss";
+@import "./z-index.scss";
 
 .welcomeSection {
-	flex-direction: column;
-	background: $background-section-purple;
-	border-bottom-left-radius: $section-border-radius;
+  flex-direction: column;
+  background: $background-section-purple;
+  border-bottom-left-radius: $section-border-radius;
 
-	.title {
-		display: flex;
-		flex-direction: column;
+  .title {
+    display: flex;
+    flex-direction: column;
 
-		h1 {
-			font-size: 50px;
-			font-weight: 500;
-		}
+    h1 {
+      font-size: 50px;
+      font-weight: 500;
+    }
 
-		h1:nth-child(1) {
-			color: $basic-text-color;
-		}
+    h1:nth-child(1) {
+      color: $basic-text-color;
+    }
 
-		h1:nth-child(2) {
-			color: $secondary-purple;
-		}
-	}
+    h1:nth-child(2) {
+      color: $secondary-purple;
+    }
+  }
 
-	.content {
-		color: $basic-text-color;
-		margin-top: 16px;
-		max-width: 530px;
-		display: flex;
-		flex-direction: column;
-		font-size: 18px;
-		line-height: 25px;
+  .content {
+    color: $basic-text-color;
+    margin-top: 16px;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 25px;
 
-		span {
-			margin-bottom: 8px;
-			font-size: 20px;
-			font-weight: 600;
-		}
-	}
+    span {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
 
-	.call {
-		background-color: $secondary-purple;
-		padding: 16px;
-		margin-top: 48px;
-		text-align: center;
-		border-radius: 6px;
-		transition: 0.5s ease;
-		min-width: 60%;
-		margin-inline: auto;
-		border: none;
-		font-weight: 600;
-		font-size: 16px;
-		cursor: pointer;
+  .call {
+    background-color: $secondary-purple;
+    padding: 16px;
+    margin-top: 48px;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.5s ease;
+    min-width: 60%;
+    margin-inline: auto;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
 
-		a {
-			color: $basic-text-color;
-			transition: 0.5s ease;
-		}
+    a {
+      color: $basic-text-color;
+      transition: 0.5s ease;
+    }
 
-		&:hover {
-			box-shadow: 0px 0px 15px 1px $secondary-purple;
-			a {
-				color: whitesmoke;
-			}
-		}
-	}
+    &:hover {
+      box-shadow: 0px 0px 15px 1px $secondary-purple;
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
 }
 
 .infoSection {
-	flex-wrap: wrap;
-	column-gap: 30px;
-	row-gap: 30px;
-	align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
 }
 
 .workPlan {
-	align-items: center;
-	flex-direction: column;
-	direction: ltr;
+  align-items: center;
+  flex-direction: column;
+  direction: ltr;
 
-	h3 {
-		color: $basic-text-color;
-		font-weight: 500;
-		font-size: 25px;
-		text-align: center;
-		padding-bottom: 25px;
-		direction: rtl;
-	}
+  h3 {
+    color: $basic-text-color;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 25px;
+    direction: rtl;
+  }
 
-	p {
-		direction: rtl;
-	}
+  p {
+    direction: rtl;
+  }
 }
 
 .quoteSection {
-	direction: ltr;
-	background-color: $background-section-pink;
+  direction: ltr;
+  background-color: $background-section-pink;
 }
 
 .quotesCarousel {
-	flex-direction: column;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
 
-	.title {
-		display: flex;
-		width: fit-content;
-		gap: 5px;
-		align-items: center;
-		margin-bottom: 50px;
+  .title {
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 50px;
 
-		h3 {
-			color: $basic-text-color;
-			font-weight: 500;
-			font-size: 25px;
-		}
+    h3 {
+      color: $basic-text-color;
+      font-weight: 500;
+      font-size: 25px;
+    }
 
-		span {
-			font-weight: 200;
-			font-size: 40px;
-			color: #ffce45;
-		}
-	}
+    span {
+      font-weight: 200;
+      font-size: 40px;
+      color: #ffce45;
+    }
+  }
 
-	.carousel {
-		display: flex;
-		justify-content: center;
-	}
+  .carousel {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .parallaxSection {
-	position: relative;
-	max-width: 100%;
-	clip-path: inset(0 0 0 0);
+  position: relative;
+  max-width: 100%;
+  clip-path: inset(0 0 0 0);
 
-	.image {
-		position: fixed;
-		height: 100%;
-		width: 100%;
-		left: 0;
-		top: 0;
+  .image {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
 
-		img {
-			opacity: 0.15;
-		}
-	}
+    img {
+      opacity: 0.15;
+    }
+  }
 
-	justify-content: flex-start;
-	align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 
-	.contact {
-		position: relative;
-	}
+  .contact {
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: $mobile-size) {
-	.welcomeSection {
-		border-bottom-left-radius: $section-border-radius-mobile;
-		.call {
-			min-width: 90%;
-		}
-	}
+  .welcomeSection {
+    border-bottom-left-radius: $section-border-radius-mobile;
+    .call {
+      min-width: 90%;
+    }
+  }
 }

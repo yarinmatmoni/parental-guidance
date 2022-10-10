@@ -1,198 +1,198 @@
-@import '../../styles/colors.scss';
-@import '../../styles/sizes.scss';
-@import '../../styles/functions.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
 
-.footerContainer{
-	background-color: $background-section-blue-light;
-	
-	.content{
-		.descriptionLogo{
-			min-height: 15vh;
-			padding-top: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: 15px;
+.footerContainer {
+  background-color: $background-section-blue-light;
 
-			.description {
-				text-align: center;
-				padding-inline: 32px;
-		
-				h4 {
-					font-size: 15px;
-					font-weight: 100;
-					color: $basic-text-color;
-				}
-			}
-		}
+  .content {
+    .descriptionLogo {
+      min-height: 15vh;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
 
-		.navigation {
-			.navContainer {
-				display: flex;
-				flex-direction: column;
-				margin: 30px 0;
-				gap: 30px;
-				
-				ul {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-					gap: 6px;
-		
-					h4 {
-						color: $basic-text-color;
-						font-size: 24px;
-						font-weight: 100;
-						margin-bottom: 10px;
-					}
-		
-					a {
-						text-decoration: none;
-						font-weight: 100;
-						font-size: 16px;
-						color: $brand-color-purple;
-						transition: all 0.3s ease-in-out;
+      .description {
+        text-align: center;
+        padding-inline: 32px;
 
-						&:hover {
-							letter-spacing: 0.8px;
-						}
-					}
-				}
-			}
-		}
+        h4 {
+          font-size: 15px;
+          font-weight: 100;
+          color: $basic-text-color;
+        }
+      }
+    }
 
-		.contact {
-			display: flex;
-			flex-direction: column;
-			gap: 18px;
-			align-items: center;
-	
-			h4 {
-				font-weight: 500;
-				font-size: 24px;
-				color: $basic-text-color;
-				font-weight: 500;
-			}
-	
-			.top {
-				align-items: center;
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
+    .navigation {
+      .navContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        gap: 30px;
 
-				.topItem {
-					display: flex;
-					gap: 8px;
-					align-items: center;
-					cursor: pointer;
+        ul {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
 
-					h4 {
-						font-size: 16px;
-						text-align: right;
-						font-weight: 100;
-						color: $brand-color-purple;
-					}
+          h4 {
+            color: $basic-text-color;
+            font-size: 24px;
+            font-weight: 100;
+            margin-bottom: 10px;
+          }
 
-					span {
-						color: $brand-color-purple;
-						font-weight: 300;
-						font-size: 20px;
-					}
-				}
-			}
+          a {
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 16px;
+            color: $brand-color-purple;
+            transition: all 0.3s ease-in-out;
 
-			.bottom {
-				margin: 20px 0;
-				justify-content: space-evenly;
-				align-items: center;
-				display: flex;
-		
-				img {
-					height: 50px !important;
-					width: 50px !important;
-				}
-			}
-		}
-	}
+            &:hover {
+              letter-spacing: 0.8px;
+            }
+          }
+        }
+      }
+    }
 
-	@include desktop{
-		padding: 16px 32px;
-		display: flex;
-		align-items: center;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
 
-		.content {
-			display: flex;
-			width: 100%;
+      h4 {
+        font-weight: 500;
+        font-size: 24px;
+        color: $basic-text-color;
+        font-weight: 500;
+      }
 
-			.navigation {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-			
-				h4 {
-					text-align: center;
-					font-weight: 500;
-					font-size: 16px;
-					color: $basic-text-color;
-				}
+      .top {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-				.navContainer{
-					flex-direction: row;
-					display: flex;
-					justify-content: space-evenly;
+        .topItem {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          cursor: pointer;
 
-					ul {
-						align-items: flex-start;
-						display: flex;
-						flex-direction: column;
-						gap: 6px;
-			
-						h4 {
-							font-size: 16px;
-						}
-			
-						a {
-							font-size: 15px;
-	
-							&:hover {
-								letter-spacing: initial;
-							}
-						}
-					}
-				}
-			}
+          h4 {
+            font-size: 16px;
+            text-align: right;
+            font-weight: 100;
+            color: $brand-color-purple;
+          }
 
-			.contact {
-				margin-top: 30px;
-				justify-content: space-between;
+          span {
+            color: $brand-color-purple;
+            font-weight: 300;
+            font-size: 20px;
+          }
+        }
+      }
 
-				h4 {
-					font-size: 16px;
-				}
-		
-				.top {
-					.topItem {
-						padding: 5px;
+      .bottom {
+        margin: 20px 0;
+        justify-content: space-evenly;
+        align-items: center;
+        display: flex;
 
-						h4 {
-							font-size: 15px;
-						}
-	
-						span {
-							font-size: 18px;
-						}
-					}
-				}
-	
-				.bottom {
-					justify-content: center;
-					
-					img{
-						height: 35px !important;
-					}
-				}
-			}
-		}
-	}
+        img {
+          height: 50px !important;
+          width: 50px !important;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+
+    .content {
+      display: flex;
+      width: 100%;
+
+      .navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        h4 {
+          text-align: center;
+          font-weight: 500;
+          font-size: 16px;
+          color: $basic-text-color;
+        }
+
+        .navContainer {
+          flex-direction: row;
+          display: flex;
+          justify-content: space-evenly;
+
+          ul {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            h4 {
+              font-size: 16px;
+            }
+
+            a {
+              font-size: 15px;
+
+              &:hover {
+                letter-spacing: initial;
+              }
+            }
+          }
+        }
+      }
+
+      .contact {
+        margin-top: 30px;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 16px;
+        }
+
+        .top {
+          .topItem {
+            padding: 5px;
+
+            h4 {
+              font-size: 15px;
+            }
+
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .bottom {
+          justify-content: center;
+
+          img {
+            height: 35px !important;
+          }
+        }
+      }
+    }
+  }
 }
