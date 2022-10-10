@@ -39,8 +39,8 @@ function AboutPage() {
         <motion.div variants={Animation.leftFadeIn} className={styles.image}>
           <Image
             src="/images/aboutMe.jpeg"
-            height={270}
-            width={270}
+            height={220}
+            width={220}
             alt="AboutMe"
           ></Image>
         </motion.div>
