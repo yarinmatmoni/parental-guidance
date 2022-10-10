@@ -1,7 +1,6 @@
 @import '../../styles/colors.scss';
 @import '../../styles/sizes.scss';
 @import '../../styles/z-index.scss';
-@import '../../styles/functions.scss';
 
 .container {
 	display: flex;
@@ -11,9 +10,5 @@
 	.logo {
 		align-items: center;
 		display: flex;
-	}
-
-	@include desktop {
-		margin-left: 300px;
 	}
 }
