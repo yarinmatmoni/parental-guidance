@@ -8,21 +8,20 @@
 	flex: 1;
 	margin: auto 20px;
 	justify-content: space-between;
+	height: $navbar-height;
 
 	.menuContainer {
 		background-color: $background-body-color;
 		position: fixed;
 		display: flex;
 		flex-direction: column;
-		top: $navbar-height;
 		align-items: center;
-		transition: 0.3s;
+		transition: all 0.4s ease;
 		box-shadow: 0 6px 5px 0 rgb(63 71 86 / 15%);
 		opacity: 0;
 		z-index: $z-index-normal;
 		height: 0;
 		justify-content: center;
-		overflow-y: scroll;
 		width: 100%;
 
 		.menuItem {

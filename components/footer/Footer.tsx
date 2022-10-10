@@ -2,13 +2,12 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/logo/logo1.svg";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
 function Footer() {
   return (
-    <footer className={styles.footerContainer}>
+    <footer id="footer" className={styles.footerContainer}>
       <div className={styles.content}>
         <div className={styles.descriptionLogo}>
           <Logo height={80} width={100} />
