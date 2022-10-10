@@ -7,7 +7,7 @@ import Logo from "../logo/Logo";
 
 function Footer() {
   return (
-    <footer className={styles.footerContainer}>
+    <footer id="footer" className={styles.footerContainer}>
       <div className={styles.content}>
         <div className={styles.descriptionLogo}>
           <Logo height={80} width={100} />

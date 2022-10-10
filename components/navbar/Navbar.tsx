@@ -5,10 +5,14 @@ import * as Content from "../../utils/content/common";
 import styles from "./Navbar.module.scss";
 import Logo from "../logo/Logo";
 import Hamburger from "../hamburger/Hamburger";
+import useOnclickOutside from "../../utils/hooks/useOnclickOutside";
+import { useScrollLock } from "../../utils/hooks/useLockScroll";
 
 function Navbar() {
-  const refMenuContainer = useRef<HTMLUListElement>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const refMenuContainer: any = useRef();
+  useOnclickOutside(refMenuContainer, () => setIsOpen(false));
+  useScrollLock(isOpen);
   const router = useRouter();
 
   useEffect(() => {
