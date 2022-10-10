@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as Content from "../../utils/content/common";
@@ -14,23 +14,6 @@ function Navbar() {
   useOnclickOutside(refMenuContainer, () => setIsOpen(false));
   useScrollLock(isOpen);
   const router = useRouter();
-
-  useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (
-        refMenuContainer.current &&
-        !refMenuContainer.current.contains(event.target)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside, true);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  }, []);
 
   const onMenuClick = () => {
     setIsOpen(!isOpen);
