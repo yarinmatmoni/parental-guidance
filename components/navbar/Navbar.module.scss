@@ -12,18 +12,15 @@
 	.menuContainer {
 		background-color: $background-body-color;
 		position: fixed;
-		display: flex;
-		flex-direction: column;
 		top: $navbar-height;
-		align-items: center;
 		transition: 0.3s;
 		box-shadow: 0 6px 5px 0 rgb(63 71 86 / 15%);
 		opacity: 0;
 		z-index: $z-index-normal;
 		height: 0;
-		justify-content: center;
 		overflow-y: scroll;
 		width: 100%;
+		left: 0;
 
 		.menuItem {
 			display: flex;
@@ -32,6 +29,28 @@
 			opacity: 1;
 			transition: opacity 0.1s ease-in-out;
 			padding: 8px 0;
+			color: $basic-text-color;
+
+			&[data-path='true'] a {
+				color: $brand-color-purple;
+			}
+
+			.subMenu {
+				margin-top: 5px;
+			}
+
+			a {
+				color: $basic-text-color;
+				font-size: 16px;
+				text-decoration: none;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					color: $brand-color-purple;
+					letter-spacing: 0.8px;
+				}
+			}
 		}
 
 		&[data-open='true'] {
@@ -49,7 +68,7 @@
 	@include desktop {
 		.menuContainer {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			align-items: center;
 			width: 90%;
 			margin: 0 auto;
@@ -60,44 +79,36 @@
 			position: initial;
 			box-shadow: initial;
 
+			&[data-open='true'] {
+				height: initial;
+			}
+
 			.menuItem {
 				color: $basic-text-color;
 				cursor: pointer;
-				padding: 12px 0;
-				position: relative;
 
 				&:hover {
 					.subMenu {
 						position: absolute;
-						top: 30px;
+						top: $subMenu-height;
 						background: $background-body-color;
 						display: flex;
 						flex-direction: column;
 						padding: 10px 20px;
-						box-shadow: 0 0 15px 1px $box-shadow-brand-color;
+						box-shadow: 0 0 15px 1px $box-shadow-color;
 						border-radius: 8px;
-						gap: 10px;
-						margin-top: 10px;
+						margin-top: $subMenu-height;
 					}
 				}
 
 				.subMenu {
 					display: none;
 				}
-			}
 
-			a {
-				text-decoration: none;
-				cursor: pointer;
-				transition: all 0.3s ease-in-out;
-				color: $basic-text-color;
-				font-size: 16px;
-
-				&:hover {
-					color: $brand-color-purple;
+				a:hover {
+					letter-spacing: initial;
 				}
 			}
 		}
 	}
 }
-
