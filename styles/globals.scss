@@ -19,6 +19,7 @@ body {
     #content,
     #footer {
       filter: blur(3px);
+      pointer-events: none;
     }
   }
 }

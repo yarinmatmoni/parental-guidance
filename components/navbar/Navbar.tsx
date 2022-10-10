@@ -15,8 +15,8 @@ function Navbar() {
   useScrollLock(isOpen);
   const router = useRouter();
 
-  const onMenuClick = () => {
-    setIsOpen(!isOpen);
+  const onMenuClick = (forceClose?: boolean) => {
+    setIsOpen(!isOpen && !forceClose);
   };
 
   return (
@@ -40,7 +40,9 @@ function Navbar() {
                           className={styles.link}
                           href={`${subMenuItem.link}`}
                         >
-                          <a onClick={onMenuClick}>{subMenuItem.name}</a>
+                          <a onClick={() => onMenuClick(true)}>
+                            {subMenuItem.name}
+                          </a>
                         </Link>
                       </li>
                     ))}
@@ -48,14 +50,14 @@ function Navbar() {
                 </>
               ) : (
                 <Link href={`${menuItem.link}`}>
-                  <a onClick={onMenuClick}>{menuItem.name}</a>
+                  <a onClick={() => onMenuClick(true)}>{menuItem.name}</a>
                 </Link>
               )}
             </li>
           ))}
         </>
       </ul>
-      <Hamburger onMenuClick={onMenuClick} isOpen={isOpen} />
+      <Hamburger onMenuClick={() => onMenuClick()} isOpen={isOpen} />
     </nav>
   );
 }
