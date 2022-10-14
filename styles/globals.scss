@@ -1,73 +1,81 @@
-@import "./colors.scss";
-@import "./sizes.scss";
-@import "./z-index.scss";
+@import './colors.scss';
+@import './sizes.scss';
+@import './z-index.scss';
+@import './functions.scss';
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Varela Round", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Varela Round', sans-serif;
 }
 
 body {
-  background-color: $background-body-color;
-  direction: rtl;
+	background-color: $background-body-color;
+	direction: rtl;
 
-  &.sticky {
-    overflow: hidden;
+	&.sticky {
+		overflow: hidden;
 
-    #content,
-    #footer {
-      filter: blur(3px);
-      pointer-events: none;
-    }
-  }
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-h4 {
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
+		#content,
+		#footer {
+			filter: blur(3px);
+			pointer-events: none;
+		}
+	}
 }
 
 .section {
-  min-height: calc(100vh - $body-size);
-  display: flex;
-  justify-content: center;
-  padding: 32px 80px;
-  max-width: $body-max-width;
-  margin: auto;
+	min-height: calc(100vh - $body-size);
+	display: flex;
+	justify-content: center;
+	padding: 32px 30px;
+	max-width: $body-max-width;
+	margin: auto;
+}
 
-  @media only screen and (max-width: $mobile-size) {
-    padding: 32px 30px;
-  }
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
 }
 
 *::-webkit-scrollbar {
-  width: 5px;
-  height: 4px;
+	display: none;
 }
 
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
+@include desktop {
+	*::-webkit-scrollbar {
+		display: initial;
+		width: 5px;
+		height: 4px;
+	}
 
-*::-webkit-scrollbar-thumb {
-  background-color: #5078ab59;
-  border-radius: 20px;
-  border: transparent;
+	*::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #5078ab59;
+		border-radius: 20px;
+		border: transparent;
+	}
+
+	.section {
+		padding: 32px 75px;
+	}
 }

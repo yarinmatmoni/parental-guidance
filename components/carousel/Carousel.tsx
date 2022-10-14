@@ -30,16 +30,15 @@ function Carousel({ data }: any) {
   return (
     <div className={styles.carousel}>
       <ul className={styles.carouselList}>
-        {data &&
-          data.map((review: CarouselProps, index: number) => {
+        {
+          data?.map((review: CarouselProps, index: number) => {
             return (
               <li
                 key={index + 1}
-                className={`${styles.carouselItem} ${
-                  index + 1 === activeSlide ? styles.active : ""
-                }
-                            ${index + 1 < activeSlide ? styles.right : ""}
-                            ${index + 1 > activeSlide ? styles.left : ""}`}
+                className={`${styles.carouselItem} ${index + 1 === activeSlide ? styles.active : ""
+                  }
+                  ${index + 1 < activeSlide ? styles.right : ""}
+                  ${index + 1 > activeSlide ? styles.left : ""}`}
               >
                 <blockquote className={styles.carouselQuote}>
                   <p>{review.quote}</p>
