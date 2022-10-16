@@ -74,9 +74,11 @@
 	column-gap: 30px;
 	row-gap: 30px;
 	align-items: center;
+	position: relative;
 }
 
 .workPlan {
+	position: relative;
 	align-items: center;
 	flex-direction: column;
 	direction: ltr;

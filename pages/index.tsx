@@ -13,6 +13,7 @@ import * as Animation from "../utils/animation/animation";
 import * as Content from "../utils/content/homePage";
 import * as Quotes from "../utils/content/quotes";
 import * as Data from "../utils/content/common";
+import Shape from "../components/shape/Shape";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       initial="hidden"
       animate="show"
     >
+      <Shape name="shape1" height={600} top={80} left={100} opacity={0.2} />
       <Head>
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
@@ -51,8 +53,16 @@ const Home: NextPage = () => {
           <InfoBox key={i} data={box} />
         ))}
         {/* <BubblePurple /> */}
+        <Shape name="shape3" height={600} top={80} left={"50%"} opacity={0.2} />
       </section>
       <section className={`section ${styles.workPlan}`}>
+        <Shape
+          name="shape2"
+          height={300}
+          top={180}
+          left={"10%"}
+          opacity={0.2}
+        />
         <h3>איך זה עובד ?</h3>
         <TimeLine data={Content.timeLineElements} />
       </section>
