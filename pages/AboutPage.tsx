@@ -9,6 +9,7 @@ import * as Data from "../utils/content/common";
 import * as Content from "../utils/content/about";
 import * as Animation from "../utils/animation/animation";
 import styles from "../styles/AboutPage.module.scss";
+import Shape from "../components/shape/Shape";
 
 function AboutPage() {
   return (
@@ -22,6 +23,7 @@ function AboutPage() {
         <meta name="keywords" content="אודות" />
       </Head>
       <section className={`section ${styles.introSection}`}>
+        <Shape name="shape3" height={300} top={"-15%"} left={"15%"} opacity={0.25} />
         <div className={styles.about}>
           <div className={styles.title}>
             <motion.h1 variants={Animation.titleAnimation}>קצת עליי</motion.h1>
@@ -46,6 +48,7 @@ function AboutPage() {
         </motion.div>
       </section>
       <section className={`section ${styles.QuoteSection}`}>
+        <Shape name="shape1" height={350} top={"25%"} left={"65%"} opacity={0.2} />
         <Quote data={Quotes.quote1} />
       </section>
       <section className={`section ${styles.mainSection}`}>
