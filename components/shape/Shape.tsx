@@ -9,6 +9,7 @@ function Shape({
   left,
   opacity,
   name,
+  rotate,
 }: {
   height: number;
   width?: number;
@@ -16,11 +17,12 @@ function Shape({
   left: number | string;
   opacity: number;
   name: string;
+  rotate?: number;
 }) {
   return (
     <div
       className={styles.container}
-      style={{ top: top, left: left, opacity: opacity }}
+      style={{ top: top, left: left, opacity: opacity, rotate: `${rotate}deg` }}
     >
       <Image
         src={`/svgs/` + name + ".svg"}
