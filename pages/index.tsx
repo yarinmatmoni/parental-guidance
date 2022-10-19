@@ -7,7 +7,6 @@ import TimeLine from "../components/timeLine/TimeLine";
 import Carousel from "../components/carousel/Carousel";
 import Quote from "../components/quote/Quote";
 import Contact from "../components/contact/Contact";
-// import BubblePurple from '../components/bubblePurple/BubblePurple';
 import { motion } from "framer-motion";
 import * as Animation from "../utils/animation/animation";
 import * as Content from "../utils/content/homePage";
@@ -22,12 +21,12 @@ const Home: NextPage = () => {
       initial="hidden"
       animate="show"
     >
-      <Shape name="shape1" height={600} top={80} left={100} opacity={0.2} />
       <Head>
         <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
         <meta name="keywords" content="ייעוץ והדרכה הורית" />
       </Head>
       <section className={`section ${styles.welcomeSection}`}>
+        <Shape name="shape1" height={300} top={-80} left={220} opacity={0.25} rotate={12} />
         <div className={styles.title}>
           <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
           <motion.h1 variants={Animation.titleAnimation}>
@@ -52,16 +51,15 @@ const Home: NextPage = () => {
         {Content.infoSection.map((box, i) => (
           <InfoBox key={i} data={box} />
         ))}
-        {/* <BubblePurple /> */}
-        <Shape name="shape3" height={600} top={80} left={"50%"} opacity={0.2} />
+        <Shape name="shape3" height={350} top={"55%"} left={"60%"} opacity={0.2} rotate={10} />
       </section>
       <section className={`section ${styles.workPlan}`}>
         <Shape
           name="shape2"
-          height={300}
-          top={180}
-          left={"10%"}
-          opacity={0.2}
+          height={250}
+          top={"50%"}
+          left={"5%"}
+          opacity={0.15}
         />
         <h3>איך זה עובד ?</h3>
         <TimeLine data={Content.timeLineElements} />
