@@ -7,11 +7,12 @@ import TimeLine from "../components/timeLine/TimeLine";
 import Carousel from "../components/carousel/Carousel";
 import Quote from "../components/quote/Quote";
 import Contact from "../components/contact/Contact";
+import Link from '../components/link/Link';
 import { motion } from "framer-motion";
+import { whatsAppHref } from '../utils/content/hrefs';
 import * as Animation from "../utils/animation/animation";
 import * as Content from "../utils/content/homePage";
 import * as Quotes from "../utils/content/quotes";
-import * as Data from "../utils/content/common";
 import Shape from "../components/shape/Shape";
 
 const Home: NextPage = () => {
@@ -38,13 +39,7 @@ const Home: NextPage = () => {
           {Content.welcomeSection}
         </motion.div>
         <motion.button className={styles.call} variants={Animation.fade}>
-          <a
-            href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            שיחת יעוץ ראשונה - בחינם
-          </a>
+          <Link href={whatsAppHref} text={'שיחת יעוץ ראשונה - בחינם'} />
         </motion.button>
       </section>
       <section className={`section ${styles.infoSection}`}>

@@ -3,9 +3,10 @@ import Head from "next/head";
 import Quote from "../components/quote/Quote";
 import DesignParagraph from "../components/designParagraph/DesignParagraph";
 import * as Quotes from "../utils/content/quotes";
+import Link from '../components/link/Link';
 import { motion } from "framer-motion";
 import Image from "next/image";
-import * as Data from "../utils/content/common";
+import { whatsAppHref } from "../utils/content/hrefs";
 import * as Content from "../utils/content/about";
 import * as Animation from "../utils/animation/animation";
 import styles from "../styles/AboutPage.module.scss";
@@ -59,13 +60,7 @@ function AboutPage() {
         <div className={styles.contact}>
           <h3>
             אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר{" "}
-            <a
-              href={`//api.whatsapp.com/send?phone=972${Data.personalInfo.phoneNumber.value}&text=${Data.whatsAppMessage}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              בווצאפ
-            </a>
+            <Link href={whatsAppHref} text={'בווצאפ'} />
           </h3>
         </div>
       </section>
