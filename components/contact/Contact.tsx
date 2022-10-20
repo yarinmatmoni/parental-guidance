@@ -4,6 +4,21 @@ import * as contact from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
+
+  async function handleOnSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = {};
+    Array.from(event.currentTarget.elements).forEach((filed: any) => {
+      if (!filed.name) return;
+      formData[filed.name as keyof Object] = filed.value;
+    })
+
+    fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+    })
+  }
+
   return (
     <div className={styles.contactContainer}>
       <div className={styles.top}>
@@ -28,7 +43,7 @@ function Contact() {
         </div>
       </div>
       <div className={styles.contact}>
-        <form method="post">
+        <form method="post" onSubmit={handleOnSubmit}>
           {contact.contact.data.map((item, index) => {
             return (
               <input
