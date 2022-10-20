@@ -28,16 +28,18 @@ function Contact() {
         </div>
       </div>
       <div className={styles.contact}>
-        <form>
+        <form method="post">
           {contact.contact.data.map((item, index) => {
             return (
               <input
                 key={`${index}_${item.name}`}
-                type="text"
+                type={item.type}
+                name={item.inputName}
                 placeholder={item.name}
               ></input>
             );
           })}
+          <textarea name="message" placeholder="הקלד טקסט..."></textarea>
           <button>קביעת פגישת היכרות</button>
         </form>
       </div>
