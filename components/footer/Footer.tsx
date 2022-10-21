@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
-import LinkIcon from "../link/Link";
+import MyLink from "../link/Link";
 import Image from "next/image";
-import { whatsAppHref } from "../../utils/content/hrefs";
+import { whatsAppHref, phoneCallHref } from "../../utils/content/hrefs";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
@@ -49,15 +49,19 @@ function Footer() {
             <div className={styles.top}>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">call</span>
-                <h4>{Content.personalInfo.phoneNumber.display}</h4>
+                <h4>
+                  <MyLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
+                </h4>
               </div>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">mail</span>
-                <h4>shalhevetbarak@gmail.com</h4>
+                <h4>
+                  <a>{Content.personalInfo.email}</a>
+                </h4>
               </div>
             </div>
             <div className={styles.bottom}>
-              <LinkIcon href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
+              <MyLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
               <a>
                 <Image
                   src="/icons/facebook_icon.svg"
