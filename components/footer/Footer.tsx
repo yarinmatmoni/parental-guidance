@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
+import ContactLink from "../link/Link";
 import Image from "next/image";
+import { whatsAppHref, phoneCallHref } from "../../utils/content/hrefs";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
@@ -47,26 +49,19 @@ function Footer() {
             <div className={styles.top}>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">call</span>
-                <h4>{Content.personalInfo.phoneNumber.display}</h4>
+                <h4>
+                  <ContactLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
+                </h4>
               </div>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">mail</span>
-                <h4>shalhevetbarak@gmail.com</h4>
+                <h4>
+                  <a>{Content.personalInfo.email}</a>
+                </h4>
               </div>
             </div>
             <div className={styles.bottom}>
-              <a
-                href={`//api.whatsapp.com/send?phone=972${Content.personalInfo.phoneNumber.value}&text=${Content.whatsAppMessage}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src="/icons/whatsapp_icon.svg"
-                  height={30}
-                  width={30}
-                  alt="whatsapp_icon"
-                ></Image>
-              </a>
+              <ContactLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
               <a>
                 <Image
                   src="/icons/facebook_icon.svg"
