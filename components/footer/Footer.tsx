@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
-import MyLink from "../link/Link";
+import ContactLink from "../link/Link";
 import Image from "next/image";
 import { whatsAppHref, phoneCallHref } from "../../utils/content/hrefs";
 import * as Content from "../../utils/content/common";
@@ -50,7 +50,7 @@ function Footer() {
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">call</span>
                 <h4>
-                  <MyLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
+                  <ContactLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
                 </h4>
               </div>
               <div className={styles.topItem}>
@@ -61,7 +61,7 @@ function Footer() {
               </div>
             </div>
             <div className={styles.bottom}>
-              <MyLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
+              <ContactLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
               <a>
                 <Image
                   src="/icons/facebook_icon.svg"

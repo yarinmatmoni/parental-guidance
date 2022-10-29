@@ -4,7 +4,7 @@ import * as contact from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
-  //TODO: send email + Custom hook? 
+  //TODO: send email
   async function handleOnSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = {};
