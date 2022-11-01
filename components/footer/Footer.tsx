@@ -35,7 +35,7 @@ function Footer() {
                 <ul key={i}>
                   <h4>{item.name}</h4>
                   {item.sub.map((subMenuItem, i) => (
-                    <Link key={i} href="/">
+                    <Link key={i} href={`${subMenuItem.link}`}>
                       <a>{subMenuItem.name}</a>
                     </Link>
                   ))}
