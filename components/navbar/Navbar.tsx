@@ -35,7 +35,7 @@ function Navbar() {
                   {menuItem.name}
                   <ul className={styles.subMenu} data-open={isOpen}>
                     {menuItem.sub.map((subMenuItem, i) => (
-                      <li key={i} className={styles.menuItem}>
+                      <li key={i} className={styles.menuItem} data-path={router.pathname === subMenuItem.link ? true : false}>
                         <Link
                           className={styles.link}
                           href={`${subMenuItem.link}`}
