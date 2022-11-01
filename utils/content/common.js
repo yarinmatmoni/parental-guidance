@@ -22,11 +22,16 @@ export const nav = [
 	{
 		name: 'יעוץ והדרכה הורית',
 		sub: [
-			{ name: 'יועצת שינה', link: '#' },
-			{ name: 'גמילה ממוצץ', link: '#' },
-			{ name: 'גמילה מחיתולים', link: '#' },
-			{ name: 'הדרכה לגיל הרך', link: '#' },
-			{ name: 'הפרעות קשב וריכוז', link: '#' },
+			{ name: 'יועצת שינה', link: '/Advice&Guidance/Sleep' },
+			{ name: 'גמילה ממוצץ', link: '/Advice&Guidance/Pacifier' },
+			{ name: 'גמילה מחיתולים', link: '/Advice&Guidance/Diapers' },
+			{ name: 'הדרכה לגיל הרך', link: '/Advice&Guidance/Infancy' },
+			{ name: 'הפרעות קשב וריכוז', link: '/Advice&Guidance/Attention' },
+			{ name: 'סדר יום לילדים', link: '/Advice&Guidance/Schedule' },
+			{
+				name: 'אינטליגנציה רגשית',
+				link: '/Advice&Guidance/EmotionalIntelligence',
+			},
 		],
 	},
 	{

@@ -24,7 +24,7 @@ function Footer() {
               {Content.nav
                 .filter((menuItem) => menuItem.sub.length === 0)
                 .map((item, i) => (
-                  <Link key={i} href="/">
+                  <Link key={i} href={`${item.link}`}>
                     <a>{item.name}</a>
                   </Link>
                 ))}
@@ -35,7 +35,7 @@ function Footer() {
                 <ul key={i}>
                   <h4>{item.name}</h4>
                   {item.sub.map((subMenuItem, i) => (
-                    <Link key={i} href="/">
+                    <Link key={i} href={`${subMenuItem.link}`}>
                       <a>{subMenuItem.name}</a>
                     </Link>
                   ))}
@@ -61,7 +61,7 @@ function Footer() {
               </div>
             </div>
             <div className={styles.bottom}>
-              <ContactLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} />
+              <ContactLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} tab={true} />
               <a>
                 <Image
                   src="/icons/facebook_icon.svg"
