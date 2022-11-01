@@ -60,7 +60,7 @@ function AboutPage() {
         <div className={styles.contact}>
           <h3>
             אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר{" "}
-            <Link href={whatsAppHref} text={'בווצאפ'} />
+            <Link href={whatsAppHref} text={'בווצאפ'} tab={true} />
           </h3>
         </div>
       </section>

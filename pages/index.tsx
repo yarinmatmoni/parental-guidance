@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           {Content.welcomeSection}
         </motion.div>
         <motion.button className={styles.call} variants={Animation.fade}>
-          <Link href={whatsAppHref} text={'שיחת יעוץ ראשונה - בחינם'} />
+          <Link href={whatsAppHref} text={'שיחת יעוץ ראשונה - בחינם'} tab={true} />
         </motion.button>
       </section>
       <section className={`section ${styles.infoSection}`}>
