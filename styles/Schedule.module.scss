@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import './sizes.scss';
+@import './functions.scss';
 
 .intro {
 	background-color: $background-section-purple;
@@ -74,5 +75,11 @@
 				margin-left: 15px;
 			}
 		}
+	}
+}
+
+@include desktop {
+	.intro {
+		border-bottom-left-radius: $section-border-radius;
 	}
 }

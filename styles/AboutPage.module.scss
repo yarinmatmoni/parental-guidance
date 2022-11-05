@@ -83,6 +83,7 @@
 
 @include desktop {
 	.introSection {
+		border-bottom-left-radius: $section-border-radius;
 		justify-content: space-between;
 
 		.image {
