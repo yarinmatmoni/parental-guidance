@@ -1,0 +1,16 @@
+@import '../styles/colors.scss';
+@import '../styles/sizes.scss';
+@import './functions.scss';
+
+.intro {
+	background-color: $background-section-purple;
+	border-bottom-left-radius: $section-border-radius-mobile;
+	flex-direction: column;
+	justify-content: initial;
+}
+
+@include desktop {
+	.intro {
+		border-bottom-left-radius: $section-border-radius;
+	}
+}
