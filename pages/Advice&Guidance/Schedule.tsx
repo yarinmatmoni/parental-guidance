@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from "next/head";
 import * as Data from '../../utils/content/schedulePage';
+import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
 import * as Animation from "../../utils/animation/animation";
 import Shape from "../../components/shape/Shape";
@@ -14,11 +15,7 @@ function Schedule() {
                 <meta name="keywords" content="סדר יום לילדים" />
             </Head>
             <section className={`section ${styles.intro}`}>
-                <motion.h1 variants={Animation.titleAnimation}>סדר יום לילדים</motion.h1>
-                <p>{Data.intro.introParagraph}</p>
-                <h3>{Data.intro.title}</h3>
-                <p>{Data.intro.endParagraph.line1}</p>
-                <p>{Data.intro.endParagraph.line2}</p>
+                <OpenSection title={"סדר יום לילדים"} openParagraphs={Data.intro.introParagraph} subtitle={Data.intro.subtitle} paragraphs={Data.intro.paragraphs} />
                 <Shape name="shape1" height={300} top={-50} left={220} opacity={0.35} rotate={210} />
             </section>
             <section className={`section ${styles.importance}`}>
