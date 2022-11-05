@@ -30,6 +30,16 @@ function Schedule() {
                 </ul>
                 <Shape name="shape3" height={250} top={250} left={20} opacity={0.15} rotate={0} />
             </section>
+            <section className={`section ${styles.example}`}>
+                <h3>{Data.example.title}</h3>
+                <p>{Data.example.paragraph1.line1}</p>
+                <p>{Data.example.paragraph1.line2}</p>
+                <ul>
+                    {Data.example.paragraph1.list.map((item, index) => <li key={`${index}_${item}`}>{item}</li>)}
+                </ul>
+                <p>{Data.example.paragraph2}</p>
+                <p>{Data.example.paragraph3}</p>
+            </section>
         </motion.div>
     )
 }
