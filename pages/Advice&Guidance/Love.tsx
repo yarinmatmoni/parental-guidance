@@ -23,6 +23,7 @@ function Love() {
                 <ul className='dotList'>
                     {Data.importance.list.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
+                <Shape name="shape2" height={280} top={'50%'} left={'40%'} opacity={0.12} rotate={0} />
             </section>
             <section className={`section ${styles.how}`}>
                 <h3>{Data.how.title}</h3>
@@ -35,6 +36,7 @@ function Love() {
                 <ul className='arrowList'>
                     {Data.summary.list.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
+                <Shape name="shape3" height={400} top={-50} left={'55%'} opacity={0.15} rotate={150} />
             </section>
         </motion.div>
     )
