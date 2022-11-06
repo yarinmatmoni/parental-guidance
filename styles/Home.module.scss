@@ -110,7 +110,7 @@
 		width: fit-content;
 		gap: 5px;
 		align-items: center;
-		margin-bottom: 20px; //50
+		margin-bottom: 20px;
 
 		h3 {
 			color: $basic-text-color;
@@ -127,31 +127,6 @@
 	.carousel {
 		display: flex;
 		justify-content: center;
-	}
-}
-
-.parallaxSection {
-	position: relative;
-	max-width: 100%;
-	clip-path: inset(0 0 0 0);
-
-	.image {
-		position: fixed;
-		height: 100%;
-		width: 100%;
-		left: 0;
-		top: 0;
-
-		img {
-			opacity: 0.15;
-		}
-	}
-
-	justify-content: flex-start;
-	align-items: center;
-
-	.contact {
-		position: relative;
 	}
 }
 

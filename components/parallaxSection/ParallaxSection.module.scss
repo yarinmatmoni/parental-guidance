@@ -1,0 +1,31 @@
+@import '../../styles/functions.scss';
+
+.parallaxSection {
+	position: relative;
+	max-width: 100% !important;
+	clip-path: inset(0 0 0 0);
+
+	.image {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+
+		img {
+			opacity: 0.15;
+		}
+	}
+
+	align-items: center;
+
+	.contact {
+		position: relative;
+	}
+}
+
+@include desktop {
+	.parallaxSection {
+		justify-content: flex-start !important;
+	}
+}

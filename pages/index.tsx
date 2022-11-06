@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import InfoBox from "../components/infoBox/InfoBox";
 import TimeLine from "../components/timeLine/TimeLine";
 import Carousel from "../components/carousel/Carousel";
 import Quote from "../components/quote/Quote";
-import Contact from "../components/contact/Contact";
 import Link from '../components/link/Link';
 import { motion } from "framer-motion";
 import { whatsAppHref } from '../utils/content/hrefs';
@@ -69,20 +67,6 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.carousel}>
           <Carousel data={Content.reviews} />
-        </div>
-      </section>
-      <section className={`section ${styles.parallaxSection}`}>
-        <div className={styles.image}>
-          <Image
-            src={"/images/parallaxImage.jpeg"}
-            objectFit="cover"
-            objectPosition="center"
-            layout="fill"
-            alt="תמונה"
-          />
-        </div>
-        <div className={styles.contact}>
-          <Contact />
         </div>
       </section>
     </motion.div>

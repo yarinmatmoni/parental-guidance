@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
+import emailjs from '@emailjs/browser';
 import * as contact from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
-  //TODO: send email
-  async function handleOnSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const formData = {};
-    Array.from(event.currentTarget.elements).forEach((filed: any) => {
-      if (!filed.name) return;
-      formData[filed.name as keyof Object] = filed.value;
-    })
+  const form: any = useRef();
 
-    fetch('/api/mail', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-    })
+  const handleOnSubmit = (event: any) => {
+    event.preventDefault();
+
+    emailjs.sendForm('service_ospt7rs', 'template_y3tlhqn', form.current, '03DUOZfOoL2vNUiJO')
+      .then((result) => {
+        console.log(result.text);
+        event.target.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
   }
 
   return (
@@ -43,7 +43,7 @@ function Contact() {
         </div>
       </div>
       <div className={styles.contact}>
-        <form method="post" onSubmit={handleOnSubmit}>
+        <form method="post" onSubmit={handleOnSubmit} ref={form}>
           {contact.contact.data.map((item, index) => {
             return (
               <input
@@ -55,7 +55,7 @@ function Contact() {
             );
           })}
           <textarea name="message" placeholder="הקלד טקסט..."></textarea>
-          <button>קביעת פגישת היכרות</button>
+          <button type="submit" value="Send">קביעת פגישת היכרות</button>
         </form>
       </div>
     </div>

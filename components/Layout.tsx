@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./header/Header";
+import ParallaxSection from '../components/parallaxSection/ParallaxSection';
 import Footer from "./footer/Footer";
 
 type Props = {
@@ -11,6 +12,7 @@ function Layout({ children }: Props) {
     <>
       <Header />
       <div id="content">{children}</div>
+      <ParallaxSection />
       <Footer />
     </>
   );
