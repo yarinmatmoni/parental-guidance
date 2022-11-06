@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from "next/head";
+import MetaData from '../../components/metaData/MetaData';
 import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
 import * as Animation from "../../utils/animation/animation";
@@ -9,10 +9,11 @@ import styles from '../../styles/EmotionalIntelligence.module.scss';
 function EmotionalIntelligence() {
     return (
         <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
-            <Head>
-                <title>שלהבת ברק - אינטליגנציה רגשית</title>
-                <meta name="keywords" content="אינטליגנציה ריגשית" />
-            </Head>
+            <MetaData
+                title={'שלהבת ברק - אינטליגנציה רגשית'}
+                keywords={'אינטליגנציה ריגשית'}
+                description={'אינטליגנציה רגשית היא היכולת או מיומנות של אדם לזהות, להעריך ולנהל את רגשותיו ואת רגשות האחר. בשונה לכישורים מולדים זהו כלי שניתן לרכוש אותו במהלך החיים ע״י למידה ותרגולאינטליגנציה רגשית זה הבסיס לשנות את נקודת המבט של ההורים על עצמם על הסביבה ומפה יגיע השינוי בילדים. אינטליגנציה רגשית זו שפה שאותה נלמד במהלך התהליך שלי מולכם.'}
+            />
             <section className={`section ${styles.intro}`}>
                 <OpenSection title={"אינטליגנציה ריגשית"} openParagraphs={Data.intro.introParagraph} />
             </section>

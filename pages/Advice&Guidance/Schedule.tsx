@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from "next/head";
+import MetaData from '../../components/metaData/MetaData';
 import * as Data from '../../utils/content/schedulePage';
 import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
@@ -10,10 +10,11 @@ import styles from '../../styles/Schedule.module.scss';
 function Schedule() {
     return (
         <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
-            <Head>
-                <title>שלהבת ברק - סדר יום לילדים</title>
-                <meta name="keywords" content="סדר יום לילדים" />
-            </Head>
+            <MetaData
+                title={'שלהבת ברק - סדר יום לילדים'}
+                keywords={'סדר יום לילדים'}
+                description={'סדר יום מתבטא במספר פעולות שיוצרות את מהלך היומיום שלנו, תכנון היומיום לפי סדר מסוים. חשוב לזכור סדר יום זהו ארגון לוח הזמנים לא רק של הילדים אלה גם שלנו כהורים.'}
+            />
             <section className={`section ${styles.intro}`}>
                 <OpenSection title={"סדר יום לילדים"} openParagraphs={Data.intro.introParagraph} subtitle={Data.intro.subtitle} paragraphs={Data.intro.paragraphs} />
                 <Shape name="shape1" height={300} top={-50} left={220} opacity={0.35} rotate={210} />

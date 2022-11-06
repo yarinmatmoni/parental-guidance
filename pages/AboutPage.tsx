@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import MetaData from '../components/metaData/MetaData';
 import Quote from "../components/quote/Quote";
 import DesignParagraph from "../components/designParagraph/DesignParagraph";
 import * as Quotes from "../utils/content/quotes";
@@ -19,10 +19,11 @@ function AboutPage() {
       initial="hidden"
       animate="show"
     >
-      <Head>
-        <title>שלהבת ברק - אודות</title>
-        <meta name="keywords" content="אודות" />
-      </Head>
+      <MetaData
+        title={'שלהבת ברק - אודות'}
+        keywords={'אודות'}
+        description={'נעים מאוד אני שלהבת ברק, נשואה ואם לשני ילדים, עידו ומיתר. עוסקת בתחום הייעוץ והדרכה למשפחות. המשימה שלי היא לעזור להורים החווים קשיים שונים בחיי המשפחה לקחת את השליטה חזרה אל הידיים שלהם באמצעות ידע, כלים ופתרונות פרקטיים שכל הורה חייב לקבל ובכך להתחיל תהליך ריפוי שבסופו ההורה וחיי משפחתו יהפכו לנעימים, רגועים ושמחים.​'}
+      />
       <section className={`section ${styles.introSection}`}>
         <Shape name="shape3" height={300} top={"-15%"} left={"15%"} opacity={0.25} />
         <div className={styles.about}>

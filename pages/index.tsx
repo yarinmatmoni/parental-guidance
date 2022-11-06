@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import MetaData from '../components/metaData/MetaData';
 import InfoBox from "../components/infoBox/InfoBox";
 import TimeLine from "../components/timeLine/TimeLine";
 import Carousel from "../components/carousel/Carousel";
@@ -20,10 +20,11 @@ const Home: NextPage = () => {
       initial="hidden"
       animate="show"
     >
-      <Head>
-        <title>שלהבת ברק - ייעוץ והדרכה הורית</title>
-        <meta name="keywords" content="ייעוץ והדרכה הורית" />
-      </Head>
+      <MetaData
+        title={'שלהבת ברק - ייעוץ והדרכה הורית'}
+        keywords={'ייעוץ והדרכה הורית'}
+        description={'נעים מאוד אני שלהבת ברק, נשואה ואם לשני ילדים, עידו ומיתר. עוסקת בתחום הייעוץ והדרכה למשפחות. אני מקיימת הדרכות אישיות ופרטניות להורים בהן אני מסייעת להם לרכוש כלים ולהציב מטרות ויעדים שיעזרו להם להתמודד עם האתגרים עימם ניצבים ביום יום'}
+      />
       <section className={`section ${styles.welcomeSection}`}>
         <Shape name="shape1" height={300} top={-80} left={220} opacity={0.25} rotate={12} />
         <div className={styles.title}>
