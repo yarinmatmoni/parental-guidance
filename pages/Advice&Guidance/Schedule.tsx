@@ -20,7 +20,7 @@ function Schedule() {
             </section>
             <section className={`section ${styles.importance}`}>
                 <h3>{Data.importance.title}</h3>
-                <ul>
+                <ul className='dotList'>
                     {Data.importance.list.map((item, index) => (
                         <li key={`${index}_${item}`}>{item}</li>
                     ))}
@@ -31,7 +31,7 @@ function Schedule() {
                 <h3>{Data.example.title}</h3>
                 <p>{Data.example.paragraph1.line1}</p>
                 <p>{Data.example.paragraph1.line2}</p>
-                <ul>
+                <ul className='arrowList'>
                     {Data.example.paragraph1.list.map((item, index) => <li key={`${index}_${item}`}>{item}</li>)}
                 </ul>
                 <p>{Data.example.paragraph2}</p>

@@ -26,7 +26,8 @@ body {
 }
 
 .section {
-	min-height: calc(100vh - $body-size);
+	// min-height: calc(100vh - $body-size);
+	min-height: 60vh;
 	display: flex;
 	justify-content: center;
 	padding: 32px 30px;
@@ -53,6 +54,39 @@ h4 {
 
 a {
 	text-decoration: none;
+}
+
+.dotList,
+.arrowList {
+	list-style: none;
+
+	li {
+		font-size: 18px;
+		color: $basic-text-color;
+		margin: 10px;
+		align-items: baseline;
+		display: flex;
+
+		&::before {
+			font-size: 30px;
+			font-weight: bold;
+			margin-left: 15px;
+		}
+	}
+}
+
+.dotList li {
+	&::before {
+		content: '\26AC';
+		color: $brand-color-blue;
+	}
+}
+
+.arrowList li {
+	&::before {
+		content: '\203A';
+		color: $brand-color-pink;
+	}
 }
 
 *::-webkit-scrollbar {

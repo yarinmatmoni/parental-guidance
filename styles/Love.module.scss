@@ -1,0 +1,23 @@
+@import './colors.scss';
+@import './sizes.scss';
+@import './functions.scss';
+
+.intro {
+	background-color: $background-section-purple;
+	border-bottom-left-radius: $section-border-radius-mobile;
+	flex-direction: column;
+	justify-content: initial;
+}
+
+.importance,
+.how,
+.summary {
+	display: flex;
+	flex-direction: column;
+}
+
+@include desktop {
+	.intro {
+		border-bottom-left-radius: $section-border-radius;
+	}
+}

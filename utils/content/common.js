@@ -32,6 +32,7 @@ export const nav = [
 				name: 'אינטליגנציה רגשית',
 				link: '/Advice&Guidance/EmotionalIntelligence',
 			},
+			{ name: 'אהבה ללא תנאי', link: '/Advice&Guidance/Love' },
 		],
 	},
 	{

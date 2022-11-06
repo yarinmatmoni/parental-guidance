@@ -1,0 +1,43 @@
+import React from 'react';
+import Head from "next/head";
+import OpenSection from '../../components/openSection/OpenSection';
+import { motion } from "framer-motion";
+import * as Animation from "../../utils/animation/animation";
+import Shape from "../../components/shape/Shape";
+import * as Data from "../../utils/content/lovePage";
+import styles from '../../styles/Love.module.scss';
+
+function Love() {
+    return (
+        <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
+            <Head>
+                <title>שלהבת ברק - אהבה ללא תנאי</title>
+                <meta name="keywords" content="אהבה ללא תנאי" />
+            </Head>
+            <section className={`section ${styles.intro}`}>
+                <OpenSection title={"אהבה ללא תנאי"} subtitle={Data.intro.subtitle} paragraphs={Data.intro.paragraphs} />
+                <Shape name="shape3" height={300} top={-60} left={100} opacity={0.2} rotate={150} />
+            </section>
+            <section className={`section ${styles.importance}`}>
+                <h3>{Data.importance.title}</h3>
+                <ul className='dotList'>
+                    {Data.importance.list.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+            </section>
+            <section className={`section ${styles.how}`}>
+                <h3>{Data.how.title}</h3>
+                <ul className='dotList'>
+                    {Data.how.list.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+            </section>
+            <section className={`section ${styles.summary}`}>
+                <h3>{Data.summary.title}</h3>
+                <ul className='arrowList'>
+                    {Data.summary.list.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+            </section>
+        </motion.div>
+    )
+}
+
+export default Love;
