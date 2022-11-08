@@ -10,7 +10,7 @@ function Contact() {
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
 
-    emailjs.sendForm('service_ospt7rs', 'template_y3tlhqn', form.current, '03DUOZfOoL2vNUiJO')
+    emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
       .then((result) => {
         console.log(result.text);
         event.target.reset();
