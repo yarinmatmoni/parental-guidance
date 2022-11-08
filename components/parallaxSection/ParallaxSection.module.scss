@@ -1,8 +1,7 @@
 @import '../../styles/functions.scss';
 
 .parallaxSection {
-	position: relative;
-	max-width: 100% !important;
+	min-width: 100%;
 	clip-path: inset(0 0 0 0);
 
 	.image {

@@ -8,38 +8,16 @@
 	flex-direction: column;
 }
 
-.importance {
+.importance,
+.how,
+.summary {
+	display: flex;
 	flex-direction: column;
-
-	h3 {
-		font-weight: bold;
-		color: $basic-text-color;
-		margin: 15px 0 10px 0;
-	}
-}
-
-.example {
-	flex-direction: column;
-
-	h3 {
-		color: $basic-text-color;
-		margin: 15px 0 25px 0;
-	}
-
-	p {
-		font-size: 18px;
-		color: $basic-text-color;
-		margin: 5px 0;
-		line-height: 25px;
-	}
 }
 
 @include desktop {
 	.intro {
 		border-bottom-left-radius: $section-border-radius;
-	}
-
-	.example p {
-		max-width: 60vw;
+		min-height: 55vh;
 	}
 }
