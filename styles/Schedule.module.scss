@@ -6,12 +6,10 @@
 	background-color: $background-section-purple;
 	border-bottom-left-radius: $section-border-radius-mobile;
 	flex-direction: column;
-	justify-content: initial;
 }
 
 .importance {
 	flex-direction: column;
-	justify-content: flex-start;
 
 	h3 {
 		font-weight: bold;
@@ -22,7 +20,6 @@
 
 .example {
 	flex-direction: column;
-	justify-content: flex-start;
 
 	h3 {
 		color: $basic-text-color;
@@ -40,5 +37,9 @@
 @include desktop {
 	.intro {
 		border-bottom-left-radius: $section-border-radius;
+	}
+
+	.example p {
+		max-width: 60vw;
 	}
 }

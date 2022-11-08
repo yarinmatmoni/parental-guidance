@@ -26,7 +26,7 @@ function Schedule() {
                         <li key={`${index}_${item}`}>{item}</li>
                     ))}
                 </ul>
-                <Shape name="shape3" height={250} top={250} left={20} opacity={0.15} rotate={0} />
+                <Shape name="shape3" height={350} top={'20%'} left={'50%'} opacity={0.15} rotate={180} />
             </section>
             <section className={`section ${styles.example}`}>
                 <h3>{Data.example.title}</h3>

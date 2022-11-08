@@ -6,7 +6,6 @@
 	background-color: $background-section-purple;
 	border-bottom-left-radius: $section-border-radius-mobile;
 	flex-direction: column;
-	justify-content: initial;
 }
 
 @include desktop {
