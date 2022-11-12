@@ -1,22 +1,40 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
 import * as contact from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
+  const [isSent, setIsSent] = useState(false);
+  const [valid, setValid] = useState(true);
   const form: any = useRef();
 
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
+    let isValid = true;
 
-    emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
-      .then((result) => {
-        console.log(result.text);
-        event.target.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    Array.from(form.current).map((filed: any) => {
+      if (!filed.name)
+        return;
+
+      if (!filed.value) {
+        isValid = false;
+        setValid(false);
+        return;
+      }
+    })
+
+    if (isValid && !isSent) {
+      emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
+        .then((result) => {
+          console.log(result.text);
+          setIsSent(true);
+          setValid(true);
+          event.target.reset();
+        }, (error) => {
+          console.log(error.text);
+        });
+    }
   }
 
   return (
@@ -55,7 +73,8 @@ function Contact() {
             );
           })}
           <textarea name="message" placeholder="הקלד טקסט..."></textarea>
-          <button type="submit" value="Send">קביעת פגישת היכרות</button>
+          <p data-valid={valid}></p>
+          <button type="submit" value="Send" data-sent={isSent}></button>
         </form>
       </div>
     </div>
