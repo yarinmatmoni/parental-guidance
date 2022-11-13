@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
 import * as contact from "../../utils/content/common";
@@ -7,10 +7,16 @@ import styles from "./Contact.module.scss";
 function Contact() {
   const [isSent, setIsSent] = useState(false);
   const [valid, setValid] = useState(true);
+  const [userAgent, setUserAgent] = useState("");
   const form: any = useRef();
+
+  useEffect(() => {
+    setUserAgent(navigator.platform);
+  }, []);
 
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
+    // setUserAgent(navigator.platform);
     let isValid = true;
 
     Array.from(form.current).map((filed: any) => {
@@ -73,7 +79,13 @@ function Contact() {
             );
           })}
           <textarea name="message" placeholder="הקלד טקסט..."></textarea>
-          <p data-valid={valid}></p>
+          <input
+            type="hidden"
+            className="form-control"
+            name="userAgent"
+            value={userAgent}
+          />
+          <span data-valid={valid}></span>
           <button type="submit" value="Send" data-sent={isSent}></button>
         </form>
       </div>

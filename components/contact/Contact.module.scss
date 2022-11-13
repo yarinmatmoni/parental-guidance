@@ -69,10 +69,6 @@
 				color: $basic-text-color;
 				border-radius: 2px;
 				border: 0.5px solid $secondary-purple;
-
-				&[data-valid='false'] {
-					border-color: red;
-				}
 			}
 
 			textarea {
@@ -85,12 +81,14 @@
 				height: 80px;
 			}
 
-			p {
+			span {
+				transition: all ease 0.5s;
+
 				&[data-valid='false'] {
-					color: red;
+					color: $failed-color;
 					font-size: 16px;
 					text-align: center;
-					transition: all ease 0.4s;
+					margin-top: 10px;
 
 					&::after {
 						content: 'בדוק שכל הפרטים נכונים!';
@@ -121,7 +119,7 @@
 		}
 
 		&[data-sent='true'] {
-			background-color: #059205b8;
+			background-color: $success-color;
 			height: 40px;
 			width: 40px;
 			border-radius: 50%;
