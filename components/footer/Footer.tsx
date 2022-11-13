@@ -14,13 +14,13 @@ function Footer() {
         <div className={styles.descriptionLogo}>
           <Logo height={80} width={100} />
           <div className={styles.description}>
-            <h4>כמה מילים</h4>
+            <p className={styles.title}>כמה מילים</p>
           </div>
         </div>
         <div className={styles.navigation}>
           <div className={styles.navContainer}>
             <ul>
-              <h4>כללי</h4>
+              <p className={styles.title}>כללי</p>
               {Content.nav
                 .filter((menuItem) => menuItem.sub.length === 0)
                 .map((item, i) => (
@@ -33,7 +33,7 @@ function Footer() {
               .filter((menuItem) => menuItem.sub.length !== 0)
               .map((item, i) => (
                 <ul key={i}>
-                  <h4>{item.name}</h4>
+                  <p className={styles.title}>{item.name}</p>
                   {item.sub.map((subMenuItem, i) => (
                     <Link key={i} href={`${subMenuItem.link}`}>
                       <a>{subMenuItem.name}</a>
@@ -44,20 +44,20 @@ function Footer() {
           </div>
         </div>
         <div className={styles.contact}>
-          <h4>יצירת קשר</h4>
+          <p className={styles.title}>יצירת קשר</p>
           <div className={styles.contactDetails}>
             <div className={styles.top}>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">call</span>
-                <h4>
+                <p className={styles.title}>
                   <ContactLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
-                </h4>
+                </p>
               </div>
               <div className={styles.topItem}>
                 <span className="material-symbols-outlined">mail</span>
-                <h4>
+                <p className={styles.title}>
                   <a>{Content.personalInfo.email}</a>
-                </h4>
+                </p>
               </div>
             </div>
             <div className={styles.bottom}>

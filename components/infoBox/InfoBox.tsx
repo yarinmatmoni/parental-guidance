@@ -17,7 +17,7 @@ function InfoBox({ data }: InfoBoxProps) {
   return (
     <div className={styles.infoBox} onClick={() => Router.push(data.link)}>
       <Image src={data.logo} height={40} width={40} alt={data.alt}></Image>
-      <h4>{data.title}</h4>
+      <p className={styles.title}>{data.title}</p>
       <p>{data.text}</p>
     </div>
   );
