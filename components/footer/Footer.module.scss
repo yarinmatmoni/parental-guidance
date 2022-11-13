@@ -137,6 +137,7 @@
 					.block {
 						p {
 							text-align: start;
+							font-size: 17px;
 						}
 
 						ul {
@@ -159,6 +160,10 @@
 
 			.contact {
 				margin-top: 30px;
+
+				.title {
+					font-size: 17px;
+				}
 
 				.top {
 					.topItem {
