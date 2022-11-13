@@ -16,7 +16,6 @@ function Contact() {
 
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
-    // setUserAgent(navigator.platform);
     let isValid = true;
 
     Array.from(form.current).map((filed: any) => {
@@ -85,8 +84,8 @@ function Contact() {
             name="userAgent"
             value={userAgent}
           />
-          <span data-valid={valid}></span>
-          <button type="submit" value="Send" data-sent={isSent}></button>
+          <span data-valid={valid} data-sent={isSent}>{valid && !isSent ? '' : valid && isSent ? 'תודה, אצור קשר בהקדם' : 'בדוק האם כל הפרטים נכונים'}</span>
+          <button type="submit" data-sent={isSent} value="Send" name="submitButton">שלהבת, חזרי אלי</button>
         </form>
       </div>
     </div>

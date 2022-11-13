@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        <html lang="he"></html>
         <link rel="shortcut icon" href="/logo/logo1.ico" />
         <link
           rel="stylesheet"
