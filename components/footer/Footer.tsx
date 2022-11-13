@@ -19,27 +19,35 @@ function Footer() {
         </div>
         <div className={styles.navigation}>
           <div className={styles.navContainer}>
-            <ul>
+            <div className={styles.block}>
               <p className={styles.title}>כללי</p>
-              {Content.nav
-                .filter((menuItem) => menuItem.sub.length === 0)
-                .map((item, i) => (
-                  <Link key={i} href={`${item.link}`}>
-                    <a>{item.name}</a>
-                  </Link>
-                ))}
-            </ul>
+              <ul>
+                {Content.nav
+                  .filter((menuItem) => menuItem.sub.length === 0)
+                  .map((item, i) => (
+                    <li key={i}>
+                      <Link href={`${item.link}`}>
+                        <a>{item.name}</a>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
             {Content.nav
               .filter((menuItem) => menuItem.sub.length !== 0)
               .map((item, i) => (
-                <ul key={i}>
+                <div key={i} className={styles.block}>
                   <p className={styles.title}>{item.name}</p>
-                  {item.sub.map((subMenuItem, i) => (
-                    <Link key={i} href={`${subMenuItem.link}`}>
-                      <a>{subMenuItem.name}</a>
-                    </Link>
-                  ))}
-                </ul>
+                  <ul >
+                    {item.sub.map((subMenuItem, i) => (
+                      <li key={i}>
+                        <Link href={`${subMenuItem.link}`}>
+                          <a>{subMenuItem.name}</a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
           </div>
         </div>
