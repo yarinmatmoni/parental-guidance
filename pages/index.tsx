@@ -55,17 +55,14 @@ const Home: NextPage = () => {
           left={"5%"}
           opacity={0.15}
         />
-        <h3>איך זה עובד ?</h3>
+        <p className={styles.titleSection}>איך זה עובד ?</p>
         <TimeLine data={Content.timeLineElements} />
       </section>
       <section className={`section ${styles.quoteSection}`}>
         <Quote data={Quotes.quote1} />
       </section>
       <section className={`section ${styles.quotesCarousel}`}>
-        <div className={styles.title}>
-          <span className="material-symbols-outlined">star_rate</span>
-          <h3>הורים ממליצים</h3>
-        </div>
+        <p className={styles.titleSection}>הורים ממליצים</p>
         <div className={styles.carousel}>
           <Carousel data={Content.reviews} />
         </div>

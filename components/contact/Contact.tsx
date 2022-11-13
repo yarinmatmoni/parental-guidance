@@ -1,22 +1,45 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
 import * as contact from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
+  const [isSent, setIsSent] = useState(false);
+  const [valid, setValid] = useState(true);
+  const [userAgent, setUserAgent] = useState("");
   const form: any = useRef();
+
+  useEffect(() => {
+    setUserAgent(navigator.platform);
+  }, []);
 
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
+    let isValid = true;
 
-    emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
-      .then((result) => {
-        console.log(result.text);
-        event.target.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    Array.from(form.current).map((filed: any) => {
+      if (!filed.name)
+        return;
+
+      if (!filed.value) {
+        isValid = false;
+        setValid(false);
+        return;
+      }
+    })
+
+    if (isValid && !isSent) {
+      emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
+        .then((result) => {
+          console.log(result.text);
+          setIsSent(true);
+          setValid(true);
+          event.target.reset();
+        }, (error) => {
+          console.log(error.text);
+        });
+    }
   }
 
   return (
@@ -55,7 +78,14 @@ function Contact() {
             );
           })}
           <textarea name="message" placeholder="הקלד טקסט..."></textarea>
-          <button type="submit" value="Send">קביעת פגישת היכרות</button>
+          <input
+            type="hidden"
+            className="form-control"
+            name="userAgent"
+            value={userAgent}
+          />
+          <span data-valid={valid} data-sent={isSent}>{valid && !isSent ? '' : valid && isSent ? 'תודה, אצור קשר בהקדם' : 'בדוק האם כל הפרטים נכונים'}</span>
+          <button type="submit" data-sent={isSent} value="Send" name="submitButton">שלהבת, חזרי אלי</button>
         </form>
       </div>
     </div>

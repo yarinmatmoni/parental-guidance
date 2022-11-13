@@ -40,7 +40,6 @@
 				gap: 5px;
 				align-items: center;
 				padding: 2px 4px;
-				cursor: pointer;
 
 				p {
 					color: $basic-text-color;
@@ -81,6 +80,33 @@
 				padding: 3px 6px;
 				height: 80px;
 			}
+
+			span {
+				transition: all ease 0.5s;
+				text-align: center;
+				color: $failed-color;
+				margin-top: 10px;
+				font-size: 0px;
+
+				&[data-valid='false'] {
+					font-size: 15px;
+				}
+
+				&[data-sent='true'] {
+					font-size: 15px;
+					color: $success-color;
+
+					&::after {
+						content: '\263A';
+						font-size: 22px;
+						margin-right: 5px;
+					}
+				}
+
+				&[data-valid='false'] {
+					font-size: 15px;
+				}
+			}
 		}
 	}
 
@@ -98,6 +124,12 @@
 		&:hover {
 			box-shadow: 0px 0px 15px 1px $secondary-purple;
 			color: whitesmoke;
+		}
+
+		&[data-sent='true'] {
+			background: #e7e7e7;
+			color: $basic-text-color;
+			pointer-events: none;
 		}
 	}
 }

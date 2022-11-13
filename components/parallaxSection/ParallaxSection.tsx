@@ -13,6 +13,7 @@ function ParallaxSection() {
                     objectPosition="center"
                     layout="fill"
                     alt="תמונה"
+                    priority
                 />
             </div>
             <div className={styles.contact}>

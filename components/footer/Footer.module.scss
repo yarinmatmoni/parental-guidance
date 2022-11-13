@@ -6,6 +6,13 @@
 	background-color: $background-section-blue-light;
 
 	.content {
+		.title {
+			color: $basic-text-color;
+			font-size: 20px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+
 		.descriptionLogo {
 			min-height: 15vh;
 			padding-top: 20px;
@@ -19,7 +26,7 @@
 				text-align: center;
 				padding-inline: 32px;
 
-				h4 {
+				p {
 					font-size: 15px;
 					font-weight: 100;
 					color: $basic-text-color;
@@ -34,28 +41,27 @@
 				margin: 30px 0;
 				gap: 30px;
 
-				ul {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-					gap: 6px;
+				.block {
+					ul {
+						align-items: center;
+						display: flex;
+						flex-direction: column;
+						gap: 6px;
 
-					h4 {
-						color: $basic-text-color;
-						font-size: 24px;
-						font-weight: 100;
-						margin-bottom: 10px;
-					}
+						li {
+							list-style: none;
+						}
 
-					a {
-						text-decoration: none;
-						font-weight: 100;
-						font-size: 16px;
-						color: $brand-color-purple;
-						transition: all 0.3s ease-in-out;
+						a {
+							text-decoration: none;
+							font-weight: 100;
+							font-size: 16px;
+							color: $brand-color-purple;
+							transition: all 0.3s ease-in-out;
 
-						&:hover {
-							letter-spacing: 0.8px;
+							&:hover {
+								letter-spacing: 0.8px;
+							}
 						}
 					}
 				}
@@ -67,13 +73,6 @@
 			flex-direction: column;
 			gap: 18px;
 			align-items: center;
-
-			h4 {
-				font-weight: 500;
-				font-size: 24px;
-				color: $basic-text-color;
-				font-weight: 500;
-			}
 
 			.top {
 				align-items: center;
@@ -87,7 +86,7 @@
 					align-items: center;
 					cursor: pointer;
 
-					h4 a {
+					.title a {
 						font-size: 16px;
 						text-align: right;
 						font-weight: 100;
@@ -130,33 +129,29 @@
 				flex-direction: column;
 				width: 100%;
 
-				h4 {
-					text-align: center;
-					font-weight: 500;
-					font-size: 16px;
-					color: $basic-text-color;
-				}
-
 				.navContainer {
 					flex-direction: row;
 					display: flex;
 					justify-content: space-evenly;
 
-					ul {
-						align-items: flex-start;
-						display: flex;
-						flex-direction: column;
-						gap: 6px;
-
-						h4 {
-							font-size: 16px;
+					.block {
+						p {
+							text-align: start;
+							font-size: 17px;
 						}
 
-						a {
-							font-size: 15px;
+						ul {
+							align-items: flex-start;
+							display: flex;
+							flex-direction: column;
+							gap: 6px;
 
-							&:hover {
-								letter-spacing: initial;
+							a {
+								font-size: 15px;
+
+								&:hover {
+									letter-spacing: initial;
+								}
 							}
 						}
 					}
@@ -166,15 +161,15 @@
 			.contact {
 				margin-top: 30px;
 
-				h4 {
-					font-size: 16px;
+				.title {
+					font-size: 17px;
 				}
 
 				.top {
 					.topItem {
 						padding: 5px;
 
-						h4 a {
+						.title a {
 							font-size: 15px;
 						}
 
