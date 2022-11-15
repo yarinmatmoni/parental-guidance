@@ -30,6 +30,7 @@ function Shape({
         height={height}
         width={width || height}
         className={styles.shape}
+        priority
       />
     </div>
   );
