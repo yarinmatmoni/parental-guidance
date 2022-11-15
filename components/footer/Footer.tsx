@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import ContactLink from "../link/Link";
-import Image from "next/image";
-import { whatsAppHref, phoneCallHref, emailHref } from "../../utils/content/hrefs";
+import { whatsAppHref, phoneCallHref, emailHref, faceBookHref } from "../../utils/content/hrefs";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
@@ -70,14 +69,7 @@ function Footer() {
             </div>
             <div className={styles.bottom}>
               <ContactLink href={whatsAppHref} src={"/icons/whatsapp_icon.svg"} size={30} alt={"whatsapp_icon"} tab={true} />
-              <a>
-                <Image
-                  src="/icons/facebook_icon.svg"
-                  height={30}
-                  width={30}
-                  alt="facebook_icon"
-                ></Image>
-              </a>
+              <ContactLink href={faceBookHref} src={"/icons/facebook_icon.svg"} size={30} alt={"facebook_icon"} tab={true} />
             </div>
           </div>
         </div>
