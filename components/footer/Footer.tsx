@@ -3,7 +3,7 @@ import styles from "./Footer.module.scss";
 import Link from "next/link";
 import ContactLink from "../link/Link";
 import Image from "next/image";
-import { whatsAppHref, phoneCallHref } from "../../utils/content/hrefs";
+import { whatsAppHref, phoneCallHref, emailHref } from "../../utils/content/hrefs";
 import * as Content from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
@@ -56,15 +56,15 @@ function Footer() {
           <div className={styles.contactDetails}>
             <div className={styles.top}>
               <div className={styles.topItem}>
-                <span className="material-symbols-outlined">call</span>
                 <p className={styles.title}>
+                  <span className="material-symbols-outlined">call</span>
                   <ContactLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
                 </p>
               </div>
               <div className={styles.topItem}>
-                <span className="material-symbols-outlined">mail</span>
                 <p className={styles.title}>
-                  <a>{Content.personalInfo.email}</a>
+                  <span className="material-symbols-outlined">mail</span>
+                  <ContactLink href={emailHref} text={Content.personalInfo.email} tab={true} />
                 </p>
               </div>
             </div>
