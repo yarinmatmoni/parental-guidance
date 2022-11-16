@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ContactLink from "../link/Link";
 import { whatsAppHref, phoneCallHref, emailHref, faceBookHref } from "../../utils/content/hrefs";
-import * as Content from "../../utils/content/common";
+import { nav, personalInfo } from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
 function Footer() {
@@ -22,7 +22,7 @@ function Footer() {
             <div className={styles.block}>
               <p className={styles.title}>כללי</p>
               <ul>
-                {Content.nav
+                {nav
                   .filter((menuItem) => menuItem.sub.length === 0)
                   .map((item, i) => (
                     <li key={i}>
@@ -33,7 +33,7 @@ function Footer() {
                   ))}
               </ul>
             </div>
-            {Content.nav
+            {nav
               .filter((menuItem) => menuItem.sub.length !== 0)
               .map((item, i) => (
                 <div key={i} className={styles.block}>
@@ -63,7 +63,7 @@ function Footer() {
                     width={18}
                     alt={'טלפון'}
                   ></Image>
-                  <ContactLink href={phoneCallHref} text={Content.personalInfo.phoneNumber.display} />
+                  <ContactLink href={phoneCallHref} text={personalInfo.phoneNumber.display} />
                 </div>
               </div>
               <div className={styles.topItem}>
@@ -74,7 +74,7 @@ function Footer() {
                     width={18}
                     alt={'דואר אלקטרוני'}
                   ></Image>
-                  <ContactLink href={emailHref} text={Content.personalInfo.email} tab={true} />
+                  <ContactLink href={emailHref} text={personalInfo.email} tab={true} />
                 </div>
               </div>
             </div>

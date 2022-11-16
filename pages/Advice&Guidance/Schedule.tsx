@@ -3,13 +3,13 @@ import MetaData from '../../components/metaData/MetaData';
 import * as Data from '../../utils/content/schedulePage';
 import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
-import * as Animation from "../../utils/animation/animation";
+import { pageAnimation } from "../../utils/animation/animation";
 import Shape from "../../components/shape/Shape";
 import styles from '../../styles/Schedule.module.scss';
 
 function Schedule() {
     return (
-        <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
+        <motion.div variants={pageAnimation} initial="hidden" animate="show">
             <MetaData
                 title={'שלהבת ברק - סדר יום לילדים'}
                 keywords={'סדר יום לילדים'}

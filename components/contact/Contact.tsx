@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
-import * as contact from "../../utils/content/common";
+import { contact } from "../../utils/content/common";
 import styles from "./Contact.module.scss";
 
 function Contact() {
@@ -46,11 +46,11 @@ function Contact() {
     <div className={styles.contactContainer}>
       <div className={styles.top}>
         <div className={styles.title}>
-          <h2>{contact.contact.title}</h2>
-          <p>{contact.contact.subtitle}</p>
+          <h2>{contact.title}</h2>
+          <p>{contact.subtitle}</p>
         </div>
         <div className={styles.details}>
-          {contact.contact.detailsForContact.map((item, index) => {
+          {contact.detailsForContact.map((item, index) => {
             return (
               <div key={`${index}_${item.name}`} className={styles.item}>
                 <Image
@@ -67,7 +67,7 @@ function Contact() {
       </div>
       <div className={styles.contact}>
         <form method="post" onSubmit={handleOnSubmit} ref={form}>
-          {contact.contact.data.map((item, index) => {
+          {contact.data.map((item, index) => {
             return (
               <input
                 key={`${index}_${item.name}`}

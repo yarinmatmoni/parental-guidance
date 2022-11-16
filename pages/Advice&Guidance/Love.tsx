@@ -2,14 +2,14 @@ import React from 'react';
 import MetaData from '../../components/metaData/MetaData';
 import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
-import * as Animation from "../../utils/animation/animation";
+import { pageAnimation } from "../../utils/animation/animation";
 import Shape from "../../components/shape/Shape";
 import * as Data from "../../utils/content/lovePage";
 import styles from '../../styles/Love.module.scss';
 
 function Love() {
     return (
-        <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
+        <motion.div variants={pageAnimation} initial="hidden" animate="show">
             <MetaData
                 title={'שלהבת ברק - אהבה ללא תנאי'}
                 keywords={'אהבה ללא תנאי'}
