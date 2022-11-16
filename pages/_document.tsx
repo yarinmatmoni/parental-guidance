@@ -5,10 +5,6 @@ export default function Document() {
     <Html>
       <Head>
         <html lang="he"></html>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <body>
         <Main />

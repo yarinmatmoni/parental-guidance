@@ -8,7 +8,7 @@ import Quote from "../components/quote/Quote";
 import Link from '../components/link/Link';
 import { motion } from "framer-motion";
 import { whatsAppHref } from '../utils/content/hrefs';
-import * as Animation from "../utils/animation/animation";
+import { titleAnimation, pageAnimation, fade } from "../utils/animation/animation";
 import * as Content from "../utils/content/homePage";
 import * as Quotes from "../utils/content/quotes";
 import Shape from "../components/shape/Shape";
@@ -16,7 +16,7 @@ import Shape from "../components/shape/Shape";
 const Home: NextPage = () => {
   return (
     <motion.div
-      variants={Animation.pageAnimation}
+      variants={pageAnimation}
       initial="hidden"
       animate="show"
     >
@@ -28,8 +28,8 @@ const Home: NextPage = () => {
       <section className={`section ${styles.welcomeSection}`}>
         <Shape name="shape1" height={300} top={-80} left={220} opacity={0.25} rotate={12} />
         <div className={styles.title}>
-          <motion.h1 variants={Animation.titleAnimation}>שלהבת ברק</motion.h1>
-          <motion.h1 variants={Animation.titleAnimation}>
+          <motion.h1 variants={titleAnimation}>שלהבת ברק</motion.h1>
+          <motion.h1 variants={titleAnimation}>
             ייעוץ והדרכה הורית
           </motion.h1>
         </div>
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           <span>ברוכים הבאים!</span>
           {Content.welcomeSection}
         </motion.div>
-        <motion.button className={styles.call} variants={Animation.fade}>
+        <motion.button className={styles.call} variants={fade}>
           <Link href={whatsAppHref} text={'שיחת יעוץ ראשונה - בחינם'} tab={true} />
         </motion.button>
       </section>
