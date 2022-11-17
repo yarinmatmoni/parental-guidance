@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import * as Animation from "../../utils/animation/animation";
+import { titleAnimation } from "../../utils/animation/animation";
 import styles from './OpenSection.module.scss';
 
 function OpenSection({ title, openParagraphs, subtitle, paragraphs }: { title: string, openParagraphs?: string[], subtitle?: string, paragraphs?: string[] }) {
     return (
         <div className={styles.sectionContainer}>
-            <motion.h1 variants={Animation.titleAnimation}>{title}</motion.h1>
+            <motion.h1 variants={titleAnimation}>{title}</motion.h1>
             {openParagraphs?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-            <h3>{subtitle}</h3>
+            <p className={styles.subtitle}>{subtitle}</p>
             {paragraphs?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </div>
     )

@@ -3,13 +3,13 @@ import MetaData from '../../components/metaData/MetaData';
 import * as Data from '../../utils/content/schedulePage';
 import OpenSection from '../../components/openSection/OpenSection';
 import { motion } from "framer-motion";
-import * as Animation from "../../utils/animation/animation";
+import { pageAnimation } from "../../utils/animation/animation";
 import Shape from "../../components/shape/Shape";
 import styles from '../../styles/Schedule.module.scss';
 
 function Schedule() {
     return (
-        <motion.div variants={Animation.pageAnimation} initial="hidden" animate="show">
+        <motion.div variants={pageAnimation} initial="hidden" animate="show">
             <MetaData
                 title={'שלהבת ברק - סדר יום לילדים'}
                 keywords={'סדר יום לילדים'}
@@ -20,7 +20,7 @@ function Schedule() {
                 <Shape name="shape1" height={300} top={-50} left={220} opacity={0.35} rotate={210} />
             </section>
             <section className={`section ${styles.importance}`}>
-                <h3>{Data.importance.title}</h3>
+                <p className={styles.title}>{Data.importance.title}</p>
                 <ul className='dotList'>
                     {Data.importance.list.map((item, index) => (
                         <li key={`${index}_${item}`}>{item}</li>
@@ -29,7 +29,7 @@ function Schedule() {
                 <Shape name="shape3" height={350} top={'20%'} left={'50%'} opacity={0.15} rotate={180} />
             </section>
             <section className={`section ${styles.example}`}>
-                <h3>{Data.example.title}</h3>
+                <p className={styles.title}>{Data.example.title}</p>
                 <p>{Data.example.paragraph1.line1}</p>
                 <p>{Data.example.paragraph1.line2}</p>
                 <ul className='arrowList'>

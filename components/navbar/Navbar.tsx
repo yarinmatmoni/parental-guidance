@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import * as Content from "../../utils/content/common";
+import { nav } from "../../utils/content/common";
 import styles from "./Navbar.module.scss";
 import Logo from "../logo/Logo";
 import Hamburger from "../hamburger/Hamburger";
@@ -24,7 +24,7 @@ function Navbar() {
       <Logo height={75} width={75} />
       <ul className={styles.menuContainer} data-open={isOpen}>
         <>
-          {Content.nav?.map((menuItem, i) => (
+          {nav?.map((menuItem, i) => (
             <li
               key={i}
               className={styles.menuItem}

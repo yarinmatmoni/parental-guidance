@@ -23,4 +23,4 @@ function ParallaxSection() {
     )
 }
 
-export default ParallaxSection;
+export default ParallaxSection; 

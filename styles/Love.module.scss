@@ -15,6 +15,13 @@
 	flex-direction: column;
 }
 
+.title {
+	font-weight: bold;
+	color: $basic-text-color;
+	margin: 15px 0 10px 0;
+	font-size: $title-size-h3;
+}
+
 @include desktop {
 	.intro {
 		border-bottom-left-radius: $section-border-radius;

@@ -7,15 +7,15 @@ import Link from '../components/link/Link';
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { whatsAppHref } from "../utils/content/hrefs";
-import * as Content from "../utils/content/about";
-import * as Animation from "../utils/animation/animation";
+import { intro } from "../utils/content/about";
+import { titleAnimation, leftFadeIn, pageAnimation } from "../utils/animation/animation";
 import styles from "../styles/AboutPage.module.scss";
 import Shape from "../components/shape/Shape";
 
 function AboutPage() {
   return (
     <motion.div
-      variants={Animation.pageAnimation}
+      variants={pageAnimation}
       initial="hidden"
       animate="show"
     >
@@ -28,44 +28,43 @@ function AboutPage() {
         <Shape name="shape3" height={300} top={"-15%"} left={"15%"} opacity={0.25} />
         <div className={styles.about}>
           <div className={styles.title}>
-            <motion.h1 variants={Animation.titleAnimation}>קצת עליי</motion.h1>
-            <motion.p variants={Animation.titleAnimation}>
+            <motion.h1 variants={titleAnimation}>קצת עליי</motion.h1>
+            <motion.p variants={titleAnimation}>
               בואו נכיר קצת...
             </motion.p>
           </div>
           <div className={styles.info}>
-            {Content &&
-              Content.intro.introData.map((p, index) => (
-                <p key={index}>{p.paragraph}</p>
-              ))}
+            {intro?.introData.map((p, index) => (
+              <p key={index}>{p.paragraph}</p>
+            ))}
           </div>
         </div>
-        <motion.div variants={Animation.leftFadeIn} className={styles.image}>
+        <motion.div variants={leftFadeIn} className={styles.image}>
           <Image
             src="/images/aboutMe.jpeg"
-            height={220}
-            width={220}
+            width={300}
+            height={300}
+            objectFit="cover"
             alt="AboutMe"
           ></Image>
         </motion.div>
-      </section>
+      </section >
       <section className={`section ${styles.QuoteSection}`}>
         <Shape name="shape1" height={350} top={"25%"} left={"65%"} opacity={0.2} />
         <Quote data={Quotes.quote1} />
       </section>
       <section className={`section ${styles.mainSection}`}>
-        {Content &&
-          Content.intro.mainData.map((p, index) => (
-            <DesignParagraph key={`${index}_${p.alt}`} data={p} />
-          ))}
+        {intro?.mainData.map((p, index) => (
+          <DesignParagraph key={`${index}_${p.alt}`} data={p} />
+        ))}
         <div className={styles.contact}>
-          <h3>
+          <p>
             אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר{" "}
             <Link href={whatsAppHref} text={'בווצאפ'} tab={true} />
-          </h3>
+          </p>
         </div>
       </section>
-    </motion.div>
+    </motion.div >
   );
 }
 

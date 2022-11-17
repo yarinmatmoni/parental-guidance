@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./DesignParagraph.module.scss";
 import { useScroll } from "../../utils/hooks/useScroll";
 import { motion } from "framer-motion";
-import * as Animation from "../../utils/animation/animation";
+import { leftFadeIn, rightFadeIn } from "../../utils/animation/animation";
 
 type paragraphProps = {
   data: {
@@ -21,7 +21,7 @@ function DesignParagraph({ data }: paragraphProps) {
     <motion.div
       className={styles.paragraphContainer}
       variants={
-        data.animation === "left" ? Animation.leftFadeIn : Animation.rightFadeIn
+        data.animation === "left" ? leftFadeIn : rightFadeIn
       }
       ref={element}
       animate={controls}
