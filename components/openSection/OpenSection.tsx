@@ -8,7 +8,7 @@ function OpenSection({ title, openParagraphs, subtitle, paragraphs }: { title: s
         <div className={styles.sectionContainer}>
             <motion.h1 variants={titleAnimation}>{title}</motion.h1>
             {openParagraphs?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-            <h3>{subtitle}</h3>
+            <p className={styles.subtitle}>{subtitle}</p>
             {paragraphs?.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </div>
     )

@@ -20,20 +20,20 @@ function Love() {
                 <Shape name="shape3" height={300} top={-60} left={100} opacity={0.2} rotate={150} />
             </section>
             <section className={`section ${styles.importance}`}>
-                <h3>{Data.importance.title}</h3>
+                <p className={styles.title}>{Data.importance.title}</p>
                 <ul className='dotList'>
                     {Data.importance.list.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
                 <Shape name="shape2" height={280} top={'50%'} left={'40%'} opacity={0.12} rotate={0} />
             </section>
             <section className={`section ${styles.how}`}>
-                <h3>{Data.how.title}</h3>
+                <p className={styles.title}>{Data.how.title}</p>
                 <ul className='dotList'>
                     {Data.how.list.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
             </section>
             <section className={`section ${styles.summary}`}>
-                <h3>{Data.summary.title}</h3>
+                <p className={styles.title}>{Data.summary.title}</p>
                 <ul className='arrowList'>
                     {Data.summary.list.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>

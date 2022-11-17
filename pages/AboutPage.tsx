@@ -42,12 +42,13 @@ function AboutPage() {
         <motion.div variants={leftFadeIn} className={styles.image}>
           <Image
             src="/images/aboutMe.jpeg"
-            height={220}
-            width={220}
+            width={300}
+            height={300}
+            objectFit="cover"
             alt="AboutMe"
           ></Image>
         </motion.div>
-      </section>
+      </section >
       <section className={`section ${styles.QuoteSection}`}>
         <Shape name="shape1" height={350} top={"25%"} left={"65%"} opacity={0.2} />
         <Quote data={Quotes.quote1} />
@@ -57,13 +58,13 @@ function AboutPage() {
           <DesignParagraph key={`${index}_${p.alt}`} data={p} />
         ))}
         <div className={styles.contact}>
-          <h3>
+          <p>
             אז אם קראתם עד לפה זה בדיוק הזמן ליצור איתי קשר{" "}
             <Link href={whatsAppHref} text={'בווצאפ'} tab={true} />
-          </h3>
+          </p>
         </div>
       </section>
-    </motion.div>
+    </motion.div >
   );
 }
 
