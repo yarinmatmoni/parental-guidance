@@ -25,6 +25,10 @@ body {
 		}
 	}
 }
+body ::selection {
+	color: whitesmoke;
+	background: $brand-color-purple;
+}
 
 .section {
 	// min-height: calc(100vh - $body-size);

@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <nav ref={refMenuContainer} className={styles.navMenuContainer}>
-      <Logo height={75} width={75} />
+      <Logo height={72} width={72} />
       <ul className={styles.menuContainer} data-open={isOpen}>
         <>
           {nav?.map((menuItem, i) => (
