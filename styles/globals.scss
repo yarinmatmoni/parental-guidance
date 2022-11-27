@@ -28,6 +28,7 @@ body {
 body ::selection {
 	color: whitesmoke;
 	background: $brand-color-purple;
+	width: 100vw;
 }
 
 .section {
