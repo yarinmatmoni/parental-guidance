@@ -85,7 +85,7 @@ function Contact() {
             value={userAgent}
           />
           <span data-valid={valid} data-sent={isSent}>{valid && !isSent ? '' : valid && isSent ? 'תודה, אצור קשר בהקדם' : 'בדוק האם כל הפרטים נכונים'}</span>
-          <button type="submit" data-sent={isSent} value="Send" name="submitButton">שלהבת, חזרי אלי</button>
+          <button type="submit" data-sent={isSent} value="Send">שלהבת, חזרי אלי</button>
         </form>
       </div>
     </div>
