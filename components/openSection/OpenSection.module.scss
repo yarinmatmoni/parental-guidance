@@ -12,11 +12,11 @@
 		font-weight: bold;
 		color: $basic-text-color;
 		margin: 15px 0 10px 0;
-		font-size: $title-size-h3;
+		font-size: $title-size;
 	}
 
 	p {
-		font-size: 18px;
+		font-size: $content-size;
 		line-height: 25px;
 		max-width: 500px;
 		color: $basic-text-color;

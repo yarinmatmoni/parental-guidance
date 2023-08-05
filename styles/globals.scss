@@ -67,7 +67,7 @@ a {
 	list-style: none;
 
 	li {
-		font-size: 18px;
+		font-size: $content-size;
 		color: $basic-text-color;
 		margin: 10px;
 		align-items: baseline;
@@ -117,6 +117,6 @@ a {
 	}
 
 	.section {
-		padding: 32px 75px;
+		padding: 70px;
 	}
 }

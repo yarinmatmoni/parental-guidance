@@ -7,7 +7,6 @@
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: center;
-	border-bottom-left-radius: $section-border-radius-mobile;
 
 	.about {
 		.title {
@@ -17,7 +16,7 @@
 			}
 
 			p {
-				font-size: 20px;
+				font-size: $title-size - 3px;
 				font-weight: 600;
 				color: $brand-color-blue;
 			}
@@ -30,7 +29,7 @@
 				max-width: 530px;
 				display: flex;
 				flex-direction: column;
-				font-size: 18px;
+				font-size: $content-size;
 				line-height: 25px;
 			}
 		}
@@ -59,7 +58,7 @@
 		p {
 			font-weight: 100;
 			text-align: center;
-			font-size: $title-size-h3;
+			font-size: $title-size;
 
 			&::before {
 				content: '\2733';
@@ -80,7 +79,6 @@
 
 @include desktop {
 	.introSection {
-		border-bottom-left-radius: $section-border-radius;
 		justify-content: space-between;
 
 		.image {

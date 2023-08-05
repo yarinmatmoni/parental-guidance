@@ -55,7 +55,7 @@
 		}
 
 		&[data-open='true'] {
-			left: 0%;
+			left: 0;
 			opacity: 1;
 			height: 68vh;
 			top: $navbar-height;
@@ -107,7 +107,7 @@
 						flex-direction: column;
 						padding: 10px 25px;
 						box-shadow: 0 0 15px 1px $box-shadow-color;
-						border-radius: 8px;
+						border-radius: $border-radius;
 						margin-top: $subMenu-height;
 					}
 				}

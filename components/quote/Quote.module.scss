@@ -49,7 +49,7 @@
 
 	small {
 		color: $brand-color-purple;
-		font-size: 20px;
+		font-size: $content-size;
 
 		&::after {
 			content: '\2014 \0020';

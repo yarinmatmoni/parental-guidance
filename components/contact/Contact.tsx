@@ -77,14 +77,14 @@ function Contact() {
               ></input>
             );
           })}
-          <textarea name="message" placeholder="הקלד טקסט..."></textarea>
+          <textarea name="message" placeholder="תוכן הפנייה..."></textarea>
           <input
             type="hidden"
             className="form-control"
             name="userAgent"
             value={userAgent}
           />
-          <span data-valid={valid} data-sent={isSent}>{valid && !isSent ? '' : valid && isSent ? 'תודה, אצור קשר בהקדם' : 'בדוק האם כל הפרטים נכונים'}</span>
+          <span data-valid={valid} data-sent={isSent}>{valid && !isSent ? '' : valid && isSent ? 'תודה, אצור קשר בהקדם' : 'הפנייה לא נשלחה, אולי שכחנו למלא משהו?'}</span>
           <button type="submit" data-sent={isSent} value="Send">שלהבת, חזרי אלי</button>
         </form>
       </div>

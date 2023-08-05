@@ -45,8 +45,8 @@ export const nav = [
 ];
 
 export const contact = {
-	title: 'צרו קשר',
-	subtitle: 'שיחה יעוץ ראשונה - בחינם',
+	title: 'יצירת קשר',
+	subtitle: 'שיחת יעוץ ראשונה - בחינם',
 	detailsForContact: [
 		{
 			name: '050-4532052',

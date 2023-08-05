@@ -8,7 +8,7 @@
 	.content {
 		.title {
 			color: $basic-text-color;
-			font-size: 20px;
+			font-size: $title-size;
 			margin-bottom: 10px;
 			text-align: center;
 		}
@@ -121,6 +121,10 @@
 
 		.descriptionLogo {
 			flex: 2;
+
+			img {
+				width: 500px !important;
+			}
 		}
 
 		.navigation {

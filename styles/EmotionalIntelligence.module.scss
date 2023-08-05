@@ -4,12 +4,5 @@
 
 .intro {
 	background-color: $background-section-purple;
-	border-bottom-left-radius: $section-border-radius-mobile;
 	flex-direction: column;
-}
-
-@include desktop {
-	.intro {
-		border-bottom-left-radius: $section-border-radius;
-	}
 }

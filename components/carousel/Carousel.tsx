@@ -42,7 +42,7 @@ function Carousel({ data }: any) {
               >
                 <blockquote className={styles.carouselQuote}>
                   <p>{review.quote}</p>
-                  <span className={styles.title}>{review.name}</span>
+                  <span className={styles.author}>{review.name}</span>
                 </blockquote>
               </li>
             );
