@@ -1,200 +1,200 @@
-@import '../../styles/colors.scss';
-@import '../../styles/sizes.scss';
-@import '../../styles/functions.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
 
 .footerContainer {
-	background-color: $background-section-blue-light;
+  background-color: $background-section-blue-light;
 
-	.content {
-		.title {
-			color: $basic-text-color;
-			font-size: $title-size;
-			margin-bottom: 10px;
-			text-align: center;
-		}
+  .content {
+    .title {
+      color: $basic-text-color;
+      font-size: $title-size;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-		.descriptionLogo {
-			min-height: 15vh;
-			padding-top: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: 15px;
+    .descriptionLogo {
+      min-height: 15vh;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
 
-			.description {
-				text-align: center;
-				padding-inline: 32px;
+      .description {
+        text-align: center;
+        padding-inline: 32px;
 
-				p {
-					font-size: 15px;
-					font-weight: 100;
-					color: $basic-text-color;
-				}
-			}
-		}
+        p {
+          font-size: 15px;
+          font-weight: 100;
+          color: $basic-text-color;
+        }
+      }
+    }
 
-		.navigation {
-			.navContainer {
-				display: flex;
-				flex-direction: column;
-				margin: 30px 0;
-				gap: 30px;
+    .navigation {
+      .navContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        gap: 30px;
 
-				.block {
-					ul {
-						align-items: center;
-						display: flex;
-						flex-direction: column;
-						gap: 6px;
+        .block {
+          ul {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
 
-						li {
-							list-style: none;
-						}
+            li {
+              list-style: none;
+            }
 
-						a {
-							text-decoration: none;
-							font-weight: 100;
-							font-size: 16px;
-							color: $brand-color-purple;
-							transition: all 0.3s ease-in-out;
+            a {
+              text-decoration: none;
+              font-weight: 100;
+              font-size: 16px;
+              color: $brand-color-purple;
+              transition: all 0.3s ease-in-out;
 
-							&:hover {
-								letter-spacing: 0.8px;
-							}
-						}
-					}
-				}
-			}
-		}
+              &:hover {
+                letter-spacing: 0.8px;
+              }
+            }
+          }
+        }
+      }
+    }
 
-		.contact {
-			display: flex;
-			flex-direction: column;
-			gap: 18px;
-			align-items: center;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
 
-			.top {
-				align-items: center;
-				display: flex;
-				flex-direction: column;
-				gap: 8px;
+      .top {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-				.topItem {
-					.title {
-						display: flex;
-						align-items: center;
-						gap: 6px;
+        .topItem {
+          .title {
+            display: flex;
+            align-items: center;
+            gap: 6px;
 
-						a {
-							font-size: 16px;
-							text-align: right;
-							font-weight: 100;
-							color: $brand-color-purple;
-						}
-					}
+            a {
+              font-size: 16px;
+              text-align: right;
+              font-weight: 100;
+              color: $brand-color-purple;
+            }
+          }
 
-					img {
-						filter: $line-color-svg;
-					}
-				}
-			}
+          img {
+            filter: $line-color-svg;
+          }
+        }
+      }
 
-			.bottom {
-				margin: 20px 0;
-				justify-content: space-evenly;
-				align-items: center;
-				display: flex;
+      .bottom {
+        margin: 20px 0;
+        justify-content: space-evenly;
+        align-items: center;
+        display: flex;
 
-				img {
-					height: 50px !important;
-					width: 50px !important;
-				}
-			}
-		}
-	}
+        img {
+          height: 50px !important;
+          width: 50px !important;
+        }
+      }
+    }
+  }
 
-	@include desktop {
-		padding: 16px 32px;
-		display: flex;
-		align-items: center;
+  @include desktop {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
 
-		.descriptionLogo {
-			flex: 2;
+    .descriptionLogo {
+      flex: 2;
 
-			img {
-				width: 500px !important;
-			}
-		}
+      img {
+        width: 500px !important;
+      }
+    }
 
-		.navigation {
-			flex: 10;
-		}
+    .navigation {
+      flex: 10;
+    }
 
-		.content {
-			display: flex;
-			width: 100%;
-			flex: 3;
+    .content {
+      display: flex;
+      width: 100%;
+      flex: 3;
 
-			.navigation {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
+      .navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
-				.navContainer {
-					flex-direction: row;
-					display: flex;
-					justify-content: space-evenly;
+        .navContainer {
+          flex-direction: row;
+          display: flex;
+          justify-content: space-evenly;
 
-					.block {
-						p {
-							text-align: start;
-							font-size: 17px;
-						}
+          .block {
+            p {
+              text-align: start;
+              font-size: 17px;
+            }
 
-						ul {
-							align-items: flex-start;
-							display: flex;
-							flex-direction: column;
-							gap: 6px;
+            ul {
+              align-items: flex-start;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
 
-							a {
-								font-size: 15px;
+              a {
+                font-size: 15px;
 
-								&:hover {
-									letter-spacing: initial;
-								}
-							}
-						}
-					}
-				}
-			}
+                &:hover {
+                  letter-spacing: initial;
+                }
+              }
+            }
+          }
+        }
+      }
 
-			.contact {
-				margin-top: 30px;
+      .contact {
+        margin-top: 30px;
 
-				.title {
-					font-size: 17px;
-				}
+        .title {
+          font-size: 17px;
+        }
 
-				.top {
-					.topItem {
-						padding-left: 5px;
+        .top {
+          .topItem {
+            padding-left: 5px;
 
-						.title a {
-							font-size: 15px;
-						}
-					}
-				}
+            .title a {
+              font-size: 15px;
+            }
+          }
+        }
 
-				.bottom {
-					justify-content: center;
+        .bottom {
+          justify-content: center;
 
-					img {
-						height: 35px !important;
-					}
-				}
-			}
-		}
-	}
+          img {
+            height: 35px !important;
+          }
+        }
+      }
+    }
+  }
 }

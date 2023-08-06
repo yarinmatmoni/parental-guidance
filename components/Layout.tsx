@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header/Header";
-import ParallaxSection from '../components/parallaxSection/ParallaxSection';
+import ParallaxSection from "../components/parallaxSection/ParallaxSection";
 import Footer from "./footer/Footer";
 
 type Props = {

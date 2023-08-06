@@ -1,32 +1,32 @@
-@import '../../styles/colors.scss';
-@import '../../styles/z-index.scss';
-@import '../../styles/sizes.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/z-index.scss";
+@import "../../styles/sizes.scss";
 
 .infoBox {
-	padding: 15px 30px;
-	flex-direction: column;
-	text-align: center;
-	box-shadow: 0 0 15px 1px $box-shadow-color;
-	max-width: 350px;
-	max-height: 200px;
-	transition: 0.5s;
-	cursor: pointer;
-	border-radius: $border-radius;
-	z-index: $z-index-normal;
-	background: $background-body-color;
+  padding: 15px 30px;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 15px 1px $box-shadow-color;
+  max-width: 350px;
+  max-height: 200px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: $border-radius;
+  z-index: $z-index-normal;
+  background: $background-body-color;
 
-	.title {
-		padding-top: 15px;
-		font-weight: 100;
-		color: $brand-color-purple;
-	}
+  .title {
+    padding-top: 15px;
+    font-weight: 100;
+    color: $brand-color-purple;
+  }
 
-	p {
-		padding-top: 20px;
-		color: $basic-text-color;
-	}
+  p {
+    padding-top: 20px;
+    color: $basic-text-color;
+  }
 
-	&:hover {
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-	}
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
 }

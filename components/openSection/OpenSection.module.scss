@@ -1,24 +1,24 @@
-@import '../../styles/colors.scss';
-@import '../../styles/sizes.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
 
 .sectionContainer {
-	h1 {
-		font-weight: 100;
-		color: $brand-color-purple;
-		margin: 0 0 40px 0;
-	}
+  h1 {
+    font-weight: 100;
+    color: $brand-color-purple;
+    margin: 0 0 40px 0;
+  }
 
-	.subtitle {
-		font-weight: bold;
-		color: $basic-text-color;
-		margin: 15px 0 10px 0;
-		font-size: $title-size;
-	}
+  .subtitle {
+    font-weight: bold;
+    color: $basic-text-color;
+    margin: 15px 0 10px 0;
+    font-size: $title-size;
+  }
 
-	p {
-		font-size: $content-size;
-		line-height: 25px;
-		max-width: 500px;
-		color: $basic-text-color;
-	}
+  p {
+    font-size: $content-size;
+    line-height: 25px;
+    max-width: 500px;
+    color: $basic-text-color;
+  }
 }

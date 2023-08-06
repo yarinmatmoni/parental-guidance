@@ -1,136 +1,136 @@
-@import '../../styles/colors.scss';
-@import '../../styles/sizes.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
 
 .contactContainer {
-	background: $background-body-color;
-	padding: 40px 20px;
-	border-radius: $border-radius;
-	box-shadow: 0 0 15px 1px $box-shadow-color;
+  background: $background-body-color;
+  padding: 40px 20px;
+  border-radius: $border-radius;
+  box-shadow: 0 0 15px 1px $box-shadow-color;
 
-	.top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 20px;
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 
-		.title {
-			justify-content: center;
-			width: 100%;
-			text-align: center;
-			margin-bottom: 15px;
+    .title {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
 
-			h2 {
-				font-weight: 100;
-				color: $brand-color-purple;
-				margin-bottom: 5px;
-			}
+      h2 {
+        font-weight: 100;
+        color: $brand-color-purple;
+        margin-bottom: 5px;
+      }
 
-			p {
-				color: $basic-text-color;
-			}
-		}
+      p {
+        color: $basic-text-color;
+      }
+    }
 
-		.details {
-			display: flex;
-			width: 100%;
-			justify-content: space-evenly;
-			flex-wrap: wrap;
+    .details {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
 
-			.item {
-				display: flex;
-				gap: 5px;
-				align-items: center;
-				padding: 2px 12px;
+      .item {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        padding: 2px 12px;
 
-				p {
-					color: $basic-text-color;
-					font-size: 15px;
-				}
-			}
+        p {
+          color: $basic-text-color;
+          font-size: 15px;
+        }
+      }
 
-			img {
-				filter: $line-color-svg;
-			}
-		}
-	}
+      img {
+        filter: $line-color-svg;
+      }
+    }
+  }
 
-	.contact {
-		display: flex;
-		justify-content: center;
+  .contact {
+    display: flex;
+    justify-content: center;
 
-		form {
-			display: flex;
-			flex-direction: column;
-			width: 80%;
-			gap: 5px;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      gap: 5px;
 
-			input {
-				padding: 6px;
-				outline: none;
-				color: $basic-text-color;
-				border-radius: $border-radius;
-				border: 1px solid $secondary-purple;
-			}
+      input {
+        padding: 6px;
+        outline: none;
+        color: $basic-text-color;
+        border-radius: $border-radius;
+        border: 1px solid $secondary-purple;
+      }
 
-			textarea {
-				resize: none;
-				outline: none;
-				color: $basic-text-color;
-				border-radius: $border-radius;
-				border: 1px solid $secondary-purple;
-				padding: 3px 6px;
-				height: 80px;
-			}
+      textarea {
+        resize: none;
+        outline: none;
+        color: $basic-text-color;
+        border-radius: $border-radius;
+        border: 1px solid $secondary-purple;
+        padding: 3px 6px;
+        height: 80px;
+      }
 
-			span {
-				transition: all ease 0.5s;
-				text-align: center;
-				color: $failed-color;
-				margin-top: 10px;
-				font-size: 0;
+      span {
+        transition: all ease 0.5s;
+        text-align: center;
+        color: $failed-color;
+        margin-top: 10px;
+        font-size: 0;
 
-				&[data-valid='false'] {
-					font-size: 15px;
-				}
+        &[data-valid="false"] {
+          font-size: 15px;
+        }
 
-				&[data-sent='true'] {
-					font-size: 15px;
-					color: $success-color;
+        &[data-sent="true"] {
+          font-size: 15px;
+          color: $success-color;
 
-					&::after {
-						content: '\263A';
-						font-size: 22px;
-						margin-right: 5px;
-					}
-				}
+          &::after {
+            content: "\263A";
+            font-size: 22px;
+            margin-right: 5px;
+          }
+        }
 
-				&[data-valid='false'] {
-					font-size: 15px;
-				}
-			}
-		}
-	}
+        &[data-valid="false"] {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 
-	button {
-		cursor: pointer;
-		padding: 8px 10px;
-		margin-top: 10px;
-		border-radius: $border-radius;
-		border: none;
-		background-color: $secondary-purple;
-		color: $basic-text-color;
-		font-weight: 600;
-		transition: 0.5s ease;
+  button {
+    cursor: pointer;
+    padding: 8px 10px;
+    margin-top: 10px;
+    border-radius: $border-radius;
+    border: none;
+    background-color: $secondary-purple;
+    color: $basic-text-color;
+    font-weight: 600;
+    transition: 0.5s ease;
 
-		&:hover {
-			box-shadow: 0 0 15px 1px $secondary-purple;
-			color: whitesmoke;
-		}
+    &:hover {
+      box-shadow: 0 0 15px 1px $secondary-purple;
+      color: whitesmoke;
+    }
 
-		&[data-sent='true'] {
-			background: #e7e7e7;
-			color: $basic-text-color;
-			pointer-events: none;
-		}
-	}
+    &[data-sent="true"] {
+      background: #e7e7e7;
+      color: $basic-text-color;
+      pointer-events: none;
+    }
+  }
 }

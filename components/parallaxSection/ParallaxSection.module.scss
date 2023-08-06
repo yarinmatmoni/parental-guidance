@@ -1,30 +1,30 @@
-@import '../../styles/functions.scss';
+@import "../../styles/functions.scss";
 
 .parallaxSection {
-	min-width: 100%;
-	clip-path: inset(0 0 0 0);
+  min-width: 100%;
+  clip-path: inset(0 0 0 0);
 
-	.image {
-		position: fixed;
-		height: 100%;
-		width: 100%;
-		left: 0;
-		top: 0;
+  .image {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
 
-		img {
-			opacity: 0.15;
-		}
-	}
+    img {
+      opacity: 0.15;
+    }
+  }
 
-	align-items: center;
+  align-items: center;
 
-	.contact {
-		position: relative;
-	}
+  .contact {
+    position: relative;
+  }
 }
 
 @include desktop {
-	.parallaxSection {
-		justify-content: flex-start !important;
-	}
+  .parallaxSection {
+    justify-content: flex-start !important;
+  }
 }

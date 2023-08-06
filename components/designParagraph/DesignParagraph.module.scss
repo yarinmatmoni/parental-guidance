@@ -1,44 +1,44 @@
-@import '../../styles/colors.scss';
-@import '../../styles/sizes.scss';
-@import '../../styles/functions.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
 
 .paragraphContainer {
-	background: $background-section-blue;
-	display: flex;
-	justify-content: center;
-	flex-direction: column-reverse;
-	align-items: center;
-	min-height: 40vh;
-	padding: 20px 10px;
-	gap: 25px;
+  background: $background-section-blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  min-height: 40vh;
+  padding: 20px 10px;
+  gap: 25px;
 
-	&:nth-child(even) {
-		background: $background-section-purple;
-	}
+  &:nth-child(even) {
+    background: $background-section-purple;
+  }
 
-	.paragraph {
-		font-size: $content-size;
-		text-align: center;
-		max-width: 80%;
-		line-height: 25px;
-		color: $basic-text-color;
-	}
+  .paragraph {
+    font-size: $content-size;
+    text-align: center;
+    max-width: 80%;
+    line-height: 25px;
+    color: $basic-text-color;
+  }
 }
 
 @include desktop {
-	.paragraphContainer {
-		border-radius: 90px 0 0 90px;
-		justify-content: space-evenly;
-		min-height: 20vh;
-		flex-direction: initial;
+  .paragraphContainer {
+    border-radius: 90px 0 0 90px;
+    justify-content: space-evenly;
+    min-height: 20vh;
+    flex-direction: initial;
 
-		&:nth-child(even) {
-			flex-direction: row-reverse;
-			border-radius: 0 90px 90px 0;
-		}
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      border-radius: 0 90px 90px 0;
+    }
 
-		.paragraph {
-			text-align: initial;
-		}
-	}
+    .paragraph {
+      text-align: initial;
+    }
+  }
 }

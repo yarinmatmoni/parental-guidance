@@ -30,23 +30,23 @@ function Carousel({ data }: any) {
   return (
     <div className={styles.carousel}>
       <ul className={styles.carouselList}>
-        {
-          data?.map((review: CarouselProps, index: number) => {
-            return (
-              <li
-                key={index + 1}
-                className={`${styles.carouselItem} ${index + 1 === activeSlide ? styles.active : ""
-                  }
+        {data?.map((review: CarouselProps, index: number) => {
+          return (
+            <li
+              key={index + 1}
+              className={`${styles.carouselItem} ${
+                index + 1 === activeSlide ? styles.active : ""
+              }
                   ${index + 1 < activeSlide ? styles.right : ""}
                   ${index + 1 > activeSlide ? styles.left : ""}`}
-              >
-                <blockquote className={styles.carouselQuote}>
-                  <p>{review.quote}</p>
-                  <span className={styles.author}>{review.name}</span>
-                </blockquote>
-              </li>
-            );
-          })}
+            >
+              <blockquote className={styles.carouselQuote}>
+                <p>{review.quote}</p>
+                <span className={styles.author}>{review.name}</span>
+              </blockquote>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

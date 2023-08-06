@@ -20,9 +20,7 @@ function DesignParagraph({ data }: paragraphProps) {
   return (
     <motion.div
       className={styles.paragraphContainer}
-      variants={
-        data.animation === "left" ? leftFadeIn : rightFadeIn
-      }
+      variants={data.animation === "left" ? leftFadeIn : rightFadeIn}
       ref={element}
       animate={controls}
       initial="hidden"

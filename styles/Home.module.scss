@@ -1,128 +1,128 @@
-@import './colors.scss';
-@import './sizes.scss';
-@import './z-index.scss';
-@import './functions.scss';
+@import "./colors.scss";
+@import "./sizes.scss";
+@import "./z-index.scss";
+@import "./functions.scss";
 
 .titleSection {
-	color: $basic-text-color;
-	font-weight: 500;
-	font-size: $title-size;
-	text-align: center;
-	padding-bottom: 10px;
-	align-items: center;
+  color: $basic-text-color;
+  font-weight: 500;
+  font-size: $title-size;
+  text-align: center;
+  padding-bottom: 10px;
+  align-items: center;
 }
 
 .welcomeSection {
-	flex-direction: column;
-	background: $background-section-purple;
+  flex-direction: column;
+  background: $background-section-purple;
 
-	.title {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 30px;
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 
-		@include desktop {
-			margin-bottom: 40px;
-		}
+    @include desktop {
+      margin-bottom: 40px;
+    }
 
-		h1 {
-			font-weight: 500;
-			color: $basic-text-color;
+    h1 {
+      font-weight: 500;
+      color: $basic-text-color;
 
-			&:nth-child(2) {
-				color: $secondary-purple;
-			}
-		}
-	}
+      &:nth-child(2) {
+        color: $secondary-purple;
+      }
+    }
+  }
 
-	.imageContainer {
-		position: absolute;
-		opacity: 0.1;
-		top: 10px;
-		left: 40px;
-	}
+  .imageContainer {
+    position: absolute;
+    opacity: 0.1;
+    top: 10px;
+    left: 40px;
+  }
 
-	.content {
-		color: $basic-text-color;
-		max-width: 530px;
-		display: flex;
-		flex-direction: column;
-		font-size: $content-size;
-		line-height: 25px;
+  .content {
+    color: $basic-text-color;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    font-size: $content-size;
+    line-height: 25px;
 
-		span {
-			margin-bottom: 8px;
-		}
-	}
+    span {
+      margin-bottom: 8px;
+    }
+  }
 
-	.call {
-		background-color: $secondary-purple;
-		padding: 16px;
-		margin-top: 48px;
-		text-align: center;
-		border-radius: $border-radius;
-		transition: 0.5s ease;
-		min-width: 50%;
-		margin-inline: auto;
-		border: none;
-		font-weight: 600;
-		font-size: 16px;
-		cursor: pointer;
-		z-index: 1;
+  .call {
+    background-color: $secondary-purple;
+    padding: 16px;
+    margin-top: 48px;
+    text-align: center;
+    border-radius: $border-radius;
+    transition: 0.5s ease;
+    min-width: 50%;
+    margin-inline: auto;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
 
-		a {
-			color: $basic-text-color;
-			transition: 0.3s ease-in-out;
-		}
+    a {
+      color: $basic-text-color;
+      transition: 0.3s ease-in-out;
+    }
 
-		&:hover {
-			box-shadow: 0 0 15px 1px $secondary-purple;
+    &:hover {
+      box-shadow: 0 0 15px 1px $secondary-purple;
 
-			a {
-				color: whitesmoke;
-			}
-		}
-	}
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
 }
 
 .infoSection {
-	flex-wrap: wrap;
-	column-gap: 30px;
-	row-gap: 30px;
-	align-items: center;
-	position: relative;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
+  position: relative;
 }
 
 .workPlan {
-	position: relative;
-	align-items: center;
-	flex-direction: column;
-	direction: ltr;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  direction: ltr;
 
-	p {
-		direction: rtl;
-	}
+  p {
+    direction: rtl;
+  }
 }
 
 .quoteSection {
-	background-color: $background-section-pink;
+  background-color: $background-section-pink;
 }
 
 .quotesCarousel {
-	flex-direction: column;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
 
-	.titleSection {
-		&::before {
-			content: '\2606';
-			color: #ffce45;
-			font-size: 35px;
-			margin-left: 10px;
-		}
-	}
+  .titleSection {
+    &::before {
+      content: "\2606";
+      color: #ffce45;
+      font-size: 35px;
+      margin-left: 10px;
+    }
+  }
 
-	.carousel {
-		display: flex;
-		justify-content: center;
-	}
+  .carousel {
+    display: flex;
+    justify-content: center;
+  }
 }

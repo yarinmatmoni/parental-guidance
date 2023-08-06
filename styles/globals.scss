@@ -1,122 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-@import './colors.scss';
-@import './sizes.scss';
-@import './z-index.scss';
-@import './functions.scss';
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "./colors.scss";
+@import "./sizes.scss";
+@import "./z-index.scss";
+@import "./functions.scss";
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Varela Round', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
 }
 
 body {
-	background-color: $background-body-color;
-	direction: rtl;
+  background-color: $background-body-color;
+  direction: rtl;
 
-	&.sticky {
-		overflow: hidden;
+  &.sticky {
+    overflow: hidden;
 
-		#content,
-		#footer {
-			filter: blur(3px);
-			pointer-events: none;
-		}
-	}
+    #content,
+    #footer {
+      filter: blur(3px);
+      pointer-events: none;
+    }
+  }
 }
 body ::selection {
-	color: whitesmoke;
-	background: $brand-color-purple;
-	width: 100vw;
+  color: whitesmoke;
+  background: $brand-color-purple;
+  width: 100vw;
 }
 
 .section {
-	// min-height: calc(100vh - $body-size);
-	min-height: 60vh;
-	display: flex;
-	justify-content: center;
-	padding: 32px 30px;
-	max-width: $body-max-width;
-	margin: auto;
-	position: relative;
+  // min-height: calc(100vh - $body-size);
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 30px;
+  max-width: $body-max-width;
+  margin: auto;
+  position: relative;
 }
 
 h1 {
-	font-size: 50px;
+  font-size: 50px;
 }
 
 h2 {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 h3 {
-	font-size: 25px;
+  font-size: 25px;
 }
 
 h4 {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .dotList,
 .arrowList {
-	list-style: none;
+  list-style: none;
 
-	li {
-		font-size: $content-size;
-		color: $basic-text-color;
-		margin: 10px;
-		align-items: baseline;
-		display: flex;
+  li {
+    font-size: $content-size;
+    color: $basic-text-color;
+    margin: 10px;
+    align-items: baseline;
+    display: flex;
 
-		&::before {
-			font-size: 30px;
-			font-weight: bold;
-			margin-left: 15px;
-		}
-	}
+    &::before {
+      font-size: 30px;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+  }
 }
 
 .dotList li {
-	&::before {
-		content: '\26AC';
-		color: $brand-color-blue;
-	}
+  &::before {
+    content: "\26AC";
+    color: $brand-color-blue;
+  }
 }
 
 .arrowList li {
-	&::before {
-		content: '\203A';
-		color: $brand-color-pink;
-	}
+  &::before {
+    content: "\203A";
+    color: $brand-color-pink;
+  }
 }
 
 *::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 @include desktop {
-	*::-webkit-scrollbar {
-		display: initial;
-		width: 5px;
-		height: 4px;
-	}
+  *::-webkit-scrollbar {
+    display: initial;
+    width: 5px;
+    height: 4px;
+  }
 
-	*::-webkit-scrollbar-track {
-		background: transparent;
-	}
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-	*::-webkit-scrollbar-thumb {
-		background-color: #5078ab59;
-		border-radius: 20px;
-		border: transparent;
-	}
+  *::-webkit-scrollbar-thumb {
+    background-color: #5078ab59;
+    border-radius: 20px;
+    border: transparent;
+  }
 
-	.section {
-		padding: 70px;
-	}
+  .section {
+    padding: 70px;
+  }
 }
