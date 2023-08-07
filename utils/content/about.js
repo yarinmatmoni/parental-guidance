@@ -1,4 +1,4 @@
-export const intro = {
+export const head = {
   introData: [
     {
       paragraph:

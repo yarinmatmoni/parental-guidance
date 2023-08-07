@@ -32,8 +32,6 @@ body ::selection {
 }
 
 .section {
-  // min-height: calc(100vh - $body-size);
-  min-height: 60vh;
   display: flex;
   justify-content: center;
   padding: 32px 30px;

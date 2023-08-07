@@ -1,24 +1,41 @@
 @import "../../styles/colors.scss";
 @import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
 
-.sectionContainer {
-  h1 {
-    font-weight: 100;
-    color: $brand-color-purple;
-    margin: 0 0 40px 0;
+.head {
+  background-color: $background-section-purple;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    background-image: url("/waves/wave2.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -80%;
+    left: 0;
+    width: 100%;
+    height: 80%;
   }
 
-  .subtitle {
-    font-weight: bold;
-    color: $basic-text-color;
-    margin: 15px 0 10px 0;
-    font-size: $title-size;
-  }
+  .sectionContainer {
+    h1 {
+      font-weight: 100;
+      color: $brand-color-purple;
+      margin: 0 0 40px 0;
+    }
 
-  p {
-    font-size: $content-size;
-    line-height: 25px;
-    max-width: 500px;
-    color: $basic-text-color;
+    .subtitle {
+      font-weight: bold;
+      color: $basic-text-color;
+      margin: 15px 0 10px 0;
+      font-size: $title-size;
+    }
+
+    p {
+      font-size: $content-size;
+      line-height: 25px;
+      max-width: 500px;
+      color: $basic-text-color;
+    }
   }
 }

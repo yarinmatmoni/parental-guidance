@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+@import "../../styles/z-index.scss";
+@import "../../styles/sizes.scss";
+
+.infoSection {
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
+  position: relative;
+}

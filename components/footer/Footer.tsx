@@ -9,10 +9,10 @@ import {
   emailHref,
   faceBookHref,
 } from "../../utils/content/hrefs";
-import { nav, personalInfo } from "../../utils/content/common";
+import { contact, nav, personalInfo } from "../../utils/content/common";
 import Logo from "../logo/Logo";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer id="footer" className={styles.footerContainer}>
       <div className={styles.content}>
@@ -57,7 +57,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.contact}>
-          <p className={styles.title}>יצירת קשר</p>
+          <p className={styles.title}>{contact.title}</p>
           <div className={styles.contactDetails}>
             <div className={styles.top}>
               <div className={styles.topItem}>
@@ -111,6 +111,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

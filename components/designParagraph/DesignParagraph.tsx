@@ -14,7 +14,7 @@ type paragraphProps = {
   };
 };
 
-function DesignParagraph({ data }: paragraphProps) {
+const DesignParagraph = ({ data }: paragraphProps) => {
   const [element, controls]: any = useScroll();
 
   return (
@@ -33,6 +33,6 @@ function DesignParagraph({ data }: paragraphProps) {
       </div>
     </motion.div>
   );
-}
+};
 
 export default DesignParagraph;

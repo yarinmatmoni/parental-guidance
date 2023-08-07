@@ -12,7 +12,7 @@ export const pageAnimation = {
   },
 };
 
-export const titleAnimation = {
+export const textUpAnimation = {
   hidden: {
     y: 100,
     opacity: 0,

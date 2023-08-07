@@ -1,0 +1,49 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
+
+.list {
+  flex-direction: column;
+
+  .title {
+    font-weight: bold;
+    color: $basic-text-color;
+    margin: 15px 0 10px 0;
+    font-size: $title-size;
+  }
+}
+
+.list {
+  flex-direction: column;
+
+  .title {
+    font-weight: bold;
+    color: $basic-text-color;
+    margin: 15px 0 10px 0;
+    font-size: $title-size;
+  }
+}
+
+.example {
+  flex-direction: column;
+
+  .title {
+    font-weight: bold;
+    color: $basic-text-color;
+    margin: 15px 0 10px 0;
+    font-size: $title-size;
+  }
+
+  p {
+    font-size: $content-size;
+    color: $basic-text-color;
+    margin: 5px 0;
+    line-height: 25px;
+  }
+}
+
+@include desktop {
+  .example p {
+    max-width: 60vw;
+  }
+}

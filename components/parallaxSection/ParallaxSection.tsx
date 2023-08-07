@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Contact from "../../components/contact/Contact";
+import ContactForm from "../contactForm/ContactForm";
 import styles from "./ParallaxSection.module.scss";
 
-function ParallaxSection() {
+const ParallaxSection = () => {
   return (
     <section className={`section ${styles.parallaxSection}`}>
       <div className={styles.image}>
@@ -12,15 +12,15 @@ function ParallaxSection() {
           objectFit="cover"
           objectPosition="center"
           layout="fill"
-          alt="תמונה"
+          alt="שלהבת ברק"
           priority
         />
       </div>
       <div className={styles.contact}>
-        <Contact />
+        <ContactForm />
       </div>
     </section>
   );
-}
+};
 
 export default ParallaxSection;

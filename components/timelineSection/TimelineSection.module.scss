@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+
+.titleSection {
+  color: $basic-text-color;
+  font-weight: 500;
+  font-size: $title-size;
+  text-align: center;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.workPlan {
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  direction: ltr;
+
+  p {
+    direction: rtl;
+  }
+}

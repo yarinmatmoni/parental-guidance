@@ -1,0 +1,8 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
+
+.mainSection {
+  flex-direction: column;
+  gap: 20px;
+}

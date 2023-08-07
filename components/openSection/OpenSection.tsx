@@ -1,31 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { titleAnimation } from "../../utils/animation/animation";
+import { textUpAnimation } from "../../utils/animation/animation";
 import styles from "./OpenSection.module.scss";
 
-function OpenSection({
-  title,
-  openParagraphs,
-  subtitle,
-  paragraphs,
-}: {
-  title: string;
-  openParagraphs?: string[];
-  subtitle?: string;
-  paragraphs?: string[];
-}) {
+const OpenSection = ({ data }: any) => {
   return (
-    <div className={styles.sectionContainer}>
-      <motion.h1 variants={titleAnimation}>{title}</motion.h1>
-      {openParagraphs?.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-      <p className={styles.subtitle}>{subtitle}</p>
-      {paragraphs?.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-    </div>
+    <section className={`section ${styles.head}`}>
+      <div className={styles.sectionContainer}>
+        <motion.h1 variants={textUpAnimation}>{data.name}</motion.h1>
+        {data.head?.intro?.map((paragraph: any, index: number) => (
+          <p key={index}>{paragraph}</p>
+        ))}
+        {data.head?.subtitle && (
+          <p className={styles.subtitle}>{data.head?.subtitle}</p>
+        )}
+        {data.head?.paragraphs?.map((paragraph: any, index: number) => (
+          <p key={index}>{paragraph}</p>
+        ))}
+      </div>
+    </section>
   );
-}
+};
 
 export default OpenSection;

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-function Link({
+const Link = ({
   href,
   text,
   src,
@@ -15,7 +15,7 @@ function Link({
   size?: number;
   alt?: string;
   tab?: boolean;
-}) {
+}) => {
   return (
     <a href={href} target={tab ? "_blank" : ""} rel="noreferrer">
       {text !== undefined ? (
@@ -25,6 +25,6 @@ function Link({
       )}
     </a>
   );
-}
+};
 
 export default Link;

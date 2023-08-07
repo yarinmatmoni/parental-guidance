@@ -2,34 +2,7 @@
 @import "./sizes.scss";
 @import "./functions.scss";
 
-.intro {
-  background-color: $background-section-purple;
-
-  &::after {
-    content: "";
-    background-image: url("/waves/wave3.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -65%;
-    left: 0;
-    width: 100%;
-    height: 65%;
-  }
-
-  flex-direction: column;
-}
-
-.importance {
-  flex-direction: column;
-
-  .title {
-    font-weight: bold;
-    color: $basic-text-color;
-    margin: 15px 0 10px 0;
-    font-size: $title-size;
-  }
-}
-
+/*//TODO: need to remove it and use generic component instead*/
 .example {
   flex-direction: column;
 
