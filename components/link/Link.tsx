@@ -21,7 +21,7 @@ const Link = ({
       {text !== undefined ? (
         text
       ) : (
-        <Image src={src!} height={size} width={size} alt={alt}></Image>
+        <Image src={src!} height={size} width={size} alt={alt || text}></Image>
       )}
     </a>
   );

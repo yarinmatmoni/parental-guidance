@@ -54,7 +54,7 @@ const ContactForm = () => {
     <div className={styles.contactContainer}>
       <div className={styles.top}>
         <div className={styles.title}>
-          <h2>{contact.title}</h2>
+          <div>{contact.title}</div>
           <p>{contact.subtitle}</p>
         </div>
         <div className={styles.details}>

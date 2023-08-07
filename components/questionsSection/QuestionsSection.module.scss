@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+@import "../../styles/functions.scss";
+
+.questions {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-weight: bold;
+    color: $basic-text-color;
+    margin: 15px 0 20px 0;
+    font-size: $title-size;
+  }
+
+  .container {
+    padding: 10px;
+
+    div {
+      margin-bottom: 10px;
+
+      button {
+        font-size: $content-size;
+        background-image: linear-gradient(
+          to right,
+          $background-body-color,
+          $background-section-pink
+        );
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: right;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $background-section-purple;
+        }
+      }
+
+      p {
+        padding: 5px 10px;
+      }
+    }
+  }
+}

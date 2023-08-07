@@ -17,11 +17,11 @@ const WelcomeSection = () => {
           src="/images/baby.png"
           height="522px"
           width="520px"
-          alt="cute baby"
+          alt="תינוק חמוד"
         ></Image>
       </div>
       <h1 className={styles.title}>
-        שלהבת ברק<div>ייעוץ והדרכה הורית</div>
+        {text.name} <div>ייעוץ והדרכה הורית</div>
       </h1>
       <div className={styles.content}>
         <span>ברוכים הבאים!</span>

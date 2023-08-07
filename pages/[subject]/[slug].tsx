@@ -7,6 +7,7 @@ import styles from "../../styles/Schedule.module.scss";
 import { pagesData, text } from "../../utils/content/common";
 import ListSection from "../../components/listSection/ListSection";
 import type { GetStaticProps, GetStaticPaths } from "next";
+import QuestionsSection from "../../components/questionsSection/QuestionsSection";
 
 const Page = ({ data }: any) => {
   if (!data) return;
@@ -17,6 +18,7 @@ const Page = ({ data }: any) => {
         title={`${text.name} - ${data.name}`}
         keywords={data.name}
         description={data.description}
+        questions={data.questions}
       />
       <OpenSection data={data} />
       {data.importance && <ListSection data={data.importance} />}
@@ -31,12 +33,17 @@ const Page = ({ data }: any) => {
           <p>{data.example.paragraph3}</p>
         </section>
       )}
+      {data.questions && (
+        <QuestionsSection data={data.questions} title={data.name} />
+      )}
     </motion.div>
   );
 };
+
 export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
   return { paths: [], fallback: "blocking" };
 };
+
 export const getStaticProps: GetStaticProps = async (context) => {
   const pageName = context.params?.slug as string;
   const decodePageName = decodeURI(pageName);

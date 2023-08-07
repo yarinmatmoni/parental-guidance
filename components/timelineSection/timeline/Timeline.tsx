@@ -45,7 +45,7 @@ const Timeline = ({ data }: any) => {
                   ></Image>
                 }
               >
-                <h4
+                <div
                   style={{
                     fontSize: 16,
                     fontWeight: "500",
@@ -54,7 +54,7 @@ const Timeline = ({ data }: any) => {
                   }}
                 >
                   {e.title}
-                </h4>
+                </div>
                 <p
                   style={{ fontSize: 15, fontWeight: "300", color: "#3f4756" }}
                 >
