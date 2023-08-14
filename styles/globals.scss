@@ -25,6 +25,7 @@ body {
     }
   }
 }
+
 body ::selection {
   color: whitesmoke;
   background: $brand-color-purple;
@@ -33,11 +34,11 @@ body ::selection {
 
 .section {
   display: flex;
-  justify-content: center;
-  padding: 32px 30px;
-  max-width: $body-max-width;
-  margin: auto;
   position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
 }
 
 h1 {
@@ -115,6 +116,7 @@ a {
   }
 
   .section {
-    padding: 70px;
+    margin: auto auto 35px;
+    justify-content: right;
   }
 }

@@ -9,12 +9,11 @@ const ParallaxSection = () => {
     <section className={`section ${styles.parallaxSection}`}>
       <div className={styles.image}>
         <Image
-          src={"/images/parallaxImage.jpeg"}
+          src={"/images/background.png"}
           objectFit="cover"
           objectPosition="center"
           layout="fill"
           alt={text.name}
-          priority
         />
       </div>
       <div className={styles.contact}>

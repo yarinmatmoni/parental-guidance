@@ -1,0 +1,58 @@
+@import "../../styles/colors.scss";
+@import "../../styles/z-index.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/sizes.scss";
+
+.tableSection {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin-bottom: 20px;
+
+  .title {
+    color: $basic-text-color;
+    margin-bottom: 20px;
+  }
+
+  .asterisk {
+    color: $basic-text-color;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-size: 12px;
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 4px;
+      text-align: center;
+      height: 90px;
+    }
+
+    th {
+      background-color: $secondary-purple;
+    }
+
+    tr:nth-child(even) {
+      background-color: $background-section-blue;
+    }
+
+    tr:nth-child(odd) {
+      background-color: $background-section-purple;
+    }
+
+    @include desktop {
+      font-size: $content-size;
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  }
+}

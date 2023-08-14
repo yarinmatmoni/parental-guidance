@@ -3,12 +3,13 @@ import MetaData from "../components/metadata/Metadata";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../utils/animation/animation";
 import React from "react";
-import WelcomeSection from "../components/welcomeSection/WelcomeSection";
-import { text } from "../utils/content/common";
+import { contact, text } from "../utils/content/common";
 import InfoSection from "../components/infoSection/InfoSection";
 import TimelineSection from "../components/timelineSection/TimelineSection";
 import QuoteSection from "../components/quoteSection/QuoteSection";
 import RecommendedSection from "../components/recommendedSection/RecommendedSection";
+import IntroSection from "../components/introSection/IntroSection";
+import { whatsAppHref } from "../utils/content/hrefs";
 
 const Home: NextPage = () => {
   const pageName = "ייעוץ והדרכה הורית";
@@ -20,7 +21,18 @@ const Home: NextPage = () => {
         keywords={pageName}
         description={text.description}
       />
-      <WelcomeSection />
+      <IntroSection
+        title={text.name}
+        subtitle={"ייעוץ והדרכה הורית"}
+        imageName={"baby"}
+        buttonLink={whatsAppHref}
+        buttonText={contact.subtitle}
+      >
+        <div>
+          <div>ברוכים הבאים!</div>
+          {text.description}
+        </div>
+      </IntroSection>
       <InfoSection />
       <TimelineSection />
       <QuoteSection background />

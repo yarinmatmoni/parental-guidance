@@ -6,9 +6,13 @@ import Shape from "../shape/Shape";
 
 const QuoteSection = ({ background }: { background?: boolean }) => {
   return (
-    <section className={`section ${background && styles.quoteSection}`}>
+    <section
+      className={`section ${styles.quoteSection} ${
+        background && styles.withBackground
+      }`}
+    >
       {!background && (
-        <Shape name="shape1" height={350} top={"25%"} left={"65%"} />
+        <Shape name="shape1" height={350} top={"15%"} left={"65%"} />
       )}
       <Quote data={quote1} />
     </section>

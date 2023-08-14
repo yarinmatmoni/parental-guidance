@@ -1,5 +1,9 @@
 @import "../../styles/colors.scss";
 
-.quoteSection {
+.withBackground {
   background-color: $background-section-pink;
+}
+
+.quoteSection {
+  padding: 60px;
 }

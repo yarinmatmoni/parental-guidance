@@ -17,7 +17,7 @@ const Footer = () => {
     <footer id="footer" className={styles.footerContainer}>
       <div className={styles.content}>
         <div className={styles.descriptionLogo}>
-          <Logo height={80} width={100} />
+          <Logo height={80} width={100} withText />
           <div className={styles.description}>
             <p className={styles.title}>כמה מילים</p>
           </div>
