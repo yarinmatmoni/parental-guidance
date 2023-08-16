@@ -21,9 +21,8 @@
     opacity: 0;
     z-index: $z-index-normal;
     height: 0;
-    justify-content: center;
     width: 100%;
-    left: 0;
+    padding-top: 30px;
 
     .menuItem {
       display: flex;
@@ -38,6 +37,7 @@
 
       .subMenu {
         margin-top: 5px;
+        display: none;
       }
 
       a {
@@ -85,6 +85,7 @@
       flex-direction: row;
       position: initial;
       box-shadow: initial;
+      padding-top: 0;
 
       &[data-open="true"] {
         height: initial;
@@ -100,20 +101,20 @@
 
         &:hover {
           .subMenu {
-            position: absolute;
-            top: $subMenu-height;
-            background: $background-body-color;
             display: flex;
-            flex-direction: column;
-            padding: 10px 25px;
-            box-shadow: 0 0 15px 1px $box-shadow-color;
-            border-radius: $border-radius;
-            margin-top: $subMenu-height;
           }
         }
 
         .subMenu {
           display: none;
+          position: absolute;
+          top: $subMenu-height;
+          background: $background-body-color;
+          flex-direction: column;
+          padding: 10px 25px;
+          box-shadow: 0 0 15px 1px $box-shadow-color;
+          border-radius: $border-radius;
+          margin-top: $subMenu-height;
         }
 
         a:hover {

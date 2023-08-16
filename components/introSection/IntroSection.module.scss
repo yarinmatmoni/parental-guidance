@@ -89,6 +89,6 @@
   }
 
   @include desktop {
-    padding: 70px;
+    padding: $body-padding;
   }
 }

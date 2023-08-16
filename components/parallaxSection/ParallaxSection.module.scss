@@ -2,7 +2,7 @@
 
 .parallaxSection {
   min-width: 100%;
-  padding: 70px 150px 70px 70px;
+  padding: $body-padding 150px $body-padding $body-padding;
   clip-path: inset(0 0 0 0);
   align-items: center;
 

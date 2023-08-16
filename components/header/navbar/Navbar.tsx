@@ -28,7 +28,7 @@ const Navbar = () => {
             <li
               key={i}
               className={styles.menuItem}
-              data-path={router.pathname === menuItem.link ? true : false}
+              data-path={router.pathname === menuItem.link}
             >
               {menuItem.sub.length > 0 ? (
                 <>
@@ -38,9 +38,7 @@ const Navbar = () => {
                       <li
                         key={i}
                         className={styles.menuItem}
-                        data-path={
-                          router.pathname === subMenuItem.link ? true : false
-                        }
+                        data-path={router.pathname === subMenuItem.link}
                       >
                         <Link
                           className={styles.link}

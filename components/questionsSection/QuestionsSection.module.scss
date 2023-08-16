@@ -5,6 +5,11 @@
 .questions {
   display: flex;
   flex-direction: column;
+  max-width: $body-max-width;
+
+  @include desktop {
+    padding: $body-padding 0;
+  }
 
   .title {
     font-weight: bold;
