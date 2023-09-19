@@ -16,7 +16,13 @@ type InfoBoxProps = {
 const InfoBox = ({ data }: InfoBoxProps) => {
   return (
     <div className={styles.infoBox} onClick={() => Router.push(data.link)}>
-      <Image src={data.logo} height={40} width={40} alt={data.alt}></Image>
+      <Image
+        src={data.logo}
+        height={40}
+        width={40}
+        alt={data.alt}
+        title={data.alt}
+      ></Image>
       <p className={styles.title}>{data.title}</p>
       <p>{data.text}</p>
     </div>

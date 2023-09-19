@@ -29,7 +29,13 @@ const DesignParagraph = ({ data }: paragraphProps) => {
         <p>{data.paragraph}</p>
       </div>
       <div>
-        <Image src={data.icon} height={50} width={50} alt={data.alt}></Image>
+        <Image
+          src={data.icon}
+          height={50}
+          width={50}
+          alt={data.alt}
+          title={data.alt}
+        ></Image>
       </div>
     </motion.div>
   );

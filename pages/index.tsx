@@ -28,10 +28,10 @@ const Home: NextPage = () => {
         buttonLink={whatsAppHref}
         buttonText={contact.subtitle}
       >
-        <div>
+        <h2>
           <div>ברוכים הבאים!</div>
           {text.description}
-        </div>
+        </h2>
       </IntroSection>
       <InfoSection />
       <TimelineSection />

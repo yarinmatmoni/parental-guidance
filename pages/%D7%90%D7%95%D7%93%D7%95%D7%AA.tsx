@@ -9,7 +9,7 @@ import Metadata from "../components/metadata/Metadata";
 import { head } from "../utils/content/about";
 import IntroSection from "../components/introSection/IntroSection";
 
-const About = () => {
+const D790D795D793D795D7AA = () => {
   const pageName = "אודות";
 
   return (
@@ -17,16 +17,15 @@ const About = () => {
       <Metadata
         title={`${text.name} - ${pageName}`}
         keywords={pageName}
-        description={text.about}
+        description={text.description}
       />
       <IntroSection
         title={"קצת עליי"}
         subtitle={"בואו נכיר קצת.."}
         imageName={"me"}
       >
-        {head?.introData.map((p, index) => (
-          <p key={index}>{p.paragraph}</p>
-        ))}
+        <div>{text.description}</div>
+        <div>{text.extraDescription}</div>
       </IntroSection>
       <QuoteSection />
       <DirectionsContentSection />
@@ -35,4 +34,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default D790D795D793D795D7AA;

@@ -47,7 +47,7 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const pageName = context.params?.slug as string;
   const decodePageName = decodeURI(pageName);
-  const pageData = pagesData[decodePageName];
+  const pageData = (pagesData as any)[decodePageName];
   if (!pageData) {
     return { props: { hasError: true } };
   }

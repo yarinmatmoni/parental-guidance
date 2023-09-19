@@ -14,7 +14,11 @@ const About = () => {
 
   return (
     <motion.div variants={pageAnimation} initial="hidden" animate="show">
-      <Metadata title={pageName} keywords={pageName} description={text.about} />
+      <Metadata
+        title={pageName}
+        keywords={pageName}
+        description={text.description}
+      />
       <IntroSection
         title={"החזר קופת החולים על ייעוץ שינה"}
         imageName={"phone"}

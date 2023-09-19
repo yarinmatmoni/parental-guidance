@@ -42,6 +42,7 @@ const Timeline = ({ data }: any) => {
                     height={32}
                     width={32}
                     alt={e.alt}
+                    title={e.alt}
                   ></Image>
                 }
               >

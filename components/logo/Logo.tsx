@@ -21,6 +21,7 @@ const Logo = ({
         height={height}
         width={width}
         alt={text.name}
+        title={text.name}
       />
     </div>
   );

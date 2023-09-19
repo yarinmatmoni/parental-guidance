@@ -34,6 +34,7 @@ const Shape = ({
       <Image
         src={`/svgs/` + name + ".svg"}
         alt={name}
+        title={name}
         height={height}
         width={width || height}
         className={styles.shape}

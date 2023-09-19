@@ -48,6 +48,7 @@ const IntroSection = ({
             height="400px"
             width="400px"
             alt={title}
+            title={title}
             objectFit="contain"
           ></Image>
         </div>

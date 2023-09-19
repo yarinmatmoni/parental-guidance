@@ -14,6 +14,7 @@ const ParallaxSection = () => {
           objectPosition="center"
           layout="fill"
           alt={text.name}
+          title={text.name}
         />
       </div>
       <div className={styles.contact}>

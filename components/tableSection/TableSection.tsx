@@ -29,6 +29,7 @@ const TableSection: React.FC = () => {
               <a
                 href="https://mushlam.clalit.co.il/he/woman/during_pregnancy/Pages/pregnancy.aspx"
                 rel="noopener noreferrer"
+                title={"clalit"}
               >
                 פרטים נוספים
               </a>
@@ -46,6 +47,7 @@ const TableSection: React.FC = () => {
               <a
                 href="https://www.meuhedet.co.il/%D7%94%D7%99%D7%A8%D7%99%D7%95%D7%9F-%D7%95%D7%9C%D7%99%D7%93%D7%94/%D7%97%D7%91%D7%99%D7%9C%D7%AA-%D7%94%D7%94%D7%99%D7%A8%D7%99%D7%95%D7%9F-%D7%95%D7%94%D7%9C%D7%99%D7%93%D7%94-%D7%A9%D7%9C%D7%A0%D7%95/"
                 rel="noopener noreferrer"
+                title={"meuhedet"}
               >
                 פרטים נוספים
               </a>
@@ -55,11 +57,12 @@ const TableSection: React.FC = () => {
             <td>מכבי</td>
             <td>גובה ההחזר יהיה 75% ועד תקרה של 431 ש״ח</td>
             <td>מכבי שלי</td>
-            <td>הזכאות ניתנת כחלק מ"צ'ק כיסוי" עד חצי שנה לאחר לידה</td>
+            <td>{`הזכאות ניתנת כחלק מ"צ'ק כיסוי"ֿ עד חצי שנה לאחר לידה`}</td>
             <td>
               <a
                 href="https://www.maccabi4u.co.il/new/eligibilites/2673/"
                 rel="noopener noreferrer"
+                title={"maccabi4u"}
               >
                 פרטים נוספים
               </a>
@@ -77,6 +80,7 @@ const TableSection: React.FC = () => {
               <a
                 href="https://www.leumit.co.il/heb/Life/Pregnancy/Pregnancy%20and%20Leumit/articlegalleryitem,3284/"
                 rel="noopener noreferrer"
+                title={"leumit"}
               >
                 פרטים נוספים
               </a>

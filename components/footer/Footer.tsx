@@ -7,10 +7,16 @@ import {
   whatsAppHref,
   phoneCallHref,
   emailHref,
-  faceBookHref,
+  instagramHref,
 } from "../../utils/content/hrefs";
 import { contact, nav, personalInfo } from "../../utils/content/common";
 import Logo from "../logo/Logo";
+
+type MenuItem = {
+  name: string;
+  link: string;
+  hidden?: boolean;
+};
 
 const Footer = () => {
   return (
@@ -32,25 +38,30 @@ const Footer = () => {
                   .map((item, i) => (
                     <li key={i}>
                       <Link href={`${item.link}`}>
-                        <a>{item.name}</a>
+                        <a title={item.name}>{item.name}</a>
                       </Link>
                     </li>
                   ))}
               </ul>
             </div>
             {nav
-              .filter((menuItem) => menuItem.sub.length !== 0)
+              .filter(
+                (menuItem) =>
+                  menuItem.sub.length !== 0 && menuItem.hidden !== true
+              )
               .map((item, i) => (
                 <div key={i} className={styles.block}>
                   <p className={styles.title}>{item.name}</p>
                   <ul>
-                    {item.sub.map((subMenuItem, i) => (
-                      <li key={i}>
-                        <Link href={`${subMenuItem.link}`}>
-                          <a>{subMenuItem.name}</a>
-                        </Link>
-                      </li>
-                    ))}
+                    {item.sub
+                      .filter((subMenuItem: MenuItem) => !subMenuItem.hidden)
+                      .map((subMenuItem, i) => (
+                        <li key={i}>
+                          <Link href={`${subMenuItem.link}`}>
+                            <a title={subMenuItem.name}>{subMenuItem.name}</a>
+                          </Link>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               ))}
@@ -67,6 +78,7 @@ const Footer = () => {
                     height={18}
                     width={18}
                     alt={"טלפון"}
+                    title={"טלפון"}
                   ></Image>
                   <ContactLink
                     href={phoneCallHref}
@@ -81,6 +93,7 @@ const Footer = () => {
                     height={18}
                     width={18}
                     alt={"דואר אלקטרוני"}
+                    title={"דואר אלקטרוני"}
                   ></Image>
                   <ContactLink
                     href={emailHref}
@@ -99,10 +112,10 @@ const Footer = () => {
                 tab={true}
               />
               <ContactLink
-                href={faceBookHref}
-                src={"/icons/facebook_icon.svg"}
+                href={instagramHref}
+                src={"/icons/instagram_icon.svg"}
                 size={30}
-                alt={"facebook_icon"}
+                alt={"instagram_icon"}
                 tab={true}
               />
             </div>

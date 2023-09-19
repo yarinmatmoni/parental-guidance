@@ -3,6 +3,7 @@ import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { contact } from "../../utils/content/common";
 import styles from "./ContactForm.module.scss";
+import { it } from "node:test";
 
 const ContactForm = () => {
   const [isSent, setIsSent] = useState(false);
@@ -66,6 +67,7 @@ const ContactForm = () => {
                   height={18}
                   width={18}
                   alt={item.alt}
+                  title={item.alt}
                 ></Image>
                 <p>{item.name}</p>
               </div>
@@ -97,7 +99,7 @@ const ContactForm = () => {
               ? ""
               : valid && isSent
               ? "תודה, אצור קשר בהקדם"
-              : "הפנייה לא נשלחה, אולי שכחנו למלא משהו?"}
+              : "הפנייה לא נשלחה, אולי שכחת למלא משהו?"}
           </span>
           <button type="submit" data-sent={isSent} value="Send">
             שלהבת, חזרי אלי

@@ -24,41 +24,50 @@ const Navbar = () => {
       <Logo height={72} width={72} />
       <ul className={styles.menuContainer} data-open={isOpen}>
         <>
-          {nav?.map((menuItem, i) => (
-            <li
-              key={i}
-              className={styles.menuItem}
-              data-path={router.pathname === menuItem.link}
-            >
-              {menuItem.sub.length > 0 ? (
-                <>
-                  {menuItem.name}
-                  <ul className={styles.subMenu} data-open={isOpen}>
-                    {menuItem.sub.map((subMenuItem, i) => (
-                      <li
-                        key={i}
-                        className={styles.menuItem}
-                        data-path={router.pathname === subMenuItem.link}
-                      >
-                        <Link
-                          className={styles.link}
-                          href={`${subMenuItem.link}`}
+          {nav
+            .filter((menuItem) => menuItem.hidden !== true)
+            ?.map((menuItem, i) => (
+              <li
+                key={i}
+                className={styles.menuItem}
+                data-path={decodeURI(router.asPath) === menuItem.link}
+              >
+                {menuItem.sub.length > 0 ? (
+                  <>
+                    {menuItem.name}
+                    <ul className={styles.subMenu} data-open={isOpen}>
+                      {menuItem.sub.map((subMenuItem, i) => (
+                        <li
+                          key={i}
+                          className={styles.menuItem}
+                          data-path={
+                            decodeURI(router.asPath) === subMenuItem.link
+                          }
                         >
-                          <a onClick={() => onMenuClick(true)}>
-                            {subMenuItem.name}
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <Link href={`${menuItem.link}`}>
-                  <a onClick={() => onMenuClick(true)}>{menuItem.name}</a>
-                </Link>
-              )}
-            </li>
-          ))}
+                          <Link
+                            className={styles.link}
+                            href={`${subMenuItem.link}`}
+                          >
+                            <a
+                              onClick={() => onMenuClick(true)}
+                              title={subMenuItem.name}
+                            >
+                              {subMenuItem.name}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link href={`${menuItem.link}`}>
+                    <a onClick={() => onMenuClick(true)} title={menuItem.name}>
+                      {menuItem.name}
+                    </a>
+                  </Link>
+                )}
+              </li>
+            ))}
         </>
       </ul>
       <Hamburger onMenuClick={() => onMenuClick()} isOpen={isOpen} />
